@@ -1,0 +1,5 @@
+Warrior
+Archer
+Healer
+Assassin
+Thief

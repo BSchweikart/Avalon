@@ -1,0 +1,12 @@
+Large Health Potion
+This will restore a large amount of Health
+Medium Health Potion
+This will Restore some Health
+Small Health Potion
+This will restore a little Health
+Large Mealth Potion
+This will restore a large amount of Mana
+Medium Mealth Potion
+This will Restore some Mana
+Small Mealth Potion
+This will restore a little Mana

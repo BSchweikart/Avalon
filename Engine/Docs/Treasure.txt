@@ -1,0 +1,10 @@
+Mote of Darkness
+A small marble holding the powers darkness
+Mote of Light
+A small marble holding the powers of light
+Mote of Fire
+A small marble holding the powers of fire
+Mote of Water
+A small marble holding the powers of water
+Mote of Earth
+A small marble holding the powers of Earth
