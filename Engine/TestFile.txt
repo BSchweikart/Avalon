@@ -1,0 +1,2 @@
+﻿This file is just to make sure that GitHub Desktop and Visual Studio is linked and working right
+The last build didn't work and double loaded.
