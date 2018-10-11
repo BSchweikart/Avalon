@@ -8,7 +8,8 @@ view their items, along with managment of said items. The player will be able to
 Please read CONTRIBUTING.md for details on our code of conduct.
 
 # Built With
-Microsoft Visual Studio
+Microsoft Visual Studio 
+- Using Consle
 
 # Project Manager
 William Buckwell
