@@ -1,4 +1,4 @@
-#Code of Conduct
+##Code of Conduct
 Our Standards
 Examples of behavior that contributes to creating a positive environment include:
 
