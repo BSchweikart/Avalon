@@ -8,5 +8,15 @@ namespace Engine
 {
     public class NPC
     {
+         private string _name;   //  Name
+
+
+        public string Name { get { return _name; } set { return _name = value; } }
+
+
+        public Monster(string name)
+        {
+            Name = name;
+        }
     }
 }
