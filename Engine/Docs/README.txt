@@ -1,6 +1,6 @@
 Below will cover stats the player will use with changes per class
 
-Sprit - is used for the players,NPC,and Monster Health
+Health - is used for the players,NPC,and Monster Health
 Mana - fuel for casters to cast
 Strength - melee players and monsters to deal higher damage
 Wisdom - casters use to deal higher damage
@@ -12,32 +12,32 @@ Higher armor classes will use Strength
 Medium armor classes will use Dexterity
 Light armor classes will use Wisdom
 
-Amor list is listed as
+#Amor list is listed as
 Name
 Followed by states (unset to order)
 
-Weapon
+#Weapon
 Same as above
 
-Potions
+#Potions
 Same as above
 
-Classes
+#Classes
 Same as above
 
-Races
+#Races
 Same as above
 
-Monsters
+#Monsters
 Same as above
 
-Treasue
+#Treasue
 Name Followed by unset
 
-NPC
+#NPC
 Name followed by unset
 
-Room
+#Room
 Name
 Description
 Exit
