@@ -12,6 +12,7 @@ namespace Engine
     public class Treasure : Items
     {
         private string _name;   //  Name
+        private string _disc;
         //private int _health;   // Spirt - Health
         //private int _mana;    // Mana holding for later v
         //private int _str;     // Strength
@@ -19,15 +20,17 @@ namespace Engine
         //private int _dex;     // Dex holding for later ^
 
         public string Name { get { return _name; } set { return _name = value; } }
+        public string Disc { get { return _disc; } set { _disc = value; } }
         //public int Health { get; set; }
         //public int Mana { get; set; }
         //public int STR { get; set; }
         //public int Wis { get; set; }
         //public int DEX { get; set; }
 
-        public Treasure (string name)
+        public Treasure (string name string disc)
         {
             Name = name;
+            Disc = disc;
         }
 
     }
