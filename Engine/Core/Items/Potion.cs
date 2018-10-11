@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Potions : Items
+    public class Potion : Items
     {
         private string _name;   //  Name
         private string _disc;
@@ -24,7 +24,7 @@ namespace Engine
         //public int Wis { get; set; }
         //public int DEX { get; set; }
 
-        public Potion (string name, string disc)
+        public Potion(string name, string disc)
         {
             Name = name;
             Disc = disc;

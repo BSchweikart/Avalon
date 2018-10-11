@@ -22,6 +22,11 @@ namespace Engine
 
     public class WorldGenerator
     {
-	
+	    public static readonly List<>;
+        public static readonly List<>;
+        public static readonly List<>;
+        public static readonly List<>;
+        public static readonly List<>;
+
     }
 }

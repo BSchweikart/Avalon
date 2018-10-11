@@ -65,7 +65,7 @@ namespace Engine
              {
                  string name = reader.ReadLine();
                  string disc = reader.Readline();
-                 WorldGenerator.Potions.Add(new Potion(name, disc));
+                 WorldGenerator.Potions.Add(new Potions(name, disc));
              }
          }
           
