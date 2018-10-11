@@ -6,7 +6,7 @@ Small Health Potion
 This will restore a little Health
 Large Mealth Potion
 This will restore a large amount of Mana
-Medium Mealth Potion
+Medium Mana Potion
 This will Restore some Mana
-Small Mealth Potion
+Small Mana Potion
 This will restore a little Mana
