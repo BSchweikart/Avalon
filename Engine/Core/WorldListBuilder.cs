@@ -34,7 +34,7 @@ namespace Engine
              while (!reader.EndOfStream)
              {
                  string name = reader.ReadLine();
-                 string disc = reader.Readline();
+                 string disc = reader.ReadLine();
                  WorldGenerator.Treasures.Add(new Treasure(name, disc));
              }
          }
@@ -44,7 +44,7 @@ namespace Engine
              while (!reader.EndOfStream)
              {
                  string name = reader.ReadLine();
-                 string disc = reader.Readline();
+                 string disc = reader.ReadLine();
                  WorldGenerator.Monsters.Add(new Monster(name, disc));
              }
          }
@@ -54,7 +54,7 @@ namespace Engine
              while (!reader.EndOfStream)
              {
                  string name = reader.ReadLine();
-                 string disc = reader.Readline();
+                 string disc = reader.ReadLine();
                  WorldGenerator.Rooms.Add(new Room(name, disc));
              }
          }
@@ -64,8 +64,8 @@ namespace Engine
              while (!reader.EndOfStream)
              {
                  string name = reader.ReadLine();
-                 string disc = reader.Readline();
-                 WorldGenerator.Potions.Add(new Potions(name, disc));
+                 string disc = reader.ReadLine();
+                 WorldGenerator.Potions.Add(new Potion(name, disc));
              }
          }
           
@@ -74,7 +74,7 @@ namespace Engine
              while (!reader.EndOfStream)
              {
                  string name = reader.ReadLine();
-                 string disc = reader.Readline();
+                 string disc = reader.ReadLine();
                  WorldGenerator.Weapons.Add(new Weapon(name, disc));
              }
          }
@@ -84,7 +84,7 @@ namespace Engine
              while (!reader.EndOfStream)
              {
                  string name = reader.ReadLine();
-                 string disc = reader.Readline();
+                 string disc = reader.ReadLine();
                  WorldGenerator.NPCs.Add(new NPC(name, disc));
              }
          }

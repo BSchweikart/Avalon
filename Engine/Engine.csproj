@@ -67,7 +67,7 @@
     <Content Include="Docs\Rooms.txt" />
     <Content Include="Docs\Treasure.txt" />
     <Content Include="Docs\Weapons.txt" />
-    <Content Include="TestFile.txt" />
+    <Content Include="NotesToEachOther.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="User Commands\" />
