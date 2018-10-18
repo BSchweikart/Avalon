@@ -23,10 +23,10 @@ namespace Engine
         public string DiscRoom { get { return _disc; } set { _disc = value; } }
         public Monster MonsterRoom { get { return _monster; } set { _monster = value; } }
         public NPC NpcRoom { get { return _npc; } set { _npc = value; } }
-        public int MoveNorth { get { return _exitNorth; } set { _exitNorth = value; } }
-        public int MoveSouth { get { return _exitSouth; } set { _exitSouth = value; } }
-        public int MoveEast { get { return _exitEast; } set { _exitEast = value; } }
-        public int MoveWest { get { return _exitWest; } set { _exitWest = value; } }
+        public int ExitNorth { get { return _exitNorth; } set { _exitNorth = value; } }
+        public int ExitSouth { get { return _exitSouth; } set { _exitSouth = value; } }
+        public int ExitEast { get { return _exitEast; } set { _exitEast = value; } }
+        public int ExitWest { get { return _exitWest; } set { _exitWest = value; } }
     }
 
     
