@@ -46,8 +46,13 @@ Description
 ID 600-699
 Name
 Description
-Exit
-what is in the room
+Exit North 1 true
+Exit South 1 true
+Exit East 1 true
+Exit West 1 true
+Monster -1 false
+Treasue -1 false
+Npc use -1 fasle
 
 #Classes
 ID 700-749

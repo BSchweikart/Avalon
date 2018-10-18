@@ -1,21 +1,70 @@
 ﻿600
 Main Hall
 A grand room that is welcoming to all
+1
+-1
+-1
+-1
+1
+1
+-1
 601
 Feeding Room
 Entering this room you fully understand how the name was given
+1
+1
+-1
+-1
+-1
+-1
+1
 602
 Room of Despair
 The room is light by blue candles and you can just make out the crimson red on the walls.
+1
+1
+-1
+-1
+-1
+-1
+1
 603
 Dark Corridor
 A dimly lit passage
+1
+1
+-1
+-1
+-1
+-1
+1
 604
 4 Way Corridor
 A room with 4 doors which one will you take?
+1
+1
+-1
+-1
+-1
+-1
+1
 605
 Terrice of Hope
 You are able to see to outside world but will you make it.
+1
+1
+-1
+-1
+-1
+-1
+1
 606
 Dark Room
 A dimly lit room.
+1
+1
+-1
+-1
+-1
+-1
+1
