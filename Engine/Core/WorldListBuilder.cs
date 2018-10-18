@@ -55,11 +55,17 @@ namespace Engine
          {
              while (!reader.EndOfStream)
              {
-                 int id = int.Parse(reader.ReadLine());
-                 string name = reader.ReadLine();
-                 string disc = reader.ReadLine();
-                 WorldGenerator.Rooms.Add(new Room(id, name, disc));
-             }
+                    int id = int.Parse(reader.ReadLine());
+                    string name = reader.ReadLine();
+                    string descript = reader.ReadLine();
+                    int exitn = int.Parse(reader.ReadLine());
+                    int exits = int.Parse(reader.ReadLine());
+                    int exite = int.Parse(reader.ReadLine());
+                    int exitw = int.Parse(reader.ReadLine());
+               
+
+                    WorldGenerator.Rooms.Add(new Room(id, name, descript, exitn, exits, exite, exitw));
+                }
          }
           
          using (StreamReader reader = File.OpenText(@"../../../Engine/Docs/Potions.txt"))
