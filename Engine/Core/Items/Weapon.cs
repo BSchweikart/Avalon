@@ -26,17 +26,15 @@ namespace Engine
         private int _id;        // Item ID
         private string _name;   //  Name
         private string _disc;
-        //private int _health;  // Spirt - Health
-        //private int _mana;    // Mana
-        //private int _str;     // Strength
-        //private int _wis;     // Wisdom
-        //private int _dex;     // Dex
 
-        public Weapon(int id, string name, string disc)
+
+        public Weapon(int id, string name, string disc) : base(id, name, disc)
         {
             ID = id;
             Name = name;
             Disc = disc;
+            
+            
         }
     }
 }

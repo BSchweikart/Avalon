@@ -16,7 +16,7 @@ namespace Engine
         private string _disc;
         
 
-        public Treasure(int id, string name, string disc)
+        public Treasure(int id, string name, string disc) : base(id, name, disc)
         {
             ID = id;
             Name = name;

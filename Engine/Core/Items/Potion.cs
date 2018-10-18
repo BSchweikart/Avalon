@@ -18,7 +18,7 @@ namespace Engine
         //private int _dex;     // Dex might add in
         
 
-        public Potion(int id, string name, string disc)
+        public Potion(int id, string name, string disc) : base(id, name, disc)
         {
             ID = id;
             Name = name;

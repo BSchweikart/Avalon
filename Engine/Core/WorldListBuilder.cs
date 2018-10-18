@@ -62,8 +62,10 @@ namespace Engine
                     int exits = int.Parse(reader.ReadLine());
                     int exite = int.Parse(reader.ReadLine());
                     int exitw = int.Parse(reader.ReadLine());
-               
-
+                    //int 
+                    //int
+                    //int
+                    // need to add in the monsters items and npc
                     WorldGenerator.Rooms.Add(new Room(id, name, descript, exitn, exits, exite, exitw));
                 }
          }

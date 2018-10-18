@@ -114,7 +114,7 @@ namespace Avalon
                     Console.Read();
                     Console.Clear();// Clear items on the Console
                 }
-                else if (lowInput == "Classes")
+                else if (lowInput == "classes")
                 {
                     Console.Clear();
                     StreamReader classesText = new StreamReader(@"../../../Engine/Docs/Classes.txt"); // txt @ location set value              
@@ -124,7 +124,7 @@ namespace Avalon
                     Console.Read();
                     Console.Clear();// Clear items on the Console
                 }
-                else if (lowInput == "Potions")
+                else if (lowInput == "potions")
                 {
                     Console.Clear();
                     StreamReader potionsText = new StreamReader(@"../../../Engine/Docs/potions.txt"); // txt @ location set value              
@@ -134,7 +134,7 @@ namespace Avalon
                     Console.Read();
                     Console.Clear();// Clear items on the Console
                 }
-                else if (lowInput == "Treasure")
+                else if (lowInput == "treasure")
                 {
                     Console.Clear();
                     StreamReader treasureText = new StreamReader(@"../../../Engine/Docs/Treasure.txt"); // txt @ location set value              
@@ -144,7 +144,7 @@ namespace Avalon
                     Console.Read();
                     Console.Clear();// Clear items on the Console
                 }
-                else if (lowInput == "Weapons")
+                else if (lowInput == "weapons")
                 {
                     Console.Clear();
                     StreamReader weaponsText = new StreamReader(@"../../../Engine/Docs/Weapons.txt"); // txt @ location set value             
@@ -154,7 +154,7 @@ namespace Avalon
                     Console.Read();
                     Console.Clear();// Clear items on the Console
                 }
-                else if (lowInput == "Armor")
+                else if (lowInput == "armor")
                 {
                     Console.Clear();
                     Console.WriteLine("I really am sorry but this section is under works");
@@ -168,7 +168,7 @@ namespace Avalon
                     Console.Read();
                     Console.Clear();// Clear items on the Console
                 }
-                else if (lowInput == "Rooms")
+                else if (lowInput == "rooms")
                 {
                     Console.Clear();
                     StreamReader creatureText = new StreamReader(@"../../../Engine/Docs/Rooms.txt");  // txt @ location set value            
