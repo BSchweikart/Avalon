@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalon", "Avalon\Avalon.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{8D53E774-50A3-4BF5-AC49-C39A70D8DF1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvalonConsole", "AvalonConsole\AvalonConsole.csproj", "{799BD9D5-C480-43FB-B1AA-D04B25A4A4BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8D53E774-50A3-4BF5-AC49-C39A70D8DF1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D53E774-50A3-4BF5-AC49-C39A70D8DF1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D53E774-50A3-4BF5-AC49-C39A70D8DF1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{799BD9D5-C480-43FB-B1AA-D04B25A4A4BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{799BD9D5-C480-43FB-B1AA-D04B25A4A4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{799BD9D5-C480-43FB-B1AA-D04B25A4A4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{799BD9D5-C480-43FB-B1AA-D04B25A4A4BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
