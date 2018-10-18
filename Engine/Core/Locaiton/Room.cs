@@ -8,25 +8,25 @@ namespace Engine
 {
     public class Room
     {
-        private int _id;        // Item ID
-        private string _name;   //  Name
-        private string _disc;
-        private Monster _monster;
-        private NPC _npc;
-        private int _moveNorth;
-        private int _moveSouth;
-        private int _moveEast;
-        private int _moveWest;
+        private int _id;            // Item ID
+        private string _name;       //  Name
+        private string _disc;       // Description
+        private Monster _monster;   // 
+        private NPC _npc;           //
+        private int _exitNorth;     // E
+        private int _exitSouth;     //
+        private int _exitEast;      //
+        private int _exitWest;      //
 
         public int ID { get { return _id; } set { _id = value; } }
         public string NameRoom { get { return _name; } set { _name = value; } }
         public string DiscRoom { get { return _disc; } set { _disc = value; } }
         public Monster MonsterRoom { get { return _monster; } set { _monster = value; } }
         public NPC NpcRoom { get { return _npc; } set { _npc = value; } }
-        public int MoveNorth { get { return _moveNorth; } set { _moveNorth = value; } }
-        public int MoveSouth { get { return _moveSouth; } set { _moveSouth = value; } }
-        public int MoveEast { get { return _moveEast; } set { _moveEast = value; } }
-        public int MoveWest { get { return _moveWest; } set { _moveWest = value; } }
+        public int MoveNorth { get { return _exitNorth; } set { _exitNorth = value; } }
+        public int MoveSouth { get { return _exitSouth; } set { _exitSouth = value; } }
+        public int MoveEast { get { return _exitEast; } set { _exitEast = value; } }
+        public int MoveWest { get { return _exitWest; } set { _exitWest = value; } }
     }
 
     
