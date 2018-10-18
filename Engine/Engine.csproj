@@ -41,12 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Items\Items.cs" />
+    <Compile Include="Core\Items\Item.cs" />
     <Compile Include="Core\Items\Potion.cs" />
     <Compile Include="Core\Items\Treasure.cs" />
     <Compile Include="Core\Items\Weapon.cs" />
     <Compile Include="Core\Locaiton\Room.cs" />
     <Compile Include="Core\Player,NPC,Monster\Level.cs" />
+    <Compile Include="Core\Player,NPC,Monster\LivingCreature.cs" />
     <Compile Include="Core\Player,NPC,Monster\Monster.cs" />
     <Compile Include="Core\Player,NPC,Monster\NPC.cs" />
     <Compile Include="Core\Player,NPC,Monster\Player.cs" />

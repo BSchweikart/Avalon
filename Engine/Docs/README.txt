@@ -12,33 +12,49 @@ Higher armor classes will use Strength
 Medium armor classes will use Dexterity
 Light armor classes will use Wisdom
 
-#Amor list is listed as
-Name
-Followed by states (unset to order)
-
-#Weapon
-Same as above
-
-#Potions
-Same as above
-
-#Classes
-Same as above
-
-#Races
-Same as above
-
 #Monsters
-Same as above
-
-#Treasue
-Name Followed by unset
+ID 1-99
+Name
+Description
 
 #NPC
-Name followed by unset
+ID 100-199
+Name
+Description
+
+#Potions
+ID 200-299
+Name
+Description
+
+#Treasue
+ID 300-399
+Name
+Description
+
+#Weapon
+ID 400-499
+Name
+Description
+
+#Amor list is listed as
+ID 500-599
+Name
+Description
 
 #Room
+ID 600-699
 Name
 Description
 Exit
 what is in the room
+
+#Classes
+ID 700-749
+Name
+Description
+
+#Races
+ID 750-799
+Name
+Description

@@ -23,41 +23,48 @@ namespace Engine
     public static class WorldGenerator
     {
 	    public static readonly List<Monster> Monsters = new List<Monster>();
+        public static readonly List<Item> Items = new List<Item>();
         public static readonly List<Potion> Potions = new List<Potion>();
         public static readonly List<Treasure> Treasures = new List<Treasure>();
         public static readonly List<Weapon> Weapons = new List<Weapon>();
         public static readonly List<NPC> NPCs = new List<NPC>();
         public static readonly List<Room> Rooms = new List<Room>();
 
-
+        public static Monster MonsterID(int id)
+        {
+            return Monsters.SingleOrDefault();
+        }
         public static Monster MonsterName(string name)
         {
-            return ();
+            return Monsters.SingleOrDefault();
         }
 
-        public static Potion PotionName(string name)
+        public static Item ItemId(int id)
         {
-            return ();
+            return Items.SingleOrDefault();
         }
 
-        public static Treasure TreasureName(string name)
+        public static Item ItemName(string name)
         {
-            return ();
+            return Items.SingleOrDefault();
         }
 
-        public static Weapon WeaponName(string name)
+        public static NPC NPCId(int id)
         {
-            return ();
+            return NPCs.SingleOrDefault();
         }
-
         public static NPC NPCName(string name)
         {
-            return ();
+            return NPCs.SingleOrDefault();
         }
 
+        public static Room RoomId(int id)
+        {
+            return Rooms.SingleOrDefault();
+        }
         public static Room RoomName(string name)
         {
-            return ();
+            return Rooms.SingleOrDefault();
         }
 
 

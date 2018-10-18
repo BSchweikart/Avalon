@@ -33,9 +33,10 @@ namespace Engine
          {
              while (!reader.EndOfStream)
              {
+                 int id = int.Parse(reader.ReadLine());
                  string name = reader.ReadLine();
                  string disc = reader.ReadLine();
-                 WorldGenerator.Treasures.Add(new Treasure(name, disc));
+                 WorldGenerator.Treasures.Add(new Treasure(id, name, disc));
              }
          }
          
@@ -43,9 +44,10 @@ namespace Engine
          {
              while (!reader.EndOfStream)
              {
+                 int id = int.Parse(reader.ReadLine());
                  string name = reader.ReadLine();
                  string disc = reader.ReadLine();
-                 WorldGenerator.Monsters.Add(new Monster(name, disc));
+                 WorldGenerator.Monsters.Add(new Monster(id, name, disc));
              }
          }
           
@@ -53,9 +55,10 @@ namespace Engine
          {
              while (!reader.EndOfStream)
              {
+                 int id = int.Parse(reader.ReadLine());
                  string name = reader.ReadLine();
                  string disc = reader.ReadLine();
-                 WorldGenerator.Rooms.Add(new Room(name, disc));
+                 WorldGenerator.Rooms.Add(new Room(id, name, disc));
              }
          }
           
@@ -63,9 +66,10 @@ namespace Engine
          {
              while (!reader.EndOfStream)
              {
+                 int id = int.Parse(reader.ReadLine());
                  string name = reader.ReadLine();
                  string disc = reader.ReadLine();
-                 WorldGenerator.Potions.Add(new Potion(name, disc));
+                 WorldGenerator.Potions.Add(new Potion(id, name, disc));
              }
          }
           
@@ -73,9 +77,10 @@ namespace Engine
          {
              while (!reader.EndOfStream)
              {
+                 int id = int.Parse(reader.ReadLine());
                  string name = reader.ReadLine();
                  string disc = reader.ReadLine();
-                 WorldGenerator.Weapons.Add(new Weapon(name, disc));
+                 WorldGenerator.Weapons.Add(new Weapon(id, name, disc));
              }
          }
           
@@ -83,9 +88,10 @@ namespace Engine
          {
              while (!reader.EndOfStream)
              {
+                 int id = int.Parse(reader.ReadLine());
                  string name = reader.ReadLine();
                  string disc = reader.ReadLine();
-                 WorldGenerator.NPCs.Add(new NPC(name, disc));
+                 WorldGenerator.NPCs.Add(new NPC(id, name, disc));
              }
          }
            //string[] weapons = File.ReadAllLines(@"../../../Engine/Docs/Weapon.txt");

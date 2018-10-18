@@ -9,7 +9,7 @@ using System.Threading.Tasks;
  * Sprit - HP
  * STR - AP
  * Wis -  Int
- * Dex - Agi
+ * Dex - Agi  ^forget about this redoing it^
  *
  *This might end up being to much at the start
  * ex. caster fire ball does % base of int
@@ -21,26 +21,20 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Weapon : Items
+    public class Weapon : Item
     {
+        private int _id;        // Item ID
         private string _name;   //  Name
         private string _disc;
-        //private int _health;   // Spirt - Health
+        //private int _health;  // Spirt - Health
         //private int _mana;    // Mana
         //private int _str;     // Strength
         //private int _wis;     // Wisdom
         //private int _dex;     // Dex
 
-        public string Name { get { return _name; } set { return _name = value; } }
-        public string Disc { get { return _disc; } set { _disc = value; } }
-        //public int Health { get; set; }
-        //public int Mana { get; set; }
-        //public int STR { get; set; }
-        //public int Wis { get; set; }
-        //public int DEX { get; set; }
-
-        public Weapon (string name, string disc)
+        public Weapon(int id, string name, string disc)
         {
+            ID = id;
             Name = name;
             Disc = disc;
         }
