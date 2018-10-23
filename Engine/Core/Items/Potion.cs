@@ -6,23 +6,18 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Potion : Item
+    public class Potion 
     {
-        private int _id;        // Item ID
-        private string _name;   //  Name
-        private string _disc;
-        //private int _health;   // Health
-        //private int _mana;    // Mana
-        //private int _str;     // Strength might add in 
-        //private int _wis;     // Wisdom might add in
-        //private int _dex;     // Dex might add in
-        
+        //public int ID { get; set; }
+        public string Name { get; set; }
+        public string Descrip { get; set; }
 
-        public Potion(int id, string name, string disc) : base(id, name, disc)
+
+        public Potion(string name, string descrip)
         {
-            ID = id;
+            //ID = id;
             Name = name;
-            Disc = disc;
+            Descrip = descrip;
         }
     }
 }

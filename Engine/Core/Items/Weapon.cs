@@ -21,20 +21,18 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Weapon : Item
+    public class Weapon 
     {
-        private int _id;        // Item ID
-        private string _name;   //  Name
-        private string _disc;
+        //public int ID { get; set; }
+        public string Name { get; set; }
+        public string Descrip { get; set; }
 
 
-        public Weapon(int id, string name, string disc) : base(id, name, disc)
+        public Weapon(string name, string descrip)
         {
-            ID = id;
+            //ID = id;
             Name = name;
-            Disc = disc;
-            
-            
+            Descrip = descrip;
         }
     }
 }

@@ -7,22 +7,17 @@ using System.Threading.Tasks;
 namespace Engine
 {
     public class Item
-    {
-        private int _id;        // Item ID
-        private string _name;   //  Name
-        private string _disc;   // Item discription
-        
-
-        public int ID { get { return _id; } set { _id = value; } }
-        public string Name { get { return _name; } set { _name = value; } }
-        public string Disc { get { return _disc; } set { _disc = value; } }
+    {                
+        public int ID { get; set;}
+        public string Name { get; set;}
+        public string Description { get; set;}
        
 
-        public Item(int id, string name, string disc)
+        public Item(int id, string name, string description)
         {
             ID = id;
             Name = name;
-            Disc = disc;
+            Description = description;
         }
     }
 }

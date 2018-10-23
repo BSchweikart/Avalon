@@ -23,96 +23,85 @@ namespace Engine
    { 
       private static string[] ReadNextLine(StreamReader reader)
       {
-          string[] line = reader.ReadLine().Split(' ');
+          string[] line = reader.ReadLine().Split(',');
           return line;
       }
        
       public static void Generate()
       {
-         using (StreamReader reader = File.OpenText(@"../../../Engine/Docs/Treasure.txt")) //start building 
-         {
+         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Treasure.csv")) //start building 
+            {
              while (!reader.EndOfStream)
              {
-                 int id = int.Parse(reader.ReadLine());
-                 string name = reader.ReadLine();
-                 string disc = reader.ReadLine();
-                 WorldGenerator.Treasures.Add(new Treasure(id, name, disc));
+                    string[] line = ReadNextLine(reader);
+                    WorldGenerator.treasures.Add(new Treasure(line[0], line[1]));
              }
          }
-         
-         using (StreamReader reader = File.OpenText(@"../../../Engine/Docs/Monsters.txt")) // Start building 
-         {
-             while (!reader.EndOfStream)
-             {
-                 int id = int.Parse(reader.ReadLine());
-                 string name = reader.ReadLine();
-                 string disc = reader.ReadLine();
-                 WorldGenerator.Monsters.Add(new Monster(id, name, disc));
-             }
-         }
-          
-         using (StreamReader reader = File.OpenText(@"../../../Engine/Docs/Rooms.txt"))
-         {
-             while (!reader.EndOfStream)
-             {
-                    int id = int.Parse(reader.ReadLine());
-                    string name = reader.ReadLine();
-                    string descript = reader.ReadLine();
-                    int exitn = int.Parse(reader.ReadLine());
-                    int exits = int.Parse(reader.ReadLine());
-                    int exite = int.Parse(reader.ReadLine());
-                    int exitw = int.Parse(reader.ReadLine());
-                    //int 
-                    //int
-                    //int
-                    // need to add in the monsters items and npc
-                    WorldGenerator.Rooms.Add(new Room(id, name, descript, exitn, exits, exite, exitw));
-                }
-         }
-          
-         using (StreamReader reader = File.OpenText(@"../../../Engine/Docs/Potions.txt"))
-         {
-             while (!reader.EndOfStream)
-             {
-                 int id = int.Parse(reader.ReadLine());
-                 string name = reader.ReadLine();
-                 string disc = reader.ReadLine();
-                 WorldGenerator.Potions.Add(new Potion(id, name, disc));
-             }
-         }
-          
-         using (StreamReader reader = File.OpenText(@"../../../Engine/Docs/Weapons.txt"))
-         {
-             while (!reader.EndOfStream)
-             {
-                 int id = int.Parse(reader.ReadLine());
-                 string name = reader.ReadLine();
-                 string disc = reader.ReadLine();
-                 WorldGenerator.Weapons.Add(new Weapon(id, name, disc));
-             }
-         }
-          
-         using (StreamReader reader = File.OpenText(@"../../../Engine/Docs/NPC.txt"))
-         {
-             while (!reader.EndOfStream)
-             {
-                 int id = int.Parse(reader.ReadLine());
-                 string name = reader.ReadLine();
-                 string disc = reader.ReadLine();
-                 WorldGenerator.NPCs.Add(new NPC(id, name, disc));
-             }
-         }
-           //string[] weapons = File.ReadAllLines(@"../../../Engine/Docs/Weapon.txt");
-        //string[] classes = File.ReadAllLines(@"../../../Engine/Docs/Classes.txt");
-        //string[] monsters = File.ReadAllLines(@"../../../Engine/Docs/Monster.txt");
-        //string[] NPC = File.ReadAllLines(@"../../../Engine/Docs/NPC.txt");
-        //string[] player = File.ReadAllLines(@"../../../Engine/Docs/Player.txt");
-        //string[] potions = File.ReadAllLines(@"../../../Engine/Docs/Potions.txt");
-        //string[] races = File.ReadAllLines(@"../../../Engine/Docs/Races.txt");
-        //string[] rooms = File.ReadAllLines(@"../../../Engine/Docs/Rooms.txt");
-        //string[] treasure = File.ReadAllLines(@"../../../Engine/Docs/Treasure.txt");
-        //string[] levels = File.ReadAllLines(@"../../../Engine/Docs/Level.txt");      
 
-      }
+         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Monsters.csv"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    string[] line = ReadNextLine(reader); 
+                    WorldGenerator.monsters.Add(new Monster(line[0], line[1]));
+                }
+            }
+
+         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Rooms.csv"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    string[] line = ReadNextLine(reader);
+
+                    WorldGenerator.rooms.Add(new Room(line[0], line[1]));
+                }
+            }
+
+         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Potions.csv"))
+         {
+             while (!reader.EndOfStream)
+             {
+                    string[] line = ReadNextLine(reader);
+                    WorldGenerator.potions.Add(new Potion(line[0], line[1]));
+             }
+         }
+          
+         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Weapons.csv"))
+         {
+             while (!reader.EndOfStream)
+             {
+                    string[] line = ReadNextLine(reader);
+                    WorldGenerator.weapons.Add(new Weapon(line[0], line[1]));
+             }
+         }
+          
+         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/NPC.csv"))
+         {
+             while (!reader.EndOfStream)
+             {
+                    string[] line = ReadNextLine(reader);
+                    WorldGenerator.npcs.Add(new NPC(line[0], line[1]));
+             }
+         }
+
+         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Race.csv"))
+         {
+             while (!reader.EndOfStream)
+             {
+                  string[] line = ReadNextLine(reader);
+                  WorldGenerator.races.Add(new Race(line[0], line[1]));
+             }
+         }
+
+         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Classes.csv"))
+         {
+             while (!reader.EndOfStream)
+             {
+                  string[] line = ReadNextLine(reader);
+                  WorldGenerator.classes.Add(new Class(line[0], line[1]));
+             }
+         }
+            WorldGenerator.players.Add(new Player("", ""));
+        }
    } 
 }

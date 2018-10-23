@@ -20,52 +20,17 @@ using System.IO;
 namespace Engine
 { 
 
-    public static class WorldGenerator
+    public class WorldGenerator
     {
-	    public static readonly List<Monster> Monsters = new List<Monster>();
-        public static readonly List<Item> Items = new List<Item>();
-        public static readonly List<Potion> Potions = new List<Potion>();
-        public static readonly List<Treasure> Treasures = new List<Treasure>();
-        public static readonly List<Weapon> Weapons = new List<Weapon>();
-        public static readonly List<NPC> NPCs = new List<NPC>();
-        public static readonly List<Room> Rooms = new List<Room>();
-
-        public static Monster MonsterID(int id)
-        {
-            return Monsters.SingleOrDefault();
-        }
-        public static Monster MonsterName(string name)
-        {
-            return Monsters.SingleOrDefault();
-        }
-
-        public static Item ItemId(int id)
-        {
-            return Items.SingleOrDefault();
-        }
-
-        public static Item ItemName(string name)
-        {
-            return Items.SingleOrDefault();
-        }
-
-        public static NPC NPCId(int id)
-        {
-            return NPCs.SingleOrDefault();
-        }
-        public static NPC NPCName(string name)
-        {
-            return NPCs.SingleOrDefault();
-        }
-
-        public static Room RoomId(int id)
-        {
-            return Rooms.SingleOrDefault();
-        }
-        public static Room RoomName(string name)
-        {
-            return Rooms.SingleOrDefault();
-        }
+        public static List<Room> rooms = new List<Room>();
+        public static List<Treasure> treasures = new List<Treasure>();
+        public static List<Monster> monsters = new List<Monster>();
+        public static List<Potion> potions = new List<Potion>();
+        public static List<Weapon> weapons = new List<Weapon>();
+        public static List<NPC> npcs = new List<NPC>();
+        public static List<Player> players = new List<Player>();
+        public static List<Class> classes = new List<Class>();
+        public static List<Race> races = new List<Race>();
 
 
     }

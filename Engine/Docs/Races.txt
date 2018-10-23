@@ -1,5 +1,0 @@
-Elf
-Dwarf
-Giant
-Fairy
-Dragon

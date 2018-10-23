@@ -12,6 +12,8 @@ Higher armor classes will use Strength
 Medium armor classes will use Dexterity
 Light armor classes will use Wisdom
 
+#ID's are not used in the files at this time
+
 #Monsters
 ID 1-99
 Name
@@ -46,13 +48,7 @@ Description
 ID 600-699
 Name
 Description
-Exit North 1 true
-Exit South 1 true
-Exit East 1 true
-Exit West 1 true
-Monster -1 false
-Treasue -1 false
-Npc use -1 fasle
+
 
 #Classes
 ID 700-749
