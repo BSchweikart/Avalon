@@ -14,7 +14,7 @@ namespace Avalon
             Console.WriteLine("North" + " " + "South" + " " + "East" + " " + "West");
             Console.WriteLine("Attack");
             Console.WriteLine("Bags");
-            Console.WriteLine("Filler");
+            Console.WriteLine("Use");
             Console.WriteLine("Exit");
         }
     }
