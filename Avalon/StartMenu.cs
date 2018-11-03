@@ -11,7 +11,7 @@ namespace Avalon
         {
             Console.WriteLine("");
             Console.WriteLine("Which direction would you like to move");
-            Console.WriteLine("North" + " " + "South" + " " + "East" + " " + "West");
+            Console.WriteLine("North" + " " + "East" + " " + "South" + " " + "West");
             Console.WriteLine("Attack");
             Console.WriteLine("Bags");
             Console.WriteLine("Use");

@@ -26,7 +26,8 @@ namespace Engine
         //public int ID { get; set; }
         public string Name { get; set; }
         public string Descrip { get; set; }
-
+        public int DamagMini { get; set; }
+        public int DamageMax { get; set; }
 
         public Weapon(string name, string descrip)
         {

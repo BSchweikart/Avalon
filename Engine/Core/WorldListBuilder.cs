@@ -43,7 +43,7 @@ namespace Engine
                 while (!reader.EndOfStream)
                 {
                     string[] line = ReadNextLine(reader); 
-                    WorldGenerator.monsters.Add(new Monster(line[0], line[1]));
+                    WorldGenerator.monsters.Add(new Monster(int.Parse(line[0]),line[1],int.Parse(line[2]),int.Parse(line[3]),int.Parse(line[4]),int.Parse(line[5]),int.Parse(line[6])));
                 }
             }
 
@@ -53,7 +53,7 @@ namespace Engine
                 {
                     string[] line = ReadNextLine(reader);
 
-                    WorldGenerator.rooms.Add(new Room(line[0], line[1]));
+                    WorldGenerator.location.Add(new Room(line[0], line[1]));
                 }
             }
 
@@ -101,7 +101,7 @@ namespace Engine
                   WorldGenerator.classes.Add(new Class(line[0], line[1]));
              }
          }
-            WorldGenerator.players.Add(new Player("", ""));
+            WorldGenerator.players.Add(new Player(""));
         }
    } 
 }

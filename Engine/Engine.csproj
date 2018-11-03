@@ -41,10 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Attack.cs" />
     <Compile Include="Commands\MovePlayer.cs" />
     <Compile Include="Core\Class.cs" />
     <Compile Include="Core\Creatures\Race.cs" />
+    <Compile Include="Core\Items\Inventory.cs" />
     <Compile Include="Core\Items\Item.cs" />
+    <Compile Include="Core\Items\ItemLoot.cs" />
     <Compile Include="Core\Items\Potion.cs" />
     <Compile Include="Core\Items\Treasure.cs" />
     <Compile Include="Core\Items\Weapon.cs" />
@@ -58,7 +61,7 @@
     <Compile Include="Core\WorldListBuilder.cs" />
     <Compile Include="DevTools\DevMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quest.cs" />
+    <Compile Include="Core\Quests\Quest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\Level.txt" />
@@ -67,6 +70,7 @@
     <Content Include="NotesToEachOther.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Core\Combat\" />
     <Folder Include="User Commands\" />
   </ItemGroup>
   <ItemGroup>

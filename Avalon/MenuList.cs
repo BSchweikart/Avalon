@@ -42,7 +42,7 @@ namespace Avalon
                     }
                     return false;
                 case "rooms":
-                    foreach (var obj in WorldGenerator.rooms)
+                    foreach (var obj in WorldGenerator.location)
                     {
                         Console.WriteLine(obj.Name);
                     }
@@ -94,13 +94,3 @@ namespace Avalon
         }
     }
 }
-                //Console.WriteLine("Help");
-                //Console.WriteLine("Monsters");
-                //Console.WriteLine("NPC");
-                //Console.WriteLine("Races");
-                //Console.WriteLine("Classes");
-                //Console.WriteLine("Potions");
-                //Console.WriteLine("Treasure");
-                //Console.WriteLine("Weapons");
-                //Console.WriteLine("Armor");
-                //Console.WriteLine("Rooms");

@@ -17,7 +17,11 @@ Light armor classes will use Wisdom
 #Monsters
 ID 1-99
 Name
-Description
+Damage Max
+XP
+Gold
+CurrHP
+MaxHP
 
 #NPC
 ID 100-199

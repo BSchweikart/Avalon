@@ -25,7 +25,7 @@ namespace Avalon
             do
             {
                 Console.WriteLine("");
-                Console.WriteLine("You entered the " + WorldGenerator.rooms[WorldGenerator.players[0].CurrentLocation].Name);
+                Console.WriteLine("You entered the " + WorldGenerator.location[WorldGenerator.players[0].CurrentLocation].Name);
                 StartMenu.LaunchMenu();  // dispaly the start menu
                 Console.WriteLine(" ");             
                 string lowerInput = Console.ReadLine();

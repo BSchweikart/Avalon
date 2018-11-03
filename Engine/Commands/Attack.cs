@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public static class MovePlayer
+    class Attack
     {
-        public static bool canMove = true;
-
-        public static void LocationChange(Room location)
+        public static void Attacking(string noun, Player _player)
         {
-            
-        }
 
+        }
     }
 }

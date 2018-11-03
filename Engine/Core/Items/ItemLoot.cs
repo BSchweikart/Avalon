@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public static class MovePlayer
+    public class ItemLoot
     {
-        public static bool canMove = true;
-
-        public static void LocationChange(Room location)
+        public Item Details { get; set; }
+        
+        public ItemLoot(Item details)
         {
-            
+            Details = details;
         }
-
     }
 }
