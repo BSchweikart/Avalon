@@ -8,25 +8,28 @@ namespace Engine
 {
     public class Room
     {
-        private int _id;
-        private string _nameRoom;
-        private string _descripRoom;
-        private Monster _monster;
-        private NPC _npc;
-
-
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Descrip { get; set; }
-        //public Monster MonsterIsRoom { get { return Monster} }
-        public Location LocationToNorth { get; set; }
-        public Location LocationToEast { get; set; }
-        public Location LocationToSouth { get; set; }
-        public Location LocationToWest { get; set; }
+        //public Quest QuestIsHere { get; set; }
+        public Monster MonsterIsHere { get; set; }
+        public int LocationNorth { get; set; }
+        public int LocationEast { get; set; }
+        public int LocationSouth { get; set; }
+        public int LocationWest { get; set; }
 
-        public Room(string name, string descrip)
+
+
+        public Room(int id, string name, string descrip, int exitNorth, int exitEast, int exitSouth, int exitWest)
         {
+            ID = id;
             Name = name;
             Descrip = descrip;
+            //QuestIsHere = questIsHere;
+            LocationNorth = exitNorth;
+            LocationEast = exitEast;
+            LocationSouth = exitSouth;
+            LocationWest = exitWest;
         }
     }
 

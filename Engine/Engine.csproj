@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="Commands\Attack.cs" />
     <Compile Include="Commands\Get.cs" />
+    <Compile Include="Commands\Help.cs" />
     <Compile Include="Commands\Look.cs" />
     <Compile Include="Commands\MovePlayer.cs" />
     <Compile Include="Core\Class.cs" />
+    <Compile Include="Core\Combat\Combat.cs" />
     <Compile Include="Core\Creatures\Race.cs" />
     <Compile Include="Core\Items\Inventory.cs" />
     <Compile Include="Core\Items\Item.cs" />
@@ -59,9 +61,11 @@
     <Compile Include="Core\Creatures\Monster.cs" />
     <Compile Include="Core\Creatures\NPC.cs" />
     <Compile Include="Core\Creatures\Player.cs" />
+    <Compile Include="Core\RandomNumGen.cs" />
     <Compile Include="Core\WorldGenerator.cs" />
     <Compile Include="Core\WorldListBuilder.cs" />
     <Compile Include="DevTools\DevMenu.cs" />
+    <Compile Include="Enum\Level.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\Quests\Quest.cs" />
   </ItemGroup>
@@ -72,7 +76,6 @@
     <Content Include="NotesToEachOther.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\Combat\" />
     <Folder Include="User Commands\" />
   </ItemGroup>
   <ItemGroup>

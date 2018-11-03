@@ -22,11 +22,17 @@ XP
 Gold
 CurrHP
 MaxHP
+IsDead
+Attackable
 
 #NPC
 ID 100-199
 Name
 Description
+MaxHP
+Curr HP
+IsDead
+Attackable
 
 #Potions
 ID 200-299

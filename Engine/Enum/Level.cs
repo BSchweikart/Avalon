@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// Set up the base for location
-
 namespace Engine
 {
-    public class Location
+    using System;
+    public enum Level 
     {
         
+        // think this can go here?
+       
     }
 }

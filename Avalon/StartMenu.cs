@@ -15,6 +15,7 @@ namespace Avalon
             Console.WriteLine("Attack");
             Console.WriteLine("Bags");
             Console.WriteLine("Use");
+            Console.WriteLine("Help");
             Console.WriteLine("Exit");
         }
     }

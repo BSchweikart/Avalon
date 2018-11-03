@@ -1,21 +1,21 @@
-Main Hall,A grand room that is welcoming to all
-Dark Corridor,A dimly lit passage
-Feeding Room,Entering this room you fully understand how the name was given
-4 Way Corridor,A room with 4 doors which one will you take?
-Room of Despair,The room is light by blue candles and you can just make out the crimson red on the walls.
-Dark Corridor,A dimly lit passage
-4 Way Corridor,A room with 4 doors which one will you take?
-Terrice of Hope,You are able to see to outside world but will you make it.
-Dark Corridor,A dimly lit passage
-Dark Room,A dimly lit room.
-Dark Corridor,A dimly lit passage
-Dark Room,A dimly lit room.
-Dark Corridor,A dimly lit passage
-Dark Room,A dimly lit room.
-Dark Corridor,A dimly lit passage
-Dark Room,A dimly lit room.
-Dark Corridor,A dimly lit passage
-Dark Room,A dimly lit room.
-Dark Corridor,A dimly lit passage
-Dark Room,A dimly lit room.
-Final Room,Last room 
+600,Main Hall,A grand room that is welcoming to all,1,1,-1,1
+601,Dark Corridor,A dimly lit passage,1,-1,1,-1
+602,Feeding Room,Entering this room you fully understand how the name was given,1,1,1,1
+603,4 Way Corridor,A room with 4 doors which one will you take?,1,1,1,1
+604,Room of Despair,The room is light by blue candles and you can just make out the crimson red on the walls,1,1,1,1
+605,Dark Corridor,A dimly lit passage,1,-1,1,-1
+606,4 Way Corridor,A room with 4 doors which one will you take?,1,1,1,1
+607,Terrice of Hope,You are able to see to outside world but will you make it,1,1,1,1
+608,Dark Corridor,A dimly lit passage,1,-1,1,-1
+609,Dark Room,A dimly lit room,1,1,1,1
+610,Dark Corridor,A dimly lit passage,1,-1,1,-1
+611,Dark Room,A dimly lit room,1,1,1,1
+612,Dark Corridor,A dimly lit passage,1,-1,1,-1
+613,Dark Room,A dimly lit room,1,1,1,1
+614,Dark Corridor,A dimly lit passage,1,-1,1,-1
+615,Dark Room,A dimly lit room,1,1,1,1
+616,Dark Corridor,A dimly lit passage,1,-1,1,-1
+617,Dark Room,A dimly lit room,1,1,1,1
+618,Dark Corridor,A dimly lit passage,1,-1,1,-1
+619,Dark Room,A dimly lit room,1,1,1,1
+620,Final Room,Last room,-1,-1,-1,1

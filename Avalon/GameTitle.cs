@@ -9,8 +9,7 @@ namespace Avalon
         {
             Console.WriteLine("Welcome to Avalon");
             Console.WriteLine("Please type in your selection followed by Enter");
-            Console.WriteLine("");                                               
-            Console.WriteLine("Help");                                              
+            Console.WriteLine("");                                                                                             
             Console.WriteLine("Classes");                                           
             Console.WriteLine("Races");                                             
             Console.WriteLine("Monsters");                                          

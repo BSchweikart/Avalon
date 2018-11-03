@@ -75,6 +75,16 @@ namespace Avalon
                         WorldGenerator.players[0].CurrentLocation += 1;
                     }
                     return false;
+                case "east": // need to finish real movment
+                    if (WorldGenerator.players[0].CurrentLocation >= 20)
+                    {
+                        Console.WriteLine("Can't go that way!!");
+                    }
+                    else
+                    {
+                        WorldGenerator.players[0].CurrentLocation += 1;
+                    }
+                    return false;
                 case "south":
                     if (WorldGenerator.players[0].CurrentLocation <= 0)
                     {
@@ -85,6 +95,37 @@ namespace Avalon
                         WorldGenerator.players[0].CurrentLocation -= 1;
                     }
                     return false;
+                case "west": // need to finish real movment
+                    if (WorldGenerator.players[0].CurrentLocation >= 20)
+                    {
+                        Console.WriteLine("Can't go that way!!");
+                    }
+                    else
+                    {
+                        WorldGenerator.players[0].CurrentLocation += 1;
+                    }
+                    return false;
+                case "attack":
+                    {
+                        Console.WriteLine("Need to link in");
+                    }
+                    return false;
+                case "bags":
+                    {
+                        Console.WriteLine("Need to link in");
+                    }
+                    return false;
+                case "use":
+                    {
+                        Console.WriteLine("Need to link in");
+                    }
+                    return false;
+                case "help":
+                    {
+                        Console.WriteLine("Need to make something to call");
+                    }
+                    return false;
+
                 case "exit":
                     return true;
                 default:
