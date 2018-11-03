@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class NPC 
+    public class NPC : LivingCreature
     {
-        //public int ID { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Descrip { get; set; }
 
 
-        public NPC(string name, string descrip)
+        public NPC(int id, string name, string descrip, int hpCurrent, int hpMax, bool isDead, bool attackable ) : base (hpCurrent, hpMax, isDead, attackable)
         {
-            //ID = id;
+            ID = id;
             Name = name;
             Descrip = descrip;
         }

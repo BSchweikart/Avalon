@@ -13,14 +13,11 @@ namespace Engine
         public int Level { get; set; }
         public List<Inventory> Inventory { get; set; }
         
-        public string Descrip { get; set; }
+       
         public int CurrentLocation { get; set; }
 
-        public Player(string name)
+        public Player(string name) 
         {
-           // NamePlayer = name;
-            //ClassPlayer = PC;
-            //RacePlayer = PR;
             //Gold = gold;
             //XP = xp;
             //Level = level;

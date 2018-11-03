@@ -47,7 +47,7 @@ Chirs
 
 
 Brian
-After looking over things IDs are going to help. still need to switch over to .csv file
+
 Levels for player might need to be moved to another location
 Need to fix dev menu to get it working.
 Need to finish up Avalon's main

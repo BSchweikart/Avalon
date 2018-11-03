@@ -16,14 +16,17 @@ namespace Engine
         public List<ItemLoot> LootTable { get; set; }
 
 
-        public Monster(int id, string name, int damageMax, int xpReward, int goldReward, int hpCurrent, int hpMax) : base (hpCurrent, hpMax) 
+        public Monster(int id, string name, int damageMax, int xpReward, int goldReward, int hpCurrent, int hpMax, bool isDead, bool attackable) : base (hpCurrent, hpMax, isDead, attackable) 
         {
             ID = id;
             Name = name;
-            //Descrip = descrip;
             DamageMax = damageMax;
             XpReward = xpReward;
             GoldReward = goldReward;
+            HpCurrent = hpCurrent;
+            HpMax = hpMax;
+            IsDead = isDead;
+            Attackable = attackable;
             LootTable = new List<ItemLoot>();
 
         }

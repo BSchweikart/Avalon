@@ -32,6 +32,7 @@ Description
 ID 200-299
 Name
 Description
+Heal Amount
 
 #Treasue
 ID 300-399

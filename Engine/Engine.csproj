@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\Attack.cs" />
+    <Compile Include="Commands\Get.cs" />
+    <Compile Include="Commands\Look.cs" />
     <Compile Include="Commands\MovePlayer.cs" />
     <Compile Include="Core\Class.cs" />
     <Compile Include="Core\Creatures\Race.cs" />
@@ -51,8 +53,8 @@
     <Compile Include="Core\Items\Potion.cs" />
     <Compile Include="Core\Items\Treasure.cs" />
     <Compile Include="Core\Items\Weapon.cs" />
-    <Compile Include="Core\Locaiton\Location.cs" />
-    <Compile Include="Core\Locaiton\Room.cs" />
+    <Compile Include="Core\Location\Location.cs" />
+    <Compile Include="Core\Location\Room.cs" />
     <Compile Include="Core\Creatures\LivingCreature.cs" />
     <Compile Include="Core\Creatures\Monster.cs" />
     <Compile Include="Core\Creatures\NPC.cs" />

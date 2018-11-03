@@ -20,12 +20,12 @@ namespace Engine
         public bool IsDead { get { return _isDead; } set { _isDead = value; } }
         public bool Attackable { get { return _attackable; } set { _attackable = value; } }
 
-        public LivingCreature(int hpCurrent, int hpMax)
+        public LivingCreature(int hpCurrent, int hpMax, bool isDead, bool attackable)
         {
             HpCurrent = hpCurrent;
             HpMax = hpMax;
-            //IsDead = IsDead;
-            //Attackable = attackable;
+            IsDead = IsDead;
+            Attackable = attackable;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
