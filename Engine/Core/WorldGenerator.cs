@@ -20,7 +20,7 @@ using System.IO;
 namespace Engine
 { 
 
-    public class WorldGenerator
+    public static class WorldGenerator
     {
         public static readonly List<Room> location = new List<Room>();
         public static readonly List<Treasure> treasures = new List<Treasure>();

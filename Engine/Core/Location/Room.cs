@@ -8,15 +8,24 @@ namespace Engine
 {
     public class Room
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string Descrip { get; set; }
+        private int _id;
+        private string _name;
+        private string _descrip;
+        private Monster _monster;
+        private int _locationNorth;
+        private int _locationEast;
+        private int _locationSouth;
+        private int _locationWest;
+
+        public int ID { get { return _id; } set { _id = value; } }
+        public string Name { get { return _name; } set { _name = value; } }
+        public string Descrip { get { return _descrip; } set { _descrip = value; } }
         //public Quest QuestIsHere { get; set; }
-        public Monster MonsterIsHere { get; set; }
-        public int LocationNorth { get; set; }
-        public int LocationEast { get; set; }
-        public int LocationSouth { get; set; }
-        public int LocationWest { get; set; }
+        public Monster MonsterIsHere { get { return _monster; } set { _monster = value; } }
+        public int LocationNorth { get { return _locationNorth; } set { _locationNorth = value; } }
+        public int LocationEast { get { return _locationEast; } set { _locationEast = value; } }
+        public int LocationSouth { get { return _locationSouth; } set { _locationSouth = value; } }
+        public int LocationWest { get { return _locationWest; } set { _locationWest = value; } }
 
 
 
@@ -30,7 +39,11 @@ namespace Engine
             LocationEast = exitEast;
             LocationSouth = exitSouth;
             LocationWest = exitWest;
+
+            //need to add monster spwan
         }
+
+        
     }
 
 }

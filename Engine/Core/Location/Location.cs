@@ -8,8 +8,11 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Location
+    public static class Location
     {
-        
+        public static void CurrentLocation()
+        {
+
+        }
     }
 }
