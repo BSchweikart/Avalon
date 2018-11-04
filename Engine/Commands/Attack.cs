@@ -12,5 +12,10 @@ namespace Engine
         {
 
         }
+
+        internal static void Attacking(string noun)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

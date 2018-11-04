@@ -25,5 +25,10 @@ namespace Engine.Commands
             Console.WriteLine("West - Move West");
             Console.WriteLine("Exit - exit game");
         }
+
+        internal static void HelpInfo()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

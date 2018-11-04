@@ -15,5 +15,10 @@ namespace Engine.Commands
                 Console.WriteLine("Enter the name of the item you want to get");
             }
         }
+
+        internal static void GetCommand(string noun)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
