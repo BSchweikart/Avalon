@@ -8,11 +8,14 @@ namespace Engine
 {
     public static class MovePlayer
     {
-        public static bool canMove = true;
-
-        public static void LocationChange(Room location)
+        public static void MoveTo(string verb)
         {
-            
+            Move.LocationMoveNew(verb);
+            LocationCurrent.CurrentLocation();
+            if (Move.canMove == false)
+            {
+                Console.WriteLine("You can not go " + verb);
+            }
         }
 
     }

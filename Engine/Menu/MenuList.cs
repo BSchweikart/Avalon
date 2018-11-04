@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Engine;
-using Engine.Commands;
 
-namespace Avalon
+namespace Engine
 {
     public class MenuList
     {
@@ -43,9 +38,9 @@ namespace Avalon
                     }
                     return false;
                 case "rooms":
-                    foreach (var obj in WorldGenerator.location)
+                    foreach (var obj in WorldGenerator.Location)
                     {
-                        Console.WriteLine(obj.Name);
+                        Console.WriteLine(obj.NameRoom);
                     }
                     return false;
                 case "weapons":
@@ -64,46 +59,6 @@ namespace Avalon
                     foreach (var obj in WorldGenerator.treasures)
                     {
                         Console.WriteLine(obj.Name);
-                    }
-                    return false;
-                case "north":
-                    if (WorldGenerator.players[0].CurrentLocation >= 20)
-                    {
-                        Console.WriteLine("Can't go that way!!");
-                    }
-                    else
-                    {
-                        WorldGenerator.players[0].CurrentLocation += 1;
-                    }
-                    return false;
-                case "east": // need to finish real movment
-                    if (WorldGenerator.players[0].CurrentLocation >= 20)
-                    {
-                        Console.WriteLine("Can't go that way!!");
-                    }
-                    else
-                    {
-                        WorldGenerator.players[0].CurrentLocation += 1;
-                    }
-                    return false;
-                case "south":
-                    if (WorldGenerator.players[0].CurrentLocation <= 0)
-                    {
-                        Console.WriteLine("Can't go that way!!");
-                    }
-                    else
-                    {
-                        WorldGenerator.players[0].CurrentLocation -= 1;
-                    }
-                    return false;
-                case "west": // need to finish real movment
-                    if (WorldGenerator.players[0].CurrentLocation >= 20)
-                    {
-                        Console.WriteLine("Can't go that way!!");
-                    }
-                    else
-                    {
-                        WorldGenerator.players[0].CurrentLocation += 1;
                     }
                     return false;
                 case "attack":

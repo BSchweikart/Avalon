@@ -53,7 +53,7 @@ namespace Engine
                 {
                     string[] line = ReadNextLine(reader);
 
-                    WorldGenerator.location.Add(new Room(int.Parse(line[0]),line[1], line[2], int.Parse(line[3]), int.Parse(line[4]), int.Parse(line[5]), int.Parse(line[6])));
+                    WorldGenerator.Location.Add(new Room(int.Parse(line[0]),line[1], line[2], int.Parse(line[3]), int.Parse(line[4]), int.Parse(line[5]), int.Parse(line[6])));
                 }//need to fix out of bounds
             }
 
@@ -101,7 +101,8 @@ namespace Engine
                   WorldGenerator.classes.Add(new Class(line[0], line[1]));
              }
          }
-            WorldGenerator.players.Add(new Player(""));
+
+            //WorldGenerator.players.Add(new Player(""));
         }
    } 
 }

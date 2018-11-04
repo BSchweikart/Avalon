@@ -45,8 +45,10 @@
     <Compile Include="Commands\Get.cs" />
     <Compile Include="Commands\Help.cs" />
     <Compile Include="Commands\Look.cs" />
+    <Compile Include="Commands\Move.cs" />
     <Compile Include="Commands\MovePlayer.cs" />
-    <Compile Include="Core\Class.cs" />
+    <Compile Include="Commands\UserCommands.cs" />
+    <Compile Include="Core\Creatures\Class.cs" />
     <Compile Include="Core\Combat\Combat.cs" />
     <Compile Include="Core\Creatures\Race.cs" />
     <Compile Include="Core\Items\Inventory.cs" />
@@ -55,7 +57,7 @@
     <Compile Include="Core\Items\Potion.cs" />
     <Compile Include="Core\Items\Treasure.cs" />
     <Compile Include="Core\Items\Weapon.cs" />
-    <Compile Include="Core\Location\Location.cs" />
+    <Compile Include="Core\Location\LocationCurrent.cs" />
     <Compile Include="Core\Location\Room.cs" />
     <Compile Include="Core\Creatures\LivingCreature.cs" />
     <Compile Include="Core\Creatures\Monster.cs" />
@@ -66,6 +68,9 @@
     <Compile Include="Core\WorldListBuilder.cs" />
     <Compile Include="DevTools\DevMenu.cs" />
     <Compile Include="Enum\Level.cs" />
+    <Compile Include="Menu\GameTitle.cs" />
+    <Compile Include="Menu\MenuList.cs" />
+    <Compile Include="Menu\StartMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\Quests\Quest.cs" />
   </ItemGroup>

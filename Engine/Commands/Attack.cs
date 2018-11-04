@@ -8,9 +8,7 @@ namespace Engine
 {
     public class Attack
     {
-        public static void Attacking(string noun, Player _player)
-        {
-
-        }
+        
+       
     }
 }
