@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Engine
 {
     public class LivingCreature : INotifyPropertyChanged
@@ -15,7 +16,7 @@ namespace Engine
         private bool _isDead;
         private bool _attackable;
 
-        public int HpCurrent { get; set; } 
+        public int HpCurrent { get {return _hpCurrent; } set{_hpCurrent = value; OnPropertyChanged("HpCurrent"); } } 
         public int HpMax { get; set; }
         public bool IsDead { get { return _isDead; } set { _isDead = value; } }
         public bool Attackable { get { return _attackable; } set { _attackable = value; } }

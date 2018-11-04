@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    class Attack
+    public class Attack
     {
         public static void Attacking(string noun, Player _player)
         {
