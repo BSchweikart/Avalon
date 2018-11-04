@@ -9,10 +9,7 @@ namespace Engine
         {
             switch(input.ToLower())
             {
-                // need to add in the help files to clean up the menu
-                //case "help":
-                //    
-                //    return false;
+                #region Text file output //out put the text files
                 case "classes":
                     foreach (var obj in WorldGenerator.classes)
                     {
@@ -61,33 +58,69 @@ namespace Engine
                         Console.WriteLine(obj.Name);
                     }
                     return false;
+                #endregion
+
+                #region User Commands // List of user commands linked to UserCommands
+                case "north":
+                    {
+                        UserCommands.NormalCommands(input);
+                    }
+                    return false;
+                case "east":
+                    {
+                        UserCommands.NormalCommands(input);
+                    }
+                    return false;
+                case "south":
+                    {
+                        UserCommands.NormalCommands(input);
+                    }
+                    return false;
+                case "west":
+                    {
+                        UserCommands.NormalCommands(input);
+                    }
+                    return false; 
+                case "look":
+                    {
+                        UserCommands.NormalCommands(input);
+                    }
+                    return false;
+                case "get":
+                    {
+                        UserCommands.NormalCommands(input);
+                    }
+                    return false;
+                case "drop":
+                    {
+                        UserCommands.NormalCommands(input);
+                    }
+                    return false;
                 case "attack":
                     {
-                        Console.WriteLine("Need to link in");
-                        //Attack.Attacking();
+                        UserCommands.NormalCommands(input);
                     }
                     return false;
                 case "bags":
                     {
-                        Console.WriteLine("Need to link in");
+                        UserCommands.NormalCommands(input);
                     }
                     return false;
                 case "use":
                     {
-                        Console.WriteLine("Need to link in");
+                        UserCommands.NormalCommands(input);
                     }
                     return false;
                 case "help":
                     {
-                        //Console.WriteLine("Need to make something to call");
-                        Help.HelpFile();
+                        UserCommands.NormalCommands(input);
                     }
                     return false;
-
+                #endregion
                 case "exit":
                     return true;
                 default:
-                    Console.WriteLine("Not a command");
+                    Console.WriteLine(input + " is not a command"); // display when a command is not valid
                     return false;
             }
         }

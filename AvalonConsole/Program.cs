@@ -19,32 +19,47 @@ namespace AvalonConsole
             //LocationCurrent.CurrentLocation();
             Console.WriteLine("");
 
-            while (true)
+            bool exit = false;
+
+            do
             {
-                // Wait for the user to type something, and press the <Enter> key
-                string userInput = Console.ReadLine();
-
-                // If they typed a blank line, loop back and wait for input again
-                if (string.IsNullOrWhiteSpace(userInput))
-                {
-                    continue;
-                }
-
-                // Convert to lower-case, to make comparisons easier
-                string cleanedInput = userInput.ToLower();
-
-                // Save the current game data, and break out of the "while(true)" loop
-                if (cleanedInput == "exit")
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Saving character, will close when finished!");
-                    //SaveData.SaveGameData(Player._player);
-                    break;
-                }
-
-                // If the user typed something, try to determine what to do
-                //ParseInput(cleanedInput);
+                Console.WriteLine("");
+                //Console.WriteLine("You entered the " + Player.CurrentLocation.NameRoom);
+                //Console.WriteLine(Player.CurrentLocation.Descrip);
+                StartMenu.LaunchMenu();  // dispaly the start menu
+                Console.WriteLine(" ");
+                string lowerInput = Console.ReadLine();
+                Console.WriteLine(" ");
+                exit = MenuList.MenuCommand(lowerInput);
             }
+            while (exit == false);
+
+            //while (true)
+            //{
+            //    // Wait for the user to type something, and press the <Enter> key
+            //    string userInput = Console.ReadLine();
+
+            //    // If they typed a blank line, loop back and wait for input again
+            //    if (string.IsNullOrWhiteSpace(userInput))
+            //    {
+            //        continue;
+            //    }
+
+            //    // Convert to lower-case, to make comparisons easier
+            //    string cleanedInput = userInput.ToLower();
+
+
+            //    if (cleanedInput == "exit")
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Red;
+            //        Console.WriteLine("Saving character, will close when finished!");
+            //        //SaveData.SaveGameData(Player._player);
+            //        break;
+            //    }
+
+            //    // If the user typed something, try to determine what to do
+            //    ParseInput(cleanedInput);
+            //}
 
 
 

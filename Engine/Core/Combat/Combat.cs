@@ -1,20 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+
 
 namespace Engine
 {
-    public class Combat
+    internal class Combat
     {
-        private int _iterations;
+        private int _iteration;
         private int _attResults;
         private int _damageResults;
 
-        public int Iterations { get { return _iterations; } set { _iterations = value; } }
+        public int Iteration { get { return _iteration; } set { _iteration = value; } }
         public int AttResults { get { return _attResults; } }
         public int DamageResults { get { return _damageResults; } }
+
+        public Combat()
+        {
+            Iteration = 1;
+        }
 
         public static void Attacking(Player player, Monster monsterNamed)
         {
@@ -22,6 +27,11 @@ namespace Engine
             while (monsterNamed.HpCurrent > 0 && player.HpCurrent > 0)
             {
                 //_attResults = attack.Roll();
+
+                if(player.HpCurrent > 0)
+                {
+
+                }
 
                 if (monsterNamed.HpCurrent > 0)
                 {

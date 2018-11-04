@@ -23,54 +23,58 @@ namespace Engine
             }
         }
 
-            public static void NormalCommands(string verb, string noun)
+            public static void NormalCommands(string input)
             {
-                switch (verb)
+                switch (input.ToLower())
                 {
                     case "look":
-                    
+                    Console.WriteLine("Would you look at that");
                         break;
 
                     case "get":
-                        
-                        break;
+                    Console.WriteLine("I want that");
+                    break;
 
-                    case "inventory":
-                        
-                        break;
+                    case "bags":
+                    Console.WriteLine("Going to need a bigger bag");
+                    break;
 
                     case "attack":
-                        
-                        break;
+                    Console.WriteLine("You just want to push the button");
+                    break;
 
                     case "drop":
-                        
-                        break;
+                    Console.WriteLine("Litter bug");
+                    break;
 
                    
                     case "help":
                         Help.HelpFile();
                         break;
-                    
-                    case "north":
-                        MovePlayer.MoveTo(verb);
-                        break;
 
-                    case "east":
-                        MovePlayer.MoveTo(verb);
-                        break;
+                //case "north":
+                //    MovePlayer.MoveTo(verb);
+                //    break;
 
-                    case "south":
-                        MovePlayer.MoveTo(verb);
-                        break;
+                //case "east":
+                //    MovePlayer.MoveTo(verb);
+                //    break;
 
-                    case "west":
-                        MovePlayer.MoveTo(verb);
-                        break;
+                //case "south":
+                //    MovePlayer.MoveTo(verb);
+                //    break;
 
-                    
-                }
+                //case "west":
+                //    MovePlayer.MoveTo(verb);
+                //    break;
+
+                default:
+                    Console.WriteLine(input + " is not a command"); // display when a command is not valid
+                    break;
             }
+            }
+
+
         
     }
 }
