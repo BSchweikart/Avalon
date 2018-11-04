@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Engine;
+using Engine.Commands;
 
 namespace Avalon
 {
@@ -108,6 +109,7 @@ namespace Avalon
                 case "attack":
                     {
                         Console.WriteLine("Need to link in");
+                        //Attack.Attacking();
                     }
                     return false;
                 case "bags":
@@ -122,7 +124,8 @@ namespace Avalon
                     return false;
                 case "help":
                     {
-                        Console.WriteLine("Need to make something to call");
+                        //Console.WriteLine("Need to make something to call");
+                        Help.HelpFile();
                     }
                     return false;
 
