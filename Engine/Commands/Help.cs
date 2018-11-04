@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Commands
 {
-    public class Help
+    public static class Help
     {
         public static void HelpFile()
         {
