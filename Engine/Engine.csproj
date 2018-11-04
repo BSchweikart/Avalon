@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\Attack.cs" />
+    <Compile Include="Commands\Commands.cs" />
     <Compile Include="Commands\Get.cs" />
     <Compile Include="Commands\Help.cs" />
     <Compile Include="Commands\Look.cs" />

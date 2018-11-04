@@ -8,7 +8,14 @@ namespace Engine
 {
     public class Attack
     {
-        
-       
+        public static void Attacking(string noun, Player _player)
+        {
+
+        }
+
+        internal static void Attacking(string noun)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Help
+    public static class Help
     {
         public static void HelpFile()
         {
@@ -24,6 +24,11 @@ namespace Engine
             Console.WriteLine("East - Move East");
             Console.WriteLine("West - Move West");
             Console.WriteLine("Exit - exit game");
+        }
+
+        internal static void HelpInfo()
+        {
+            throw new NotImplementedException();
         }
     }
 }

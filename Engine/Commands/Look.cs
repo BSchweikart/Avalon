@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Look
+    public static class Look
     {
-    }
+        private static object CurrentLocationClass;
+
+        public static void Looking (string noun)
+            {
+
+          
+
+            }
+
+        public static void Looking()
+            {
+
+           
 }
+}
+}               
