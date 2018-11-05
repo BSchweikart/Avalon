@@ -21,19 +21,16 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Weapon 
-    {
-        //public int ID { get; set; } //kill
-        public string Name { get; set; } //kill
-        public string Descrip { get; set; } //kill
+    public class Weapon : Item
+    {        
         public int DamagMini { get; set; } //keep
         public int DamageMax { get; set; } //keep
 
-        public Weapon(string name, string descrip)
+        public Weapon(int id, string name, string description) : base (id, name, description)
         {
-            //ID = id;
+            ID = id;
             Name = name;
-            Descrip = descrip;
+            Description = description;
         }
     }
 }

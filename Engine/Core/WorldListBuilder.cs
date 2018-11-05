@@ -29,16 +29,37 @@ namespace Engine
        
       public static void Generate()
       {
-         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Treasure.csv")) //start building 
+            #region Items ListsBuilder
+            using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Treasure.csv")) //start building 
             {
-             while (!reader.EndOfStream)
-             {
+                while (!reader.EndOfStream)
+                {
                     string[] line = ReadNextLine(reader);
-                    WorldGenerator.treasures.Add(new Treasure(line[0], line[1]));
-             }
-         }
+                    WorldGenerator.treasures.Add(new Treasure(int.Parse(line[0]), line[1], line[2]));
+                }
+            }
 
-         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Monsters.csv"))
+            using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Potions.csv"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    string[] line = ReadNextLine(reader);
+                    WorldGenerator.potions.Add(new Potion(int.Parse(line[0]), line[1], line[2], int.Parse(line[3])));
+                }
+            }
+
+            using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Weapons.csv"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    string[] line = ReadNextLine(reader);
+                    WorldGenerator.weapons.Add(new Weapon(int.Parse(line[0]), line[1], line[2]));
+                }
+            }
+            #endregion
+
+            #region Creature ListBulder
+            using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Monsters.csv"))
             {
                 while (!reader.EndOfStream)
                 {
@@ -47,62 +68,49 @@ namespace Engine
                 }
             }
 
-         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Rooms.csv"))
+            using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/NPC.csv"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    string[] line = ReadNextLine(reader);
+                    WorldGenerator.npcs.Add(new NPC(int.Parse(line[0]), line[1], line[2], int.Parse(line[3]), int.Parse(line[4]), bool.Parse(line[5]), bool.Parse(line[6])));
+                }
+            }
+
+            using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Race.csv"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    string[] line = ReadNextLine(reader);
+                    WorldGenerator.races.Add(new Race(line[0], line[1]));
+                }
+            }
+
+            using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Classes.csv"))
+            {
+                while (!reader.EndOfStream)
+                {
+                    string[] line = ReadNextLine(reader);
+                    WorldGenerator.classes.Add(new Class(line[0], line[1]));
+                }
+            }
+            #endregion
+
+            //Room ListBulder
+            using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Rooms.csv"))
             {
                 while (!reader.EndOfStream)
                 {
                     string[] line = ReadNextLine(reader);
 
-                    WorldGenerator.Location.Add(new Room(int.Parse(line[0]),line[1], line[2], int.Parse(line[3]), int.Parse(line[4]), int.Parse(line[5]), int.Parse(line[6])));
-                }//need to fix out of bounds
+                    WorldGenerator.Location.Add
+                        (
+                        new Room(int.Parse(line[0]),line[1], line[2], int.Parse(line[3]), int.Parse(line[4]), int.Parse(line[5]), int.Parse(line[6]))
+                        );
+                }
             }
 
-         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Potions.csv"))
-         {
-             while (!reader.EndOfStream)
-             {
-                    string[] line = ReadNextLine(reader);
-                    WorldGenerator.potions.Add(new Potion(int.Parse(line[0]), line[1], line[2], int.Parse(line[3])));
-             }
-         }
-          
-         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Weapons.csv"))
-         {
-             while (!reader.EndOfStream)
-             {
-                    string[] line = ReadNextLine(reader);
-                    WorldGenerator.weapons.Add(new Weapon(line[0], line[1]));
-             }
-         }
-          
-         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/NPC.csv"))
-         {
-             while (!reader.EndOfStream)
-             {
-                    string[] line = ReadNextLine(reader);
-                    WorldGenerator.npcs.Add(new NPC(int.Parse(line[0]), line[1], line[2], int.Parse(line[3]), int.Parse(line[4]),bool.Parse(line[5]),bool.Parse(line[6])));
-             }
-         }
-
-         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Race.csv"))
-         {
-             while (!reader.EndOfStream)
-             {
-                  string[] line = ReadNextLine(reader);
-                  WorldGenerator.races.Add(new Race(line[0], line[1]));
-             }
-         }
-
-         using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Classes.csv"))
-         {
-             while (!reader.EndOfStream)
-             {
-                  string[] line = ReadNextLine(reader);
-                  WorldGenerator.classes.Add(new Class(line[0], line[1]));
-             }
-         }
-
             //WorldGenerator.players.Add(new Player(""));
-        }
+      }
    } 
 }

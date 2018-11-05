@@ -9,18 +9,16 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Treasure 
+    public class Treasure : Item
     {
-        //public int ID { get; set; }
-        public string Name { get; set; }
-        public string Descrip { get; set; }
+        
 
 
-        public Treasure(string name, string descrip)
+        public Treasure(int id, string name, string description) : base (id, name, description)
         {
-            //ID = id;
+            ID = id;
             Name = name;
-            Descrip = descrip;
+            Description = description;
         }
 
     }
