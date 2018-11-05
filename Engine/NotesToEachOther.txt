@@ -49,13 +49,11 @@ Chirs
 Brian
 
 Levels for player might need to be moved to another location
-Need to fix dev menu to get it working.
-Need to finish up Avalon's main
 Need to finish up World Generator
 The item count is almost done for this sprint need to add a few more in only after the last ends are bound
-
-
-
+Fix monvemt null
+Fix combat with displaying damage
+ 
 
 
 

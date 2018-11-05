@@ -42,15 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\Attack.cs" />
+    <Compile Include="Commands\Drop.cs" />
     <Compile Include="Commands\Get.cs" />
     <Compile Include="Commands\Help.cs" />
     <Compile Include="Commands\Look.cs" />
     <Compile Include="Commands\Move.cs" />
     <Compile Include="Commands\MovePlayer.cs" />
     <Compile Include="Commands\UserCommands.cs" />
-    <Compile Include="Core\Creatures\Class.cs" />
+    <Compile Include="Core\Combat\RollDie.cs" />
+    <Compile Include="Core\Creatures\Race,Class\Class.cs" />
     <Compile Include="Core\Combat\Combat.cs" />
-    <Compile Include="Core\Creatures\Race.cs" />
+    <Compile Include="Core\Creatures\Race,Class\Race.cs" />
     <Compile Include="Core\Items\Inventory.cs" />
     <Compile Include="Core\Items\Item.cs" />
     <Compile Include="Core\Items\ItemLoot.cs" />
@@ -59,15 +61,15 @@
     <Compile Include="Core\Items\Weapon.cs" />
     <Compile Include="Core\Location\LocationCurrent.cs" />
     <Compile Include="Core\Location\Room.cs" />
-    <Compile Include="Core\Creatures\LivingCreature.cs" />
-    <Compile Include="Core\Creatures\Monster.cs" />
-    <Compile Include="Core\Creatures\NPC.cs" />
-    <Compile Include="Core\Creatures\Player.cs" />
+    <Compile Include="Core\Creatures\Living\LivingCreature.cs" />
+    <Compile Include="Core\Creatures\Living\Monster.cs" />
+    <Compile Include="Core\Creatures\Living\NPC.cs" />
+    <Compile Include="Core\Creatures\Living\Player.cs" />
     <Compile Include="Core\RandomNumGen.cs" />
     <Compile Include="Core\WorldGenerator.cs" />
     <Compile Include="Core\WorldListBuilder.cs" />
-    <Compile Include="DevTools\DevMenu.cs" />
-    <Compile Include="Enum\Level.cs" />
+    <Compile Include="Commands\DevTools\DevMenu.cs" />
+    <Compile Include="Enum\PlayerLevel.cs" />
     <Compile Include="Menu\GameTitle.cs" />
     <Compile Include="Menu\MenuList.cs" />
     <Compile Include="Menu\StartMenu.cs" />
@@ -81,7 +83,7 @@
     <Content Include="NotesToEachOther.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="User Commands\" />
+    <Folder Include="Commands\User Commands\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Docs\Classes.csv" />

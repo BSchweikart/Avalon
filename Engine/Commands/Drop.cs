@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    using System;
-    public enum Level 
+    public class Drop
     {
-        
-        // think this can go here?
-       
+        public static void Dropping(string verb)
+        {
+
+        }
     }
 }

@@ -29,22 +29,27 @@ namespace Engine
                 {
                     case "look":
                     Console.WriteLine("Would you look at that");
+                    //Look.Looking(input);
                         break;
 
                     case "get":
                     Console.WriteLine("I want that");
+                    //Get.GetCommand(input);
                     break;
 
                     case "bags":
                     Console.WriteLine("Going to need a bigger bag");
+                    //Need to create
                     break;
 
                     case "attack":
                     Console.WriteLine("You just want to push the button");
+                    //Attack.Attacking(input);
                     break;
 
                     case "drop":
                     Console.WriteLine("Litter bug");
+                    Drop.Dropping(input);
                     break;
 
                     case "help":

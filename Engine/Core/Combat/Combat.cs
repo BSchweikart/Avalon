@@ -28,19 +28,47 @@ namespace Engine
             {
                 //_attResults = attack.Roll();
 
-                if(player.HpCurrent > 0)
+                if(player.HpCurrent > 0 && AttResults >= 10)
                 {
+                    Console.WriteLine("You hit " + monsterNamed.Name + " for " + DamageResults);
+                    Console.WriteLine(monsterNamed.Name + " has " + monsterNamed.HpCurrent + " left");
 
+                    if (monsterNamed.HpCurrent <= 0)
+                    {
+                        Console.WriteLine("You have defeted " + monsterNamed.Name);
+                        Player.CurrentLocation.MonsterRoom.Remove(monsterNamed);
+                        player.XP += monsterNamed.XpReward;
+                        player.Gold += monsterNamed.GoldReward;
+
+                        break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("You missed your attack");
                 }
 
-                if (monsterNamed.HpCurrent > 0)
+                if (monsterNamed.HpCurrent > 0 && AttResults >= 10)
                 {
-                   
+                    Console.WriteLine(monsterNamed.Name + " hits you for " + DamageResults);
+                    Console.WriteLine("You have " + player.HpCurrent + " left");
+
+                    if (player.HpCurrent <= 0)
+                    {
+                        Console.WriteLine("You have been defeted ");
+                        player.IsDead = true;
+                      
+
+                       
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(monsterNamed.Name + " Missed its attack");
                 }
 
+                Iteration++;
             }
         }
-
-
     }
 }

@@ -35,7 +35,7 @@ namespace Engine
             ClassPlayer = classPlayer;
             RacePlayer = RacePlayer;
             Gold = gold;
-            XP = xp;
+            XP = 0;
             Level = level;
             CurrentLocation = WorldGenerator.Location[0];
         }

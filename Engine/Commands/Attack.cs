@@ -18,21 +18,20 @@ namespace Engine
             {
                 Combat start = new Combat();
                 Monster monsterNamed;
+                //NPC npcNamed;
+
                 if(MonsterInRoom(noun, out monsterNamed))
                 {
                     start.Attacking(_player, monsterNamed);
                 }
+              
             }
         }
         private static bool MonsterInRoom(string monsterName, out Monster monsterNamed)
         {
             foreach (Monster mob in Player.CurrentLocation.MonsterRoom)
             {
-                //if (mob.Name.Equals(CapWord.FirstCharToUpper(monsterName)))
-                //{
-                //    monsterNamed = mob;
-                //    return true;
-                //}
+                
             }
             monsterNamed = null;
             return false;
