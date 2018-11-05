@@ -8,11 +8,17 @@ namespace Engine
 {
     public class Monster : LivingCreature
     {
-        public int ID {get; set;}
-        public string Name { get; set; }
-        public int DamageMax { get; set; }
-        public int XpReward { get; set; }
-        public int GoldReward { get; set; }
+        private int _id;
+        private string _name;
+        private int _damageMax;
+        private int _xpReward;
+        private int _goldReward;
+
+        public int ID { get { return _id; } set { _id = value; } }
+        public string Name { get { return _name; } set { _name = value; } }
+        public int DamageMax { get { return _damageMax; } set { _damageMax = value; } }
+        public int XpReward { get { return _xpReward; } set { _xpReward = value; } }
+        public int GoldReward { get { return _goldReward; } set { _goldReward = value; } }
         public List<ItemLoot> LootTable { get; set; }
 
 

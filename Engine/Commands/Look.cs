@@ -8,19 +8,17 @@ namespace Engine
 {
     public static class Look
     {
-        private static object CurrentLocationClass;
-
         public static void Looking (string noun)
-            {
+        {
 
           
 
-            }
+        }
 
         public static void Looking()
-            {
+        {
+            LocationCurrent.CurrentLocation();
+        }
 
-           
-}
-}
+    }
 }               

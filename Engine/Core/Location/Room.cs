@@ -10,7 +10,7 @@ namespace Engine
     {
         private int _id;
         private string _nameRoom;
-        private string _descrip;
+        private string _descripRoom;
         private Monster _monster;
         private int _locationNorth;
         private int _locationEast;
@@ -19,7 +19,7 @@ namespace Engine
 
         public int ID { get { return _id; } set { _id = value; } }
         public string NameRoom { get { return _nameRoom; } set { _nameRoom = value; } }
-        public string Descrip { get { return _descrip; } set { _descrip = value; } }
+        public string DescripRoom { get { return _descripRoom; } set { _descripRoom = value; } }
         //public Quest QuestIsHere { get; set; }
         public Monster MonsterIsHere { get { return _monster; } set { _monster = value; } }
         public int LocationNorth { get { return _locationNorth; } set { _locationNorth = value; } }
@@ -29,11 +29,11 @@ namespace Engine
         public List<Item> ItemRoom = new List<Item>();
         public List<Monster> MonsterRoom = new List<Monster>();
 
-        public Room(int id, string name, string descrip, int exitNorth, int exitEast, int exitSouth, int exitWest)
+        public Room(int id, String name, String descrip, int exitNorth, int exitEast, int exitSouth, int exitWest)
         {
             ID = id;
-            this.NameRoom = name;
-            Descrip = descrip;
+            NameRoom = name;
+            DescripRoom = descrip;
             //QuestIsHere = questIsHere;
             LocationNorth = exitNorth;
             LocationEast = exitEast;

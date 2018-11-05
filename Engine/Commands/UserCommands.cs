@@ -47,34 +47,59 @@ namespace Engine
                     Console.WriteLine("Litter bug");
                     break;
 
-                   
                     case "help":
                         Help.HelpFile();
-                        break;
+                    break;
+                    // Need to finsh for movement
+                    //case "north":
+                    //    MovePlayer.MoveTo(verb);
+                    //break;
 
-                //case "north":
-                //    MovePlayer.MoveTo(verb);
-                //    break;
+                    //case "east":
+                    //    MovePlayer.MoveTo(verb);
+                    //break;
 
-                //case "east":
-                //    MovePlayer.MoveTo(verb);
-                //    break;
+                    //case "south":
+                    //    MovePlayer.MoveTo(verb);
+                    //break;
 
-                //case "south":
-                //    MovePlayer.MoveTo(verb);
-                //    break;
+                    //case "west":
+                    //    MovePlayer.MoveTo(verb);
+                    //break;
 
-                //case "west":
-                //    MovePlayer.MoveTo(verb);
-                //    break;
+                    default:
+                        Console.WriteLine(input + " is not a command"); // display when a command is not valid
+                    break;
+                }
+            }
+        #region Movement Commands
+        public static void MoveCommands(string input)
+        {
+            switch (input.ToLower())
+            {
+                 //Need to finsh for movement
+                case "north":
+                    MovePlayer.MoveTo(input);
+                break;
+
+                case "east":
+                    MovePlayer.MoveTo(input);
+                break;
+
+                case "south":
+                    MovePlayer.MoveTo(input);
+                break;
+
+                case "west":
+                    MovePlayer.MoveTo(input);
+                break;
 
                 default:
-                    Console.WriteLine(input + " is not a command"); // display when a command is not valid
-                    break;
+                    Console.WriteLine(" is not a command"); // display when a command is not valid
+                break;
             }
-            }
+        }
+        #endregion
 
-
-        
     }
 }

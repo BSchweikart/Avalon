@@ -20,13 +20,15 @@ namespace Engine
             LocationChange(location);
         }
 
-        public static void LocationMoveNew(string input)
+        public static void LocationMoveNew(string input)         
         {
+            // System.NullReferenceExeption:'Object reference not set to an instance of an object' 
+            // Engine.Player.CurrentLocation.get returned null
             int ele = WorldGenerator.Location.IndexOf(Player.CurrentLocation);
             switch(input)
             {
                 case "north":
-                    if (Player.CurrentLocation.LocationWest != -1)
+                    if (Player.CurrentLocation.LocationWest != -1) 
                     {
                         LocationChange(WorldGenerator.Location[Player.CurrentLocation.LocationNorth]);
                     }

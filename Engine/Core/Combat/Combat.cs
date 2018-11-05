@@ -21,7 +21,7 @@ namespace Engine
             Iteration = 1;
         }
 
-        public static void Attacking(Player player, Monster monsterNamed)
+        public void Attacking(Player player, Monster monsterNamed)
         {
             //if()
             while (monsterNamed.HpCurrent > 0 && player.HpCurrent > 0)

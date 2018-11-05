@@ -17,7 +17,7 @@ namespace Engine
         private bool _attackable;
 
         public int HpCurrent { get {return _hpCurrent; } set{_hpCurrent = value; OnPropertyChanged("HpCurrent"); } } 
-        public int HpMax { get; set; }
+        public int HpMax { get { return _hpMax; } set { _hpMax = value; } }
         public bool IsDead { get { return _isDead; } set { _isDead = value; } }
         public bool Attackable { get { return _attackable; } set { _attackable = value; } }
 

@@ -14,13 +14,13 @@ namespace Engine
         {
             Console.WriteLine("You are at: {0}", Player.CurrentLocation.NameRoom); //getting a null for location
 
-            if (Player.CurrentLocation.Descrip != "")
+            if (Player.CurrentLocation.DescripRoom != "")
             {
-                Console.WriteLine(Player.CurrentLocation.Descrip);
+                Console.WriteLine(Player.CurrentLocation.DescripRoom);
             }
 
             string exits = "\n[Exits: ";
-            //Console.Write("[Exits: ");
+            Console.Write("[Exits: ");
             List<string> validExits = new List<string>();
             if (Player.CurrentLocation.LocationNorth != -1)
                 validExits.Add("north");

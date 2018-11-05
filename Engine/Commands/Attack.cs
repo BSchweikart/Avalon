@@ -20,7 +20,7 @@ namespace Engine
                 Monster monsterNamed;
                 if(MonsterInRoom(noun, out monsterNamed))
                 {
-
+                    start.Attacking(_player, monsterNamed);
                 }
             }
         }

@@ -61,26 +61,29 @@ namespace Engine
                 #endregion
 
                 #region User Commands // List of user commands linked to UserCommands
+                #region Movment Commands
                 case "north":
                     {
-                        UserCommands.NormalCommands(input);
+                        UserCommands.MoveCommands(input);
                     }
                     return false;
                 case "east":
                     {
-                        UserCommands.NormalCommands(input);
+                        UserCommands.MoveCommands(input);
                     }
                     return false;
                 case "south":
                     {
-                        UserCommands.NormalCommands(input);
+                        UserCommands.MoveCommands(input);
                     }
                     return false;
                 case "west":
                     {
-                        UserCommands.NormalCommands(input);
+                        UserCommands.MoveCommands(input);
                     }
-                    return false; 
+                    return false;
+                #endregion
+
                 case "look":
                     {
                         UserCommands.NormalCommands(input);
