@@ -23,11 +23,10 @@ namespace Engine
         public string RacePlayer { get{return _racePlayer;} set { _racePlayer = value; } }
         public int Gold{ get { return _gold; } set { _gold = value; OnPropertyChanged("Gold"); } }
         public int XP { get { return _xp; } set { _xp = value; OnPropertyChanged("XP"); } }
-        public int Level { get; set; }
+        public int Level { get {return _level; } set {_level = value; OnPropertyChanged("Level"); } }
         public List<Inventory> Inventory { get; set; }
         public static Room CurrentLocation { get {return _currentLocation; } set { _currentLocation = value; } }
-
-        //public int CurrentLocation { get {return _currentLocation; } set { _currentLocation = value; } } // to be used once location/movement is fixed
+        //public Room CurrentLocation { get { return _currentLocation; } set { _currentLocation = value; } }
 
         public Player(string namePlayer, string classPlayer, string racePlayer, int gold, int xp, int level, int hpCurrent, int hpMax, bool isDead, bool attackable) : base (hpCurrent, hpMax, isDead, attackable)
         {
@@ -37,7 +36,8 @@ namespace Engine
             Gold = gold;
             XP = 0;
             Level = level;
-            CurrentLocation = WorldGenerator.Location[0];
+            CurrentLocation = WorldGenerator.Location[0];            
+            //Engine.Player.CurrentLocation.get returned null
         }
 
         public void AddXP(int xpToAdd) // Used to incress player health

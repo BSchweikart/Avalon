@@ -66,22 +66,22 @@ namespace AvalonConsole
 
         }
 
-        private static void Player_OnPropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (e.PropertyName == "CurrentLocation")
-            {
-                LocationCurrent.CurrentLocation();
-            }
-        }
+        //private static void Player_OnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        //{
+        //    if (e.PropertyName == "CurrentLocation")
+        //    {
+        //        LocationCurrent.CurrentLocation();
+        //    }
+        //}
 
-        private static void ParseInput(string input)
-        {
-            // Call the command class to figure out what to do.
-            UserCommands.CommandCase(input, Player._player);
+        //private static void ParseInput(string input)
+        //{
+        //    // Call the command class to figure out what to do.
+        //    UserCommands.CommandCase(input, Player._player);
 
-            // Write a blank line, to keep the UI a little cleaner
-            Console.WriteLine("");
-        }
+        //    // Write a blank line, to keep the UI a little cleaner
+        //    Console.WriteLine("");
+        //}
     }
 }
             

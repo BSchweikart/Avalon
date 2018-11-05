@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 //this is not code to use something playing around with.
 namespace Engine
 {
-    public class PlayerLevel
+    public abstract class PlayerLevel
     {
         public int Level { get; set; }
         public int XPCurrent { get; set; }

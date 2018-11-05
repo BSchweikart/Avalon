@@ -19,7 +19,7 @@ namespace Engine
         {
             LocationChange(location);
         }
-
+        
         public static void LocationMoveNew(string input)         
         {
             // System.NullReferenceExeption:'Object reference not set to an instance of an object' 

@@ -17,14 +17,13 @@ namespace Engine
             else
             {
                 Combat start = new Combat();
-                Monster monsterNamed;
                 //NPC npcNamed;
 
-                if(MonsterInRoom(noun, out monsterNamed))
+                if (MonsterInRoom(noun, out Monster monsterNamed))
                 {
                     start.Attacking(_player, monsterNamed);
                 }
-              
+
             }
         }
         private static bool MonsterInRoom(string monsterName, out Monster monsterNamed)
