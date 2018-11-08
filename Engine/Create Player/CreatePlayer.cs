@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Engine.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,7 @@ namespace Engine.Create_Player
 
             Console.WriteLine("What is your name?");
             Console.Write(">");
-            name = CapWord.FirstCharToUpper(Console.ReadLine());
+            name = CapWords.FirstCharToUpper(Console.ReadLine());
 
             while (validClass == false)
             {

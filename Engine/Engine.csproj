@@ -49,6 +49,7 @@
     <Compile Include="Commands\Move.cs" />
     <Compile Include="Commands\MovePlayer.cs" />
     <Compile Include="Commands\UserCommands.cs" />
+    <Compile Include="Core\CapWords.cs" />
     <Compile Include="Core\Combat\RollDie.cs" />
     <Compile Include="Core\Creatures\Race,Class\Class.cs" />
     <Compile Include="Core\Combat\Combat.cs" />
@@ -70,7 +71,8 @@
     <Compile Include="Core\WorldListBuilder.cs" />
     <Compile Include="Commands\DevTools\DevMenu.cs" />
     <Compile Include="Create Player\CreatePlayer.cs" />
-    <Compile Include="Create Player\isNewPlayer.cs" />
+    <Compile Include="Create Player\IsNewPlayer.cs" />
+    <Compile Include="Create Player\LoadPlayer.cs" />
     <Compile Include="Enum\PlayerLevel.cs" />
     <Compile Include="Menu\GameTitle.cs" />
     <Compile Include="Menu\MenuList.cs" />

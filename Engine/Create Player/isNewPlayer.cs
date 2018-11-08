@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Engine.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Create_Player
 {
-    public static class isNewPlayer
+    public static class IsNewPlayer
     {
         public static void NewPlayer()
         {
@@ -25,7 +26,7 @@ namespace Engine.Create_Player
                 {
                     validAnswer = true;
                     Console.WriteLine("What is your name?");
-                    usersInput = CapWord.FirstCharToUpper(Console.ReadLine());
+                    usersInput = CapWords.FirstCharToUpper(Console.ReadLine());
                     Load.LoadGameData(usersInput.ToLower());
                 }
                 else if (usersInput.ToLower() == "yes")
