@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine.Creat_Player
+namespace Engine.Create_Player
 {
     public static class CreatePlayer
     {
-        public static void CreatePlayerInstructions()
+        public static void CreateAPlayer()
         {
             string name;
             string className = "";
@@ -21,7 +21,7 @@ namespace Engine.Creat_Player
 
             Console.WriteLine("What is your name?");
             Console.Write(">");
-            name = CapWord.FirstCharoUpper(Console.ReadLine());
+            name = CapWord.FirstCharToUpper(Console.ReadLine());
 
             while (validClass == false)
             {

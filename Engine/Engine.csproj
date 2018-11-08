@@ -70,6 +70,7 @@
     <Compile Include="Core\WorldListBuilder.cs" />
     <Compile Include="Commands\DevTools\DevMenu.cs" />
     <Compile Include="Create Player\CreatePlayer.cs" />
+    <Compile Include="Create Player\isNewPlayer.cs" />
     <Compile Include="Enum\PlayerLevel.cs" />
     <Compile Include="Menu\GameTitle.cs" />
     <Compile Include="Menu\MenuList.cs" />
