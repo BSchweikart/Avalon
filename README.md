@@ -20,7 +20,6 @@ William Buckwell
 
 # Authors
 - Brian Schweikart
-- Christopher Lee
 - Jenica Miller
 
 # Institution
