@@ -84,6 +84,9 @@
     <Content Include="Docs\Level.txt" />
     <Content Include="Docs\Player.txt" />
     <Content Include="Docs\README.txt" />
+    <Content Include="Game Data\GameItems.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="NotesToEachOther.txt" />
   </ItemGroup>
   <ItemGroup>

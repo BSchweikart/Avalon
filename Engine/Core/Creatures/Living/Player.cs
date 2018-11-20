@@ -28,7 +28,7 @@ namespace Engine
         public static Room CurrentLocation { get {return _currentLocation; } set { _currentLocation = value; } }
         //public Room CurrentLocation { get { return _currentLocation; } set { _currentLocation = value; } }
 
-        public Player(string namePlayer, string classPlayer, string racePlayer, int gold, int xp, int level, int hpCurrent, int hpMax, bool isDead, bool attackable) : base (hpCurrent, hpMax, isDead, attackable)
+        public Player(string namePlayer, string classPlayer, string racePlayer, int gold, int xp, int level, Weapon equipt, int hpCurrent, int hpMax, bool isDead, bool attackable) : base (hpCurrent, hpMax, isDead, attackable)
         {
             NamePlayer = namePlayer;
             ClassPlayer = classPlayer;
@@ -38,6 +38,11 @@ namespace Engine
             Level = level;
             CurrentLocation = WorldGenerator.Location[0];            
             //Engine.Player.CurrentLocation.get returned null
+        }
+
+        public Player(string playerName, string pC, string pR, int gold, int currentHitPoints, int maximumHitPoints, Weapon equipt, bool v1, bool v2, int alignment)
+        {
+            Gold = gold;
         }
 
         public void AddXP(int xpToAdd) // Used to incress player health
