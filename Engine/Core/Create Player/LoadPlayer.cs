@@ -8,7 +8,7 @@ using System.Xml;
 using System.Xml.Serialization;
 
 
-namespace Engine.Create_Player
+namespace Engine
 {
     class LoadPlayer
     {
@@ -30,7 +30,7 @@ namespace Engine.Create_Player
             }
         }
 
-        public static Player CreatePlayerFromXmlStrin(string PLAYER_DATA_FILE_NAME)
+        public static Player CreatePlayerFromXmlString(string PLAYER_DATA_FILE_NAME)
         {
             try
             {
