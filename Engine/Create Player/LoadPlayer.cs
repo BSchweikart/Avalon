@@ -12,7 +12,7 @@ namespace Engine.Create_Player
 {
     class LoadPlayer
     {
-        private static Weapon equipt;
+        private static Weapon Equipt;
 
         public static object World { get; private set; }
 
@@ -30,7 +30,7 @@ namespace Engine.Create_Player
             }
         }
 
-        public static Player CreatePlayerFromXmlString(string PLAYER_DATA_FILE_NAME)
+        public static Player CreatePlayerFromXmlStrin(string PLAYER_DATA_FILE_NAME)
         {
             try
             {
@@ -48,6 +48,7 @@ namespace Engine.Create_Player
                 int equiptString = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentWeapon").InnerText);
                 Player player = new Player(playerName, PC, PR, gold, currentHitPoints, maximumHitPoints, equipt, false, true, alignment);
                 int currentLocationID = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentLocation").InnerText);
+
             }
         }
     }
