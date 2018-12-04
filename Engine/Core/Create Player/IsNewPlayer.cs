@@ -8,6 +8,8 @@ namespace Engine
 {
     public static class IsNewPlayer
     {
+        private static object Load;
+
         public static void NewPlayer()
         {
             //get the user input
@@ -26,7 +28,7 @@ namespace Engine
                     validAnswer = true;
                     Console.WriteLine("What is your name?");
                     usersInput = CapWords.FirstCharToUpper(Console.ReadLine());
-                    Load.LoadGameData(usersInput.ToLower());
+                    //Load.LoadGameData(usersInput.ToLower());
                 }
                 else if (usersInput.ToLower() == "yes")
                 {

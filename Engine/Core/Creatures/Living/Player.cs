@@ -26,6 +26,10 @@ namespace Engine
         public int Level { get {return _level; } set {_level = value; OnPropertyChanged("Level"); } }
         public List<Inventory> Inventory { get; set; }
         public static Room CurrentLocation { get {return _currentLocation; } set { _currentLocation = value; } }
+        
+
+        public Item Equipt { get; internal set; }
+
         //public Room CurrentLocation { get { return _currentLocation; } set { _currentLocation = value; } }
 
         public Player(string namePlayer, string classPlayer, string racePlayer, int gold, int xp, int level, Weapon equipt, int hpCurrent, int hpMax, bool isDead, bool attackable) : base (hpCurrent, hpMax, isDead, attackable)
@@ -40,10 +44,10 @@ namespace Engine
             //Engine.Player.CurrentLocation.get returned null
         }
 
-        public Player(string playerName, string pC, string pR, int gold, int currentHitPoints, int maximumHitPoints, Weapon equipt, bool v1, bool v2, int alignment)
-        {
-            Gold = gold;
-        }
+        //public Player(string playerName, string pC, string pR, int gold, int currentHitPoints, int maximumHitPoints, Weapon equipt, bool v1, bool v2, int alignment)
+        //{
+        //    Gold = gold;
+        //}
 
         public void AddXP(int xpToAdd) // Used to incress player health
         {

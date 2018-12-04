@@ -28,7 +28,7 @@ namespace Engine
             switch(input)
             {
                 case "north":
-                    if (Player.CurrentLocation.LocationWest != -1) 
+                    if (Player.CurrentLocation.LocationNorth != -1) 
                     {
                         LocationChange(WorldGenerator.Location[Player.CurrentLocation.LocationNorth]);
                     }
