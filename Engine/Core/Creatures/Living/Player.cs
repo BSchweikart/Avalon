@@ -12,39 +12,17 @@ namespace Engine
 {
     public class Player : LivingCreature
     {
-        private string _namePlayer;                         // To hold the player's name
-        private string _classPlayer;                        // To hold the player's class
-        private string _racePlayer;
-        private int _gold;
-        private int _xp;
-        private int _level;
-        private static Room _currentLocation;
-
-        private string playerName;
-        private string pC;
-        private string pR;
-        private int currentHitPoints;
-        private int maximumHitPoints;
-        private object equip;
-        private bool v1;
-        private bool v2;
-        private int alignment;
-
-        public string NamePlayer { get { return _namePlayer; } set { _namePlayer = value; } }
-        public string ClassPlayer { get { return _classPlayer; } set { _classPlayer = value; } }
-        public string RacePlayer { get { return _racePlayer; } set { _racePlayer = value; } }
-        public int Gold { get { return _gold; } set { _gold = value; OnPropertyChanged("Gold"); } }
-        public int XP { get { return _xp; } set { _xp = value; OnPropertyChanged("XP"); } }
-        public int Level { get { return _level; } set { _level = value; OnPropertyChanged("Level"); } }
+        public string NamePlayer { get; set; }
+        public string ClassPlayer { get; set; }
+        public string RacePlayer { get; set; }
+        public int Gold { get; set; }
+        public int XP { get; set; }
+        public int Level { get; set; }
         public List<Inventory> Inventory { get; set; }
-        public static Room CurrentLocation { get { return _currentLocation; } set { _currentLocation = value; } }
-
-
-        public Item Equipt { get; internal set; }
-        public static object _player { get; internal set; }
-
-        //public Room CurrentLocation { get { return _currentLocation; } set { _currentLocation = value; } }
-
+        public static Room CurrentLocation { get; set; }
+        public Weapon Equipt { get; set; }
+        public static object _player { get; set; }
+        
         public Player(string namePlayer, string classPlayer, string racePlayer, int gold, int xp, int level, Weapon equipt, int hpCurrent, int hpMax, bool isDead, bool attackable) : base(hpCurrent, hpMax, isDead, attackable)
         {
             NamePlayer = namePlayer;
@@ -54,30 +32,11 @@ namespace Engine
             XP = 0;
             Level = level;
             CurrentLocation = WorldGenerator.Location[0];
-            //Engine.Player.CurrentLocation.get returned null
         }
-
-        public Player(string playerName, string pC, string pR, int gold, int currentHitPoints, int maximumHitPoints, object equip, bool v1, bool v2, int alignment)
-        {
-            this.playerName = playerName;
-            this.pC = pC;
-            this.pR = pR;
-            Gold = gold;
-            this.currentHitPoints = currentHitPoints;
-            this.maximumHitPoints = maximumHitPoints;
-            this.equip = equip;
-            this.v1 = v1;
-            this.v2 = v2;
-            this.alignment = alignment;
-        }
-
-        //public Player(string playerName, string pC, string pR, int gold, int currentHitPoints, int maximumHitPoints, Weapon equipt, bool v1, bool v2, int alignment)
-        //{
-        //    Gold = gold;
-        //}
 
         public void AddXP(int xpToAdd) // Used to incress player health
         {
+            //TODO finsh adding in XP
             //XP += xpToAdd;
             //HpMax = (Level * 2); // not used until LC can take over have to fix other parts for this to happen
         }
@@ -95,7 +54,7 @@ namespace Engine
             player.AppendChild(stats);
 
             XmlNode playerName = playerData.CreateElement("Name");
-            playerName.AppendChild(playerData.CreateTextNode(this.playerName.ToString()));
+            playerName.AppendChild(playerData.CreateTextNode(this.NamePlayer.ToString()));
             stats.AppendChild(playerName);
 
             XmlNode playerClass = playerData.CreateElement("Class");
@@ -106,19 +65,19 @@ namespace Engine
             playerRace.AppendChild(playerData.CreateTextNode(this.RacePlayer.ToString()));
             stats.AppendChild(playerRace);
 
-            XmlNode currentHitPoints = playerData.CreateElement("CurrentHitPoints");
-            currentHitPoints.AppendChild(playerData.CreateTextNode(this.currentHitPoints.ToString()));
+            XmlNode currentHitPoints = playerData.CreateElement("HpCurrent");
+            currentHitPoints.AppendChild(playerData.CreateTextNode(this.HpCurrent.ToString()));
             stats.AppendChild(currentHitPoints);
 
-            XmlNode maximumHitPoints = playerData.CreateElement("MaximumHitPoints");
-            maximumHitPoints.AppendChild(playerData.CreateTextNode(this.maximumHitPoints.ToString()));
+            XmlNode maximumHitPoints = playerData.CreateElement("HpMax");
+            maximumHitPoints.AppendChild(playerData.CreateTextNode(this.HpMax.ToString()));
             stats.AppendChild(maximumHitPoints);
 
             XmlNode gold = playerData.CreateElement("Gold");
             gold.AppendChild(playerData.CreateTextNode(this.Gold.ToString()));
             stats.AppendChild(gold);
 
-            XmlNode experiencePoints = playerData.CreateElement("ExperiencePoints");
+            XmlNode experiencePoints = playerData.CreateElement("XP");
             experiencePoints.AppendChild(playerData.CreateTextNode(this.XP.ToString()));
             stats.AppendChild(experiencePoints);
 
@@ -126,9 +85,9 @@ namespace Engine
             currentLocation.AppendChild(playerData.CreateTextNode(CurrentLocation.ID.ToString()));
             stats.AppendChild(currentLocation);
 
-            XmlNode alignment = playerData.CreateElement("Alignment");
-            alignment.AppendChild(playerData.CreateTextNode(this.alignment.ToString()));
-            stats.AppendChild(alignment);
+            //XmlNode alignment = playerData.CreateElement("Alignment");
+            //alignment.AppendChild(playerData.CreateTextNode(this.alignment.ToString()));
+            //stats.AppendChild(alignment);
 
             if (Equipt != null)
             {
@@ -251,62 +210,63 @@ namespace Engine
             }
         }
 
-        public void RemoveItemFromInventory(Item itemToRemove, int quantity = 1)
-        {
-            Inventory item = Inventory.SingleOrDefault(ii => ii.ItemID == itemToRemove.ID);
+        //public void RemoveItemFromInventory(Item itemToRemove, int quantity = 1)
+        //{
+        //    Inventory item = Inventory.SingleOrDefault(ii => ii.ItemID == itemToRemove.ID);
 
-            if (item == null)
-            {
-                // The item is not in the player's inventory, so ignore it.
-                // We might want to raise an error for this situation
-                Console.WriteLine("Cannot drop an item you do not have.");
-            }
-            else
-            {
-                // They have the item in their inventory, so decrease the quantity
-                item.Quantity -= quantity;
+        //    if (item == null)
+        //    {
+        //        // The item is not in the player's inventory, so ignore it.
+        //        // We might want to raise an error for this situation
+        //        Console.WriteLine("Cannot drop an item you do not have.");
+        //    }
+        //    else
+        //    {
+        //        // They have the item in their inventory, so decrease the quantity
+        //        item.Quantity -= quantity;
 
-                // Don't allow negative quantities.
-                // We might want to raise an error for this situation
-                if (item.Quantity < 0)
-                {
-                    item.Quantity = 0;
-                }
+        //        // Don't allow negative quantities.
+        //        // We might want to raise an error for this situation
+        //        if (item.Quantity < 0)
+        //        {
+        //            item.Quantity = 0;
+        //        }
 
-                // If the quantity is zero, remove the item from the list
-                if (item.Quantity == 0)
-                {
-                    Inventory.Remove(item);
-                }
-            }
-        }
+        //        // If the quantity is zero, remove the item from the list
+        //        if (item.Quantity == 0)
+        //        {
+        //            Inventory.Remove(item);
+        //        }
+        //    }
+        //}
 
-        public void RemoveItemFromInventory(Weapon weaponToRemove, int quantity = 1)
-        {
-            Item weapon = weaponToRemove;
-            Inventory item = Inventory.SingleOrDefault(ii => ii.ItemID == weapon.ID);
+        //public void RemoveItemFromInventory(Weapon weaponToRemove, int quantity = 1)
+        //{
+        //    Item weapon = weaponToRemove;
+        //    Inventory item = Inventory.SingleOrDefault(ii => ii.ItemID == weapon.ID);
 
-            if (item == null)
-            {
-                //Item is not in the player's inventory, ignore it.
-             
-            }
-            else
-            {
-                // They have the item in their inventory, so decrease the quantity
-                item.Quantity -= quantity;
+        //    if (item == null)
+        //    {
+        //        Item is not in the player's inventory, ignore it.
 
-                if (item.Quantity < 0)
-                {
-                    item.Quantity = 0;
-                }
 
-                // If the quantity is zero, remove the item from the list
-                if (item.Quantity == 0)
-                {
-                    Inventory.Remove(item);
-                }      
-            }
-        }
+        //    }
+        //    else
+        //    {
+        //        They have the item in their inventory, so decrease the quantity
+        //        item.Quantity -= quantity;
+
+        //        if (item.Quantity < 0)
+        //        {
+        //            item.Quantity = 0;
+        //        }
+
+        //        If the quantity is zero, remove the item from the list
+        //        if (item.Quantity == 0)
+        //        {
+        //            Inventory.Remove(item);
+        //        }
+        //    }
+        //}
     }
 }

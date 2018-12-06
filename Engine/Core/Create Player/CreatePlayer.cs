@@ -13,7 +13,7 @@ namespace Engine
             string name;
             string className = "";
             string raceName = "";
-            int aligment = 0;
+            //int aligment = 0;
             int gold = 0;
             int hp = 0;
             bool validClass = false;
@@ -99,8 +99,8 @@ namespace Engine
         }
             public static void CreateFromLoad(Player loadPlayer)
             {
-                Player _player = new Player(loadPlayer.NamePlayer, loadPlayer.ClassPlayer, loadPlayer.RacePlayer, loadPlayer.Gold, loadPlayer.currentHitPoints,
-                                 loadPlayer.maximumHitPoints);
+                Player _player = new Player(loadPlayer.NamePlayer, loadPlayer.ClassPlayer, loadPlayer.RacePlayer, loadPlayer.Gold, loadPlayer.XP, loadPlayer.Level, loadPlayer.Equipt, loadPlayer.HpCurrent,
+                                 loadPlayer.HpMax, loadPlayer.IsDead, loadPlayer.Attackable);
             }
     }
 }

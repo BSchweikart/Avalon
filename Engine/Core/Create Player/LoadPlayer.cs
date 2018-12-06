@@ -12,7 +12,7 @@ namespace Engine
 {
     class LoadPlayer
     {
-        //private static Weapon Equipt;
+    private static Weapon Equipt;
 
         //public static object World { get; private set; }
 
@@ -31,58 +31,59 @@ namespace Engine
         }
 
         public static Player CreatePlayerFromXmlString(string PLAYER_DATA_FILE_NAME)
+    {
+        try
         {
-            try
+            XmlDocument playerData = new XmlDocument();
+
+            playerData.LoadXml(PLAYER_DATA_FILE_NAME);
+            string playerName = playerData.SelectSingleNode("/Player/Stats/Name").InnerText;
+            string classPlayer = playerData.SelectSingleNode("/Player/Stats/Class").InnerText;
+            string racePlayer = playerData.SelectSingleNode("/Player/Stats/Race").InnerText;
+            int gold = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Gold").InnerText);
+            int xp = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/XP").InnerText);
+            int level = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Level").InnerText);
+            int hpCurrent = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/HpCurrent").InnerText);
+            int hpMax = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/HpMax").InnerText);
+            //int alignment = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Alignment").InnerText);
+            int equiptString = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentWeapon").InnerText);//check later
+            Player player = new Player(playerName, classPlayer, racePlayer, gold, xp, level, Equipt, hpCurrent, hpMax, false, true);
+            int currentLocationID = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentLocation").InnerText);
+            Player.CurrentLocation = WorldGenerator.LocationID(currentLocationID);
+
+            if (playerData.SelectSingleNode("/Player/Stats/CurrentWeapon") != null)
             {
-                XmlDocument playerData = new XmlDocument();
+                int currentWeaponID = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentWeapon").InnerText);
+                 player.Equipt = WorldGenerator.WeaponID(currentWeaponID);
+            }
 
-                playerData.LoadXml(PLAYER_DATA_FILE_NAME);
-                string playerName = playerData.SelectSingleNode("/Player/Stats/Name").InnerText;
-                string PC = playerData.SelectSingleNode("/Player/Stats/Class").InnerText;
-                string PR = playerData.SelectSingleNode("/Player/Stats/Race").InnerText;
-                int currentHitPoints = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentHitPoints").InnerText);
-                int maximumHitPoints = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/MaximumHitPoints").InnerText);
-                int gold = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Gold").InnerText);
-                int experiencePoints = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/ExperiencePoints").InnerText);
-                int alignment = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Alignment").InnerText);
-                int equiptString = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentWeapon").InnerText);
-                Player player = new Player(playerName, PC, PR, gold, currentHitPoints, maximumHitPoints, Equip, false, true, alignment);
-                int currentLocationID = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentLocation").InnerText);
-                Player.CurrentLocation = WorldGenerator.LocationID(currentLocationID);
+            foreach (XmlNode node in playerData.SelectNodes("/Player/Inventory/Inventory"))
+            {
+                int id = Convert.ToInt32(node.Attributes["ID"].Value);
+                int quantity = Convert.ToInt32(node.Attributes["Quantity"].Value);
 
-                if (playerData.SelectSingleNode("/Player/Stats/CurrentWeapon") != null)
+                if (id > 100 && id <= 200)
                 {
-                    int currentWeaponID = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentWeapon").InnerText);
-                    player.Equipt = WorldGenerator.WeaponID(currentWeaponID);
-                }
-
-                foreach (XmlNode node in playerData.SelectNodes("/Player/Inventory/Inventory"))
-                {
-                    int id = Convert.ToInt32(node.Attributes["ID"].Value);
-                    int quantity = Convert.ToInt32(node.Attributes["Quantity"].Value);
-
-                    if (id > 100 && id <= 200)
+                    for (int i = 0; i < quantity; i++)
                     {
-                        for (int i = 0; i < quantity; i++)
-                        {
-                            player.AddItemToInventory(WorldGenerator.WeaponID(id));
-                        }
-                    }
-                    else
-                    {
-                        for (int i = 0; i < quantity; i++)
-                        {
-                            player.AddItemToInventory(WorldGenerator.ItemID(id));
-                        }
+                         player.AddItemToInventory(WorldGenerator.WeaponID(id));
                     }
                 }
-                return player;
+                else
+                {
+                    for (int i = 0; i < quantity; i++)
+                    {
+                         player.AddItemToInventory(WorldGenerator.ItemID(id));
+                    }
+                }
             }
-            catch
-            {
-                Console.WriteLine(ex.ToString());
-                return null;
-            }
+             return player;
+        }
+        catch
+        {
+            //Console.WriteLine(ex.ToString());
+            return null;
         }
     }
+  }
 }
