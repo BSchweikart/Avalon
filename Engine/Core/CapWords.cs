@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    class CapWords
+    public static class CapWords
     {
                 public static string FirstCharToUpper(string input)
             {

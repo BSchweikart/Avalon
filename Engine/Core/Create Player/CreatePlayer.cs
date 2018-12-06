@@ -97,5 +97,13 @@ namespace Engine
                 }
             }
         }
+            public static void CreateFromLoad(Player loadPlayer)
+            {
+                Player _player = new Player(loadPlayer.NamePlayer, loadPlayer.ClassPlayer, loadPlayer.RacePlayer, loadPlayer.Gold, loadPlayer.currentHitPoints,
+                                 loadPlayer.maximumHitPoints);
+            }
+    }
+}
+
            
 

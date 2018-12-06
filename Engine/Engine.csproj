@@ -81,6 +81,7 @@
     <Compile Include="Menu\StartMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\Quests\Quest.cs" />
+    <Compile Include="Core\Create Player\SavePlayerData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\Level.txt" />
