@@ -68,6 +68,7 @@
     <Compile Include="Core\Creatures\Living\NPC.cs" />
     <Compile Include="Core\Creatures\Living\Player.cs" />
     <Compile Include="Core\RandomNumGen.cs" />
+    <Compile Include="Core\Create Player\WelcomeScreen.cs" />
     <Compile Include="Core\WorldGenerator.cs" />
     <Compile Include="Core\WorldListBuilder.cs" />
     <Compile Include="Commands\DevTools\DevMenu.cs" />
