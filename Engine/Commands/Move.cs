@@ -21,9 +21,7 @@ namespace Engine
         }
         
         public static void LocationMoveNew(string input)         
-        {
-            // System.NullReferenceExeption:'Object reference not set to an instance of an object' 
-            // Engine.Player.CurrentLocation.get returned null
+        {            
             int ele = WorldGenerator.Location.IndexOf(Player.CurrentLocation);
             switch(input)
             {
@@ -60,7 +58,7 @@ namespace Engine
                     }
                     break;
 
-                case "west": // need to finish real movment
+                case "west": 
                     if (Player.CurrentLocation.LocationWest != -1)
                     {
                         LocationChange(WorldGenerator.Location[Player.CurrentLocation.LocationWest]);

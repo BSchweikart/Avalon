@@ -26,8 +26,6 @@ namespace AvalonConsole
             do
             {
                 Console.WriteLine("");
-                //Console.WriteLine("You entered the " + Player.CurrentLocation.NameRoom);
-                //Console.WriteLine(Player.CurrentLocation.Descrip);
                 StartMenu.LaunchMenu();  // dispaly the start menu
                 Console.WriteLine(" ");
                 string lowerInput = Console.ReadLine();
@@ -59,22 +57,16 @@ namespace AvalonConsole
             //        break;
             //    }
 
-            //    // If the user typed something, try to determine what to do
-            //    ParseInput(cleanedInput);
-            //}
+                // If the user typed something, try to determine what to do
+                //ParseInput(cleanedInput);
+            }
 
 
 
 
         }
 
-        //private static void Player_OnPropertyChanged(object sender, PropertyChangedEventArgs e)
-        //{
-        //    if (e.PropertyName == "CurrentLocation")
-        //    {
-        //        LocationCurrent.CurrentLocation();
-        //    }
-        //}
+        
 
         //private static void ParseInput(string input)
         //{

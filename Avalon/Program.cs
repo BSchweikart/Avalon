@@ -12,8 +12,18 @@ namespace Avalon
     {
         static void Main(string[] args)
         {
-            
-          
+            GameTitle.Title();
+            bool exit = false;
+            do
+            {
+                Console.WriteLine("");
+                string lowerInput = Console.ReadLine();
+                Console.WriteLine(" ");
+                exit = MenuList.MenuCommand(lowerInput);
+            }
+            while (exit == false);
+
+
         }
 
     }

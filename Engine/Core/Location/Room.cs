@@ -8,24 +8,24 @@ namespace Engine
 {
     public class Room
     {
-        private int _id;
-        private string _nameRoom;
-        private string _descripRoom;
-        private Monster _monster;
-        private int _locationNorth;
-        private int _locationEast;
-        private int _locationSouth;
-        private int _locationWest;
+        //private int _id;
+        //private string _nameRoom;
+        //private string _descripRoom;
+        //private Monster _monster;
+        //private int _locationNorth;
+        //private int _locationEast;
+        //private int _locationSouth;
+        //private int _locationWest;
 
-        public int ID { get { return _id; } set { _id = value; } }
-        public string NameRoom { get { return _nameRoom; } set { _nameRoom = value; } }
-        public string DescripRoom { get { return _descripRoom; } set { _descripRoom = value; } }
+        public int ID { get; set; }
+        public string NameRoom { get; set; }
+        public string DescripRoom { get; set; }
         //public Quest QuestIsHere { get; set; }
-        public Monster MonsterIsHere { get { return _monster; } set { _monster = value; } }
-        public int LocationNorth { get { return _locationNorth; } set { _locationNorth = value; } }
-        public int LocationEast { get { return _locationEast; } set { _locationEast = value; } }
-        public int LocationSouth { get { return _locationSouth; } set { _locationSouth = value; } }
-        public int LocationWest { get { return _locationWest; } set { _locationWest = value; } }
+        public Monster MonsterIsHere { get; set; }
+        public int LocationNorth { get; set; }
+        public int LocationEast { get; set; }
+        public int LocationSouth { get; set; }
+        public int LocationWest { get; set; }
         public List<Item> ItemRoom = new List<Item>();
         public List<Monster> MonsterRoom = new List<Monster>();
 

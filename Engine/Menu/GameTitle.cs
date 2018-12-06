@@ -9,15 +9,12 @@ namespace Engine
         {
             Console.WriteLine("Welcome to Avalon");
             Console.WriteLine("Please type in your selection followed by Enter");
-            Console.WriteLine("");                                                                                             
-            Console.WriteLine("Classes");                                           
-            Console.WriteLine("Races");                                             
-            Console.WriteLine("Monsters");                                          
-            Console.WriteLine("NPC");                                            
-            Console.WriteLine("Rooms");                                          
-            Console.WriteLine("Weapons");                                        
-            Console.WriteLine("Potions");                                        
-            Console.WriteLine("Treasure");                                       
+            Console.WriteLine("");
+            Console.WriteLine("New Player");
+            Console.WriteLine("Saved Game");
+            Console.WriteLine("Help");
+            Console.WriteLine("Exit");
+            Console.WriteLine("");
             Console.WriteLine("_______________________________________________");
         }
     }

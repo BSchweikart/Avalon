@@ -162,11 +162,3 @@ namespace Engine
 //}
 
 
-//Console.WriteLine("Welcome to Avalon");
-//            Console.WriteLine("Please type in your selection followed by Enter");
-//            Console.WriteLine("");
-//            Console.WriteLine("New Game");
-//            Console.WriteLine("Saved Game");
-//            Console.WriteLine("Menu");
-//            Console.WriteLine("Exit");
-//            Console.WriteLine("");
