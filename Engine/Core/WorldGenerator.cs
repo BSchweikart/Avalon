@@ -28,7 +28,7 @@ namespace Engine
         public static readonly List<Potion> potions = new List<Potion>();
         public static readonly List<Weapon> weapons = new List<Weapon>();
         public static readonly List<NPC> npcs = new List<NPC>();
-        //public static List<Player> players = new List<Player>();
+        public static List<Player> players = new List<Player>();
         public static List<Class> classes = new List<Class>();
         public static List<Race> races = new List<Race>();
 
