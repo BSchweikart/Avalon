@@ -16,13 +16,15 @@ namespace Avalon
             GameTitle.Title();
             Console.WriteLine("");
             LocationCurrent.CurrentLocation();
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Type help to see list of commands");
             Console.Write("> ");
 
             while (true)
             {
                 bool exit = false;
-                Console.WriteLine("< " + Player._player.HpCurrent + "/" + Player._player.HpMax + " HP" + " >");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("< " + Player._player.NamePlayer +"-"+ Player._player.ClassPlayer + " > <" + Player._player.HpCurrent + "/" + Player._player.HpMax + " HP" + " >");
                 Console.Write("> ");
                 string inputUser = Console.ReadLine();
 
@@ -33,7 +35,7 @@ namespace Avalon
 
                 string lowerInput = inputUser.ToLower();
                 Console.WriteLine(" ");
-                exit = MenuList.MenuCommand(lowerInput);
+                exit = MenuList.MenuCommand(lowerInput); 
 
                 if (lowerInput == "exit")
                 {

@@ -44,7 +44,7 @@ namespace Engine
 
                     case "attack":
                     Console.WriteLine("You just want to push the button");
-                    //Attack.Attacking(input);
+                    Attack.Attacking(input);
                     break;
 
                     case "drop":

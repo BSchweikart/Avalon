@@ -19,6 +19,7 @@ namespace Engine
                 Console.WriteLine(Player.CurrentLocation.DescripRoom);
             }
 
+            Console.ForegroundColor = ConsoleColor.Magenta;
             string exits = "\n[Exits: ";
             List<string> validExits = new List<string>();
 
@@ -50,6 +51,22 @@ namespace Engine
                 }
             }
             Console.WriteLine(exits + "]");
+
+            if (Player.CurrentLocation.MonsterRoom != null)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                foreach (Monster mob in Player.CurrentLocation.MonsterRoom )
+                {
+                    if (mob.ID !=5)
+                    {
+                        Player.CurrentMonster = mob;
+
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("A " + mob.Name + " is wondering around here.");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                }
+            }
         }
     }
 }

@@ -12,8 +12,6 @@ Higher armor classes will use Strength
 Medium armor classes will use Dexterity
 Light armor classes will use Wisdom
 
-#ID's are not used in the files at this time
-
 #Monsters
 ID 1-99
 Name
@@ -59,7 +57,11 @@ Description
 ID 600-699
 Name
 Description
-
+n
+e
+s
+w
+Mob
 
 #Classes
 ID 700-749

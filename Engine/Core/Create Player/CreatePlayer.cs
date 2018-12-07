@@ -33,6 +33,7 @@ namespace Engine
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("Warrior, Archer, Healer, Assassin, or Mage");
                 className = Console.ReadLine().ToLower();
+                Console.ForegroundColor = ConsoleColor.White;
 
                 if (className == "warrior")
                 {
@@ -67,10 +68,12 @@ namespace Engine
 
             while (validRace == false)
             {
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("Choose a race.");
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("Elf, Dwarf, Gaint, Fairy, Dragon");
                 raceName = Console.ReadLine().ToLower();
+                
 
                 if (raceName == "elf")
                 {
@@ -103,7 +106,7 @@ namespace Engine
                 }
             }
 
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.White;
             Player._player = new Player(name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), gold, xp, level, equipt, hpCurrent, hpMax, false, true);
             Console.WriteLine("Loading game please wait");
             SavePlayerData.SaveGameData(Player._player);
