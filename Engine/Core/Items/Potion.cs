@@ -12,7 +12,7 @@ namespace Engine
         public int HealAmount { get; set; }
 
 
-        public Potion(int id, string name, string description,int healAmount) : base(id, name, description)
+        public Potion(int id, string name, string description,int healAmount) : base(id, name, description, false, 0)
         {
             ID = id;
             Name = name;

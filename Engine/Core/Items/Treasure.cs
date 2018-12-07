@@ -14,7 +14,7 @@ namespace Engine
         
 
 
-        public Treasure(int id, string name, string description) : base (id, name, description)
+        public Treasure(int id, string name, string description) : base (id, name, description, false, 0)
         {
             ID = id;
             Name = name;

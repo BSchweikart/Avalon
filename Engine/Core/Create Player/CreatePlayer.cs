@@ -19,7 +19,7 @@ namespace Engine
             int level = 1;
             Weapon equipt = null;
             int hpMax = 0;
-            int hpCurrent = 0;
+            //int hpCurrent = 0;
             bool validClass = false;
             bool validRace = false;
 
@@ -107,7 +107,7 @@ namespace Engine
             }
 
             Console.ForegroundColor = ConsoleColor.White;
-            Player._player = new Player(name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), gold, xp, level, equipt, hpCurrent, hpMax, false, true);
+            Player._player = new Player(name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), gold, xp, level, equipt, hpMax, hpMax, false, true);
             Console.WriteLine("Loading game please wait");
             SavePlayerData.SaveGameData(Player._player);
         }

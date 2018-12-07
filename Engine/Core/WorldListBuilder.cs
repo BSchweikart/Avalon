@@ -53,7 +53,7 @@ namespace Engine
                 while (!reader.EndOfStream)
                 {
                     string[] line = ReadNextLine(reader);
-                    WorldGenerator.weapons.Add(new Weapon(int.Parse(line[0]), line[1], line[2]));
+                    WorldGenerator.weapons.Add(new Weapon(int.Parse(line[0]), line[1], line[2], true, 0));
                 }
             }
             #endregion

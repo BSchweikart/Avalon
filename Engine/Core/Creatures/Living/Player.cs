@@ -28,7 +28,9 @@ namespace Engine
         {
             NamePlayer = namePlayer;
             ClassPlayer = classPlayer;
-            RacePlayer = RacePlayer;
+            RacePlayer = racePlayer;
+            HpCurrent = hpCurrent;
+            HpMax = hpMax;
             Gold = gold;
             XP = 0;
             Level = level;
@@ -62,9 +64,9 @@ namespace Engine
             playerClass.AppendChild(playerData.CreateTextNode(this.ClassPlayer.ToString()));
             stats.AppendChild(playerClass);
 
-            //XmlNode playerRace = playerData.CreateElement("Race");
-            //playerRace.AppendChild(playerData.CreateTextNode(this.RacePlayer.ToString()));
-            //stats.AppendChild(playerRace);
+            XmlNode playerRace = playerData.CreateElement("Race");
+            playerRace.AppendChild(playerData.CreateTextNode(this.RacePlayer.ToString()));
+            stats.AppendChild(playerRace);
 
             XmlNode currentHitPoints = playerData.CreateElement("HpCurrent");
             currentHitPoints.AppendChild(playerData.CreateTextNode(this.HpCurrent.ToString()));
