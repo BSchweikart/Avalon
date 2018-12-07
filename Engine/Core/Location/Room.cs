@@ -29,7 +29,7 @@ namespace Engine
         public List<Item> ItemRoom = new List<Item>();
         public List<Monster> MonsterRoom = new List<Monster>();
 
-        public Room(int id, String name, String descrip, int exitNorth, int exitEast, int exitSouth, int exitWest)
+        public Room(int id, String name, String descrip, int exitNorth, int exitEast, int exitSouth, int exitWest, int idMonster)
         {
             ID = id;
             NameRoom = name;
@@ -41,9 +41,25 @@ namespace Engine
             LocationWest = exitWest;
 
             //need to add monster spwan
+            #region add monsters
+            if(idMonster !=5)
+            {
+                if(idMonster > -1)
+                {
+                    Random rand = new Random();
+                    int mobRm = RandomNumGen.NumberBetween(0,3);
+                    MonsterIsHere = new Monster(WorldGenerator.monsters[mobRm]);
+                    MonsterRoom.Add(MonsterIsHere);
+                }
+            }
+            else
+            {
+                this.MonsterRoom.Add(WorldGenerator.MonsterByID(idMonster));
+            }
+            #endregion
         }
 
-        
+
     }
 
 }

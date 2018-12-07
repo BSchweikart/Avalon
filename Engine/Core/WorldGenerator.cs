@@ -8,20 +8,14 @@ using System.IO;
 /**
  * This is the area that will populate  Avalon with the items and location and others
  * room for notes at a later time
- * 
- * 
- * 
- * 
- * 
- * 
  */
-
 
 namespace Engine
 { 
 
     public static class WorldGenerator
     {
+        #region lists
         public static readonly List<Room> Location = new List<Room>();
         public static readonly List<Treasure> treasures = new List<Treasure>();
         public static readonly List<Monster> monsters = new List<Monster>();
@@ -32,15 +26,31 @@ namespace Engine
         public static List<Player> players = new List<Player>();
         public static List<Class> classes = new List<Class>();
         public static List<Race> races = new List<Race>();
+        #endregion
 
+        #region Monster
+        public static Monster MonsterByID(int id)
+        {
+            return monsters.SingleOrDefault(x => x.ID == id);
+        }
+        public static Monster MonsterByName(string name)
+        {
+            return monsters.SingleOrDefault(x => x.Name == name);
+        }
+        #endregion
+
+        #region
         public static Room RoomByID(int id)
         {
             return Location.SingleOrDefault(x => x.ID == id);
         }
-        //public static Room RoomByName(string name)
-        //{
-        //    return Location.SingleOrDefault(x => x.Name == name);
-        //}
+        public static Room RoomByName(string name)
+        {
+            return Location.SingleOrDefault(x => x.NameRoom == name);
+        }
+        #endregion
+
+        #region weapon
         public static Weapon WeaponByID(int id)
         {
             return weapons.SingleOrDefault(x => x.ID == id);
@@ -49,6 +59,9 @@ namespace Engine
         {
             return weapons.SingleOrDefault(x => x.Name == name);
         }
+        #endregion
+
+        #region Item
         public static Item ItemByID(int id)
         {
             return items.SingleOrDefault(x => x.ID == id);
@@ -57,5 +70,6 @@ namespace Engine
         {
             return items.SingleOrDefault(x => x.Name == name);
         }
+        #endregion
     }
 }

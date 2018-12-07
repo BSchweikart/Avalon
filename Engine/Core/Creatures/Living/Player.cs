@@ -62,9 +62,9 @@ namespace Engine
             playerClass.AppendChild(playerData.CreateTextNode(this.ClassPlayer.ToString()));
             stats.AppendChild(playerClass);
 
-            XmlNode playerRace = playerData.CreateElement("Race");
-            playerRace.AppendChild(playerData.CreateTextNode(this.RacePlayer.ToString()));
-            stats.AppendChild(playerRace);
+            //XmlNode playerRace = playerData.CreateElement("Race");
+            //playerRace.AppendChild(playerData.CreateTextNode(this.RacePlayer.ToString()));
+            //stats.AppendChild(playerRace);
 
             XmlNode currentHitPoints = playerData.CreateElement("HpCurrent");
             currentHitPoints.AppendChild(playerData.CreateTextNode(this.HpCurrent.ToString()));
@@ -102,20 +102,20 @@ namespace Engine
             player.AppendChild(inventoryItems);
 
             // Create an "InventoryItem" node for each item in the player's inventory
-            foreach (Inventory item in this.Inventory)
-            {
-                XmlNode inventoryItem = playerData.CreateElement("Inventory");
+            //foreach (Inventory item in this.Inventory)
+            //{
+            //    XmlNode inventoryItem = playerData.CreateElement("Inventory");
 
-                XmlAttribute idAttribute = playerData.CreateAttribute("ID");
-                idAttribute.Value = item.Details.ID.ToString();
-                inventoryItem.Attributes.Append(idAttribute);
+            //    XmlAttribute idAttribute = playerData.CreateAttribute("ID");
+            //    idAttribute.Value = item.Details.ID.ToString();
+            //    inventoryItem.Attributes.Append(idAttribute);
 
-                XmlAttribute quantityAttribute = playerData.CreateAttribute("Quantity");
-                quantityAttribute.Value = item.Quantity.ToString();
-                inventoryItem.Attributes.Append(quantityAttribute);
+            //    XmlAttribute quantityAttribute = playerData.CreateAttribute("Quantity");
+            //    quantityAttribute.Value = item.Quantity.ToString();
+            //    inventoryItem.Attributes.Append(quantityAttribute);
 
-                inventoryItems.AppendChild(inventoryItem);
-            }
+            //    inventoryItems.AppendChild(inventoryItem);
+            //}
 
             return playerData.InnerXml; // The XML document, as a string, so we can save the data to disk
         }

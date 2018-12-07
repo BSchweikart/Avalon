@@ -15,7 +15,6 @@ namespace Engine
         public int GoldReward { get; set; }
         public List<ItemLoot> LootTable { get; set; }
 
-
         public Monster(int id, string name, int damageMax, int xpReward, int goldReward, int hpCurrent, int hpMax, bool isDead, bool attackable) : base (hpCurrent, hpMax, isDead, attackable) 
         {
             ID = id;
@@ -29,6 +28,19 @@ namespace Engine
             Attackable = attackable;
             LootTable = new List<ItemLoot>();
 
+        }
+
+        public Monster(Monster m) : base(m.HpCurrent, m.HpMax, m.IsDead, m.Attackable)
+        {
+            ID = m.ID;
+            Name = m.Name;
+            DamageMax = m.DamageMax;
+            XpReward = m.XpReward;
+            GoldReward = m.GoldReward;
+            HpCurrent = m.HpCurrent;
+            HpMax = m.HpMax;
+            IsDead = m.IsDead;
+            Attackable = m.Attackable;
         }
     }
 }
