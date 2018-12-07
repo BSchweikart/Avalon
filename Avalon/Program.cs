@@ -14,10 +14,12 @@ namespace Avalon
         {
             WorldListBuilder.Generate();
             GameTitle.Title();
+            Console.WriteLine("");
+            LocationCurrent.CurrentLocation();
+            Console.Write("> ");
             bool exit = false;
             do
             {
-                Console.WriteLine("");
                 string lowerInput = Console.ReadLine();
                 Console.WriteLine(" ");
                 exit = MenuList.MenuCommand(lowerInput);
