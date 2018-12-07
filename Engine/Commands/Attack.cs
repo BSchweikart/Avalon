@@ -8,7 +8,7 @@ namespace Engine
 {
     public class Attack
     {
-        public static void Attacking(string noun, Player _player)
+        public static void Attacking(string input, Player _player)
         {
             if(Player.CurrentLocation.MonsterRoom == null)
             {
@@ -20,7 +20,7 @@ namespace Engine
                 Monster monsterNamed;
                 //NPC npcNamed;
 
-                if (MonsterInRoom(noun, out monsterNamed))
+                if (MonsterInRoom(input, out monsterNamed))
                 {
                     start.Attacking(_player, monsterNamed);
                 }
@@ -31,14 +31,19 @@ namespace Engine
         {
             foreach (Monster mob in Player.CurrentLocation.MonsterRoom)
             {
+                if (mob.Name.Equals(CapWords.FirstCharToUpper(monsterName)))
+                {
+                    monsterNamed = mob;
+                    return true;
+                }
                 
             }
             monsterNamed = null;
             return false;
         }
-        internal static void Attacking(string noun)
-        {
-            throw new NotImplementedException();
-        }
+        //internal static void Attacking(string noun)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
