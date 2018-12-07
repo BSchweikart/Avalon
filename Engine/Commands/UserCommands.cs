@@ -34,7 +34,7 @@ namespace Engine
 
                     case "get":
                     Console.WriteLine("I want that");
-                    //Get.GetCommand(input);
+                    Get.GetCommand(input, Player._player);
                     break;
 
                     case "bags":
@@ -49,7 +49,7 @@ namespace Engine
 
                     case "drop":
                     Console.WriteLine("Litter bug");
-                    //Drop.Dropping(input);
+                    Drop.Dropping(input);
                     break;
 
                     case "help":
