@@ -12,14 +12,48 @@ namespace Engine
         {
             if (string.IsNullOrEmpty(verb))
             {
-                Console.WriteLine("Enter the name of the item you want to get");
-
+                Console.WriteLine("You must enter the name of the item to get");
             }
-        }
+            else
+            {
+                if (verb != null)
+                {
+                    foreach (Item item in Player.CurrentLocation.ItemRoom.ToList())
+                    {
+                        if (item.Name.ToLower() == verb)
+                        {
+                            if (item.ID > 200 && item.ID <= 300)
+                            {
+                                _player.Inventory.Add(new Inventory(item, 1));
+                                Player.CurrentLocation.ItemRoom.Remove(item);
+                            }
+                            else if (item.ID > 100 && item.ID <= 200)
+                            {
+                                Weapon weaponToGet =
+                                    WorldGenerator.weapons.SingleOrDefault(x => x.ID == item.ID);
 
-        internal static void GetCommand(string noun)
-        {
-            throw new NotImplementedException();
+                                _player.Inventory.Add(new Inventory(new Weapon(weaponToGet.ID, weaponToGet.Name, weaponToGet.Description, weaponToGet.Equiptable, weaponToGet.Price), 1));
+                                Player.CurrentLocation.ItemRoom.Remove(item);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
+//        public static void GetCommand(string verb, Player _player)
+//        {
+//            if (string.IsNullOrEmpty(verb))
+//            {
+//                Console.WriteLine("Enter the name of the item you want to get");
+
+//            }
+//        }
+
+//        internal static void GetCommand(string noun)
+//        {
+//            throw new NotImplementedException();
+//        }
+//    }
+//}

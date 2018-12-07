@@ -26,7 +26,7 @@ namespace Engine
         public int DamagMini { get; set; } //keep
         public int DamageMax { get; set; } //keep
 
-        public Weapon(int id, string name, string description) : base (id, name, description)
+        public Weapon(int id, string name, string description, bool equiptable, int price) : base (id, name, description, equiptable, price)
         {
             ID = id;
             Name = name;
