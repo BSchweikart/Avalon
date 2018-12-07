@@ -34,7 +34,7 @@ namespace Engine
 
                     case "get":
                     Console.WriteLine("I want that");
-                    //Get.GetCommand(input);
+                    Get.GetCommand(input);
                     break;
 
                     case "bags":

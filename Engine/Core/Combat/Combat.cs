@@ -8,13 +8,11 @@ namespace Engine
 {
     internal class Combat
     {
-        private int _iteration;
-        private int _attResults;
-        private int _damageResults;
-
-        public int Iteration { get { return _iteration; } set { _iteration = value; } }
-        public int AttResults { get { return _attResults; } }
-        public int DamageResults { get { return _damageResults; } }
+        #region Properties
+        public int Iteration { get; set; }
+        public int AttResults { get; set; }
+        public int DamageResults { get; set; }
+        #endregion
 
         public Combat()
         {
@@ -23,10 +21,10 @@ namespace Engine
 
         public void Attacking(Player player, Monster monsterNamed)
         {
-            //if()
+            RollDie attack = new RollDie(1, 20);
             while (monsterNamed.HpCurrent > 0 && player.HpCurrent > 0)
             {
-                //_attResults = attack.Roll();
+                AttResults = attack.Roll();
 
                 if(player.HpCurrent > 0 && AttResults >= 10)
                 {
