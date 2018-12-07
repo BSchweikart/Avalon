@@ -35,11 +35,11 @@ namespace Avalon
 
                 string lowerInput = inputUser.ToLower();
                 Console.WriteLine(" ");
-                exit = MenuList.MenuCommand(lowerInput); 
+                exit = MenuList.MenuCommand(lowerInput);
 
                 if (lowerInput == "exit")
                 {
-                    break;
+                      break;
                 }
             }
         }

@@ -7,7 +7,7 @@ namespace Engine
     {
         public static bool MenuCommand(string input)
         {
-            switch(input.ToLower())
+            switch (input.ToLower())
             {
                 #region Text file output //out put the text files
                 case "classes":

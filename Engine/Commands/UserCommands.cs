@@ -8,28 +8,13 @@ namespace Engine
 {
     public static class UserCommands
     {
-        public static void CommandCase(string input, Player _player)
-        {
-            string[] commands = input.Split(null);
-            string verb = commands[0].ToLower();
-            string noun;
-            if (commands.Length != 1)
-            {
-                noun = commands[1];
-            }
-            else
-            {
-                noun = "";
-            }
-        }
-
             public static void NormalCommands(string input)
             {
                 switch (input)
                 {
                     case "look":
                     Console.WriteLine("Would you look at that");
-                    //Look.Looking(input);
+                    //Look.Looking(input, Player._player);
                         break;
 
                     case "get":
@@ -55,32 +40,16 @@ namespace Engine
                     case "help":
                         Help.HelpFile();
                     break;
-                    // Need to finsh for movement
-                    //case "north":
-                    //    MovePlayer.MoveTo(verb);
-                    //break;
-
-                    //case "east":
-                    //    MovePlayer.MoveTo(verb);
-                    //break;
-
-                    //case "south":
-                    //    MovePlayer.MoveTo(verb);
-                    //break;
-
-                    //case "west":
-                    //    MovePlayer.MoveTo(verb);
-                    //break;
-
+                    
                     default:
-                        Console.WriteLine(input + " is not a command"); // display when a command is not valid
+                       // Console.WriteLine(input + " is not a command"); // display when a command is not valid
                     break;
                 }
             }
         #region Movement Commands
         public static void MoveCommands(string input)
         {
-            switch (input.ToLower())
+            switch (input)
             {
                  //Need to finsh for movement
                 case "north":
@@ -108,3 +77,21 @@ namespace Engine
 
     }
 }
+#region test things
+//public static void CommandCase(string input, Player _player)
+//{
+//    string[] commands = input.Split(null);
+//    string verb = commands[0].ToLower();
+//    string noun;
+//    if (commands.Length != 1)
+//    {
+//        noun = commands[1];
+//        //NormalCommands(verb, noun);
+//        MoveCommands(verb);
+//    }
+//    else
+//    {
+//        noun = "";
+//    }
+//}
+#endregion
