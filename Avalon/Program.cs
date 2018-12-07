@@ -8,50 +8,38 @@ using Engine;
 
 namespace Avalon
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             WorldListBuilder.Generate();
             GameTitle.Title();
             Console.WriteLine("");
             LocationCurrent.CurrentLocation();
+            Console.WriteLine("Type help to see list of commands");
             Console.Write("> ");
-            bool exit = false;
-            do
+
+            while (true)
             {
-                string lowerInput = Console.ReadLine();
+                bool exit = false;
+                Console.WriteLine("< " + Player._player.HpCurrent + "/" + Player._player.HpMax + " HP" + " >");
+                Console.Write("> ");
+                string inputUser = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(inputUser))
+                {
+                    continue;
+                }
+
+                string lowerInput = inputUser.ToLower();
                 Console.WriteLine(" ");
                 exit = MenuList.MenuCommand(lowerInput);
+
+                if (lowerInput == "exit")
+                {
+                    break;
+                }
             }
-            while (exit == false);
-
-
         }
-
     }
 }
-
-
-
-
-
-//GameTitle.Title();
-
-//bool exit = false;
-
-//do
-//{
-//    Console.WriteLine("");
-//    Console.WriteLine("You entered the " + Player.CurrentLocation.NameRoom);
-//    Console.WriteLine(Player.CurrentLocation.Descrip);
-//    StartMenu.LaunchMenu();  // dispaly the start menu
-//    Console.WriteLine(" ");             
-//    string lowerInput = Console.ReadLine();
-//    Console.WriteLine(" ");
-//    exit = MenuList.MenuCommand(lowerInput);
-//}
-//while (exit == false);
-
-
-
