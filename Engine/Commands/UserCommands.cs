@@ -25,7 +25,7 @@ namespace Engine
 
             public static void NormalCommands(string input)
             {
-                switch (input.ToLower())
+                switch (input)
                 {
                     case "look":
                     Console.WriteLine("Would you look at that");
@@ -34,7 +34,7 @@ namespace Engine
 
                     case "get":
                     Console.WriteLine("I want that");
-                    Get.GetCommand(input, Player._player);
+                    //Get.GetCommand(input);
                     break;
 
                     case "bags":
@@ -43,13 +43,13 @@ namespace Engine
                     break;
 
                     case "attack":
-                    Console.WriteLine("You just want to push the button");
-                    Attack.Attacking(input);
+                    //Console.WriteLine("You just want to push the button");
+                    Attack.Attacking(input, Player._player);
                     break;
 
                     case "drop":
                     Console.WriteLine("Litter bug");
-                    Drop.Dropping(input);
+                    //Drop.Dropping(input);
                     break;
 
                     case "help":
