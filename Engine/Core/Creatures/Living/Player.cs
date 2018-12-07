@@ -213,35 +213,35 @@ namespace Engine
             }
         }
 
-        //public void RemoveItemFromInventory(Item itemToRemove, int quantity = 1)
-        //{
-        //    Inventory item = Inventory.SingleOrDefault(ii => ii.ItemID == itemToRemove.ID);
+        public void RemoveItemFromInventory(Item itemToRemove, int quantity = 1)
+        {
+            Inventory item = Inventory.SingleOrDefault(ii => ii.Quantity == itemToRemove.ID);
 
-        //    if (item == null)
-        //    {
-        //        // The item is not in the player's inventory, so ignore it.
-        //        // We might want to raise an error for this situation
-        //        Console.WriteLine("Cannot drop an item you do not have.");
-        //    }
-        //    else
-        //    {
-        //        // They have the item in their inventory, so decrease the quantity
-        //        item.Quantity -= quantity;
+            if (item == null)
+            {
+                // The item is not in the player's inventory, so ignore it.
+                // We might want to raise an error for this situation
+                Console.WriteLine("Cannot drop an item you do not have.");
+            }
+            else
+            {
+                // They have the item in their inventory, so decrease the quantity
+                item.Quantity -= quantity;
 
-        //        // Don't allow negative quantities.
-        //        // We might want to raise an error for this situation
-        //        if (item.Quantity < 0)
-        //        {
-        //            item.Quantity = 0;
-        //        }
+                // Don't allow negative quantities.
+                // We might want to raise an error for this situation
+                if (item.Quantity < 0)
+                {
+                    item.Quantity = 0;
+                }
 
-        //        // If the quantity is zero, remove the item from the list
-        //        if (item.Quantity == 0)
-        //        {
-        //            Inventory.Remove(item);
-        //        }
-        //    }
-        //}
+                // If the quantity is zero, remove the item from the list
+                if (item.Quantity == 0)
+                {
+                    Inventory.Remove(item);
+                }
+            }
+        }
 
         //public void RemoveItemFromInventory(Weapon weaponToRemove, int quantity = 1)
         //{
