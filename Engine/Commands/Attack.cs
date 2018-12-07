@@ -24,9 +24,14 @@ namespace Engine
                 {
                     start.Attacking(_player, monsterNamed);
                 }
+                else
+                {
+
+                }
 
             }
         }
+
         private static bool MonsterInRoom(string monsterName, out Monster monsterNamed)
         {
             foreach (Monster mob in Player.CurrentLocation.MonsterRoom)
@@ -41,9 +46,5 @@ namespace Engine
             monsterNamed = null;
             return false;
         }
-        //internal static void Attacking(string noun)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

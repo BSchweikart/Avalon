@@ -34,6 +34,7 @@ namespace Engine
             Gold = gold;
             XP = 0;
             Level = level;
+            Equipt = equipt;
             CurrentLocation = WorldGenerator.Location[0];
         }
 

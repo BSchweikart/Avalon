@@ -22,13 +22,15 @@ namespace Engine
         public void Attacking(Player player, Monster monsterNamed)
         {
             RollDie attack = new RollDie(1, 20);
+            RollDie pDamage = new RollDie(player.Equipt.DamageMax);
             while (monsterNamed.HpCurrent > 0 && player.HpCurrent > 0)
             {
                 AttResults = attack.Roll();
 
                 if(player.HpCurrent > 0 && AttResults >= 10)
                 {
-                    Console.WriteLine("You hit " + monsterNamed.Name + " for " + DamageResults);
+                    DamageResults = pDamage.Roll();
+                    Console.WriteLine("You hit " + monsterNamed.Name + " for " + AttResults);
                     Console.WriteLine(monsterNamed.Name + " has " + monsterNamed.HpCurrent + " left");
 
                     if (monsterNamed.HpCurrent <= 0)

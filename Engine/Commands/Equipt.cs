@@ -14,28 +14,28 @@ namespace Engine
             {
                 if (item.Details.Name.ToLower() == noun.ToString())
                 {
-                    //if (string.IsNullOrEmpty(noun))
-                    //{
-                    //    Console.WriteLine("Enter the name of the weapon you want to equip");
-                    //}
-                    //else
-                    //{
-                    //    Weapon weaponToEquip =
-                    //        Item.Weapons.SingleOrDefault(
-                    //            x => x.Name.ToLower() == noun || x.NamePlural.ToLower() == noun);
+                    if (string.IsNullOrEmpty(noun))
+                    {
+                        Console.WriteLine("Enter the name of the weapon you want to equip");
+                    }
+                    else
+                    {
+                        Weapon weaponToEquip =
+                            WorldGenerator.weapons.SingleOrDefault(
+                                x => x.Name.ToLower() == noun);
 
-                    //    if (weaponToEquip == null)
-                    //    {
-                    //        Console.WriteLine("You do not have the weapon: {0}", weaponToEquip);
-                    //    }
-                    //    else
-                    //    {
-                    //        _player.Inventory.Add(new Inventory(_player.Equipt, 1));
-                    //        _player.Equipt = weaponToEquip;
-                    //        //_player.RemoveItemFromInventory(weaponToEquip, 1);
-                    //        Console.WriteLine("You equip your {0}", weaponToEquip.Name.ToString());
-                    //    }
-                    //}
+                        if (weaponToEquip == null)
+                        {
+                            Console.WriteLine("You do not have the weapon: {0}", weaponToEquip);
+                        }
+                        else
+                        {
+                            _player.Inventory.Add(new Inventory(_player.Equipt, 1));
+                            _player.Equipt = weaponToEquip;
+                            //_player.RemoveItemFromInventory(weaponToEquip, 1);
+                            Console.WriteLine("You equip your {0}", weaponToEquip.Name.ToString());
+                        }
+                    }
                 }
                 else
                 {
