@@ -7,13 +7,13 @@ using System.IO;
 
 namespace Engine
 {
-    //public static class SavePlayerData
-    //{
-    //    public static string PLAYER_DATA_FILE_NAME = (CapWords.FirstCharToUpper(Player._player.playerName) + ".xml");
+    public static class SavePlayerData
+    {
+        public static string PLAYER_DATA_FILE_NAME = (CapWords.FirstCharToUpper(Player._player.NamePlayer) + ".xml");
 
-    //    public static void SaveGameData(Player _player)
-    //    {
-    //        File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
-    //    }
-    //}
+        public static void SaveGameData(Player _player)
+        {
+            File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
+        }
+    }
 }

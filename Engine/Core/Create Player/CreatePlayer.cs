@@ -15,7 +15,11 @@ namespace Engine
             string raceName = "";
             //int aligment = 0;
             int gold = 0;
-            int hp = 0;
+            int xp = 0;
+            int level = 1;
+            Weapon equipt = null;
+            int hpMax = 0;
+            int hpCurrent = 0;
             bool validClass = false;
             bool validRace = false;
 
@@ -26,7 +30,8 @@ namespace Engine
             while (validClass == false)
             {
                 Console.WriteLine("Choose a class.");
-                Console.WriteLine("Warrior, Archer, Healer, Assissin, or Mage");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("Warrior, Archer, Healer, Assassin, or Mage");
                 className = Console.ReadLine().ToLower();
 
                 if (className == "warrior")
@@ -44,7 +49,7 @@ namespace Engine
                     gold = 300;
                     validClass = true;
                 }
-                else if (className == "assissin")
+                else if (className == "assassin")
                 {
                     gold = 400;
                     validClass = true;
@@ -63,39 +68,45 @@ namespace Engine
             while (validRace == false)
             {
                 Console.WriteLine("Choose a race.");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("Elf, Dwarf, Gaint, Fairy, Dragon");
                 raceName = Console.ReadLine().ToLower();
 
                 if (raceName == "elf")
                 {
                     validRace = true;
-                    hp = 100;
+                    hpMax = 100;
                 }
                 else if (raceName == "dwarf")
                 {
                     validRace = true;
-                    hp = 100;
+                    hpMax = 100;
                 }
                 else if (raceName == "gaint")
                 {
                     validRace = true;
-                    hp = 100;
+                    hpMax = 100;
                 }
                 else if (raceName == "fairy")
                 {
                     validRace = true;
-                    hp = 100;
+                    hpMax = 100;
                 }
                 else if (raceName == "dragon")
                 {
                     validRace = true;
-                    hp = 100;
+                    hpMax = 100;
                 }
                 else
                 {
                     Console.WriteLine("Pick a valid race");
                 }
             }
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Player._player = new Player(name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), gold, xp, level, equipt, hpCurrent, hpMax, false, true);
+            Console.WriteLine("Loading game please wait");
+            SavePlayerData.SaveGameData(Player._player);
         }
             public static void CreateFromLoad(Player loadPlayer)
             {

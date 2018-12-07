@@ -12,6 +12,7 @@ namespace Engine
 {
     public class Player : LivingCreature
     {
+        public static Player _player;
         public string NamePlayer { get; set; }
         public string ClassPlayer { get; set; }
         public string RacePlayer { get; set; }
@@ -21,8 +22,8 @@ namespace Engine
         public List<Inventory> Inventory { get; set; }
         public static Room CurrentLocation { get; set; }
         public Weapon Equipt { get; set; }
-        public static object _player { get; set; }
         
+
         public Player(string namePlayer, string classPlayer, string racePlayer, int gold, int xp, int level, Weapon equipt, int hpCurrent, int hpMax, bool isDead, bool attackable) : base(hpCurrent, hpMax, isDead, attackable)
         {
             NamePlayer = namePlayer;
