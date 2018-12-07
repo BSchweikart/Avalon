@@ -15,10 +15,10 @@ namespace AvalonConsole
         static void Main(string[] args)
         {
             WorldListBuilder.Generate();
-            GameTitle.Title();            
+            GameTitle.Title();
             Console.WriteLine("");
-            Weapon weapon = new Weapon(1,"dagger","A short sword");
-            Player player = new Player("Kriina", "Assassin", "Elf", 100, 0, 1, weapon, 100, 100, false,true );
+            Weapon weapon = new Weapon(1, "dagger", "A short sword");
+            Player player = new Player("Kriina", "Assassin", "Elf", 100, 0, 1, weapon, 100, 100, false, true);
             LocationCurrent.CurrentLocation();
 
             bool exit = false;
@@ -33,51 +33,44 @@ namespace AvalonConsole
                 exit = MenuList.MenuCommand(lowerInput);
             }
             while (exit == false);
-
-            //while (true)
-            //{
-            //    // Wait for the user to type something, and press the <Enter> key
-            //    string userInput = Console.ReadLine();
-
-            //    // If they typed a blank line, loop back and wait for input again
-            //    if (string.IsNullOrWhiteSpace(userInput))
-            //    {
-            //        continue;
-            //    }
-
-            //    // Convert to lower-case, to make comparisons easier
-            //    string cleanedInput = userInput.ToLower();
-
-
-            //    if (cleanedInput == "exit")
-            //    {
-            //        Console.ForegroundColor = ConsoleColor.Red;
-            //        Console.WriteLine("Saving character, will close when finished!");
-            //        //SaveData.SaveGameData(Player._player);
-            //        break;
-            //    }
-
-                // If the user typed something, try to determine what to do
-                //ParseInput(cleanedInput);
-            }
-
-
-
-
         }
-
-        
-
-        //private static void ParseInput(string input)
-        //{
-        //    // Call the command class to figure out what to do.
-        //    UserCommands.CommandCase(input, Player._player);
-
-        //    // Write a blank line, to keep the UI a little cleaner
-        //    Console.WriteLine("");
-        //}
     }
 }
-            
-        
+//private static void ParseInput(string input)
+//{
+//    // Call the command class to figure out what to do.
+//    UserCommands.CommandCase(input, Player._player);
+
+//    // Write a blank line, to keep the UI a little cleaner
+//    Console.WriteLine("");
+//}
+
+//while (true)
+//{
+//    // Wait for the user to type something, and press the <Enter> key
+//    string userInput = Console.ReadLine();
+
+//    // If they typed a blank line, loop back and wait for input again
+//    if (string.IsNullOrWhiteSpace(userInput))
+//    {
+//        continue;
+//    }
+
+//    // Convert to lower-case, to make comparisons easier
+//    string cleanedInput = userInput.ToLower();
+
+
+//    if (cleanedInput == "exit")
+//    {
+//        Console.ForegroundColor = ConsoleColor.Red;
+//        Console.WriteLine("Saving character, will close when finished!");
+//        //SaveData.SaveGameData(Player._player);
+//        break;
+//    }
+
+// If the user typed something, try to determine what to do
+//ParseInput(cleanedInput);
+
+
+
 

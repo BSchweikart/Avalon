@@ -20,7 +20,7 @@ namespace Engine
             while (validAnswer == false)
             {
                 Console.WriteLine("Are you new to Avalon?");
-                Console.WriteLine(">");
+                Console.Write("> ");
                 usersInput = Console.ReadLine();
 
                 if (usersInput.ToLower() == "no")

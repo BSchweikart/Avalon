@@ -12,6 +12,7 @@ namespace Avalon
     {
         static void Main(string[] args)
         {
+            WorldListBuilder.Generate();
             GameTitle.Title();
             bool exit = false;
             do
@@ -32,7 +33,7 @@ namespace Avalon
 
 
 
-//WorldListBuilder.Generate();
+
 //GameTitle.Title();
 
 //bool exit = false;

@@ -29,27 +29,27 @@ namespace Engine
                 Console.WriteLine("Warrior, Archer, Healer, Assissin, or Mage");
                 className = Console.ReadLine().ToLower();
 
-                if (className == "Warrior")
+                if (className == "warrior")
                 {
                     gold = 100;
                     validClass = true;
                 }
-                else if (className == "Archer")
+                else if (className == "archer")
                 {
                     gold = 200;
                     validClass = true;
                 }
-                else if (className == "Healer")
+                else if (className == "healer")
                 {
                     gold = 300;
                     validClass = true;
                 }
-                else if (className == "Assissin")
+                else if (className == "assissin")
                 {
                     gold = 400;
                     validClass = true;
                 }
-                else if (className == "Mage")
+                else if (className == "mage")
                 {
                     gold = 500;
                     validClass = true;
@@ -64,29 +64,29 @@ namespace Engine
             {
                 Console.WriteLine("Choose a race.");
                 Console.WriteLine("Elf, Dwarf, Gaint, Fairy, Dragon");
-                className = Console.ReadLine().ToLower();
+                raceName = Console.ReadLine().ToLower();
 
-                if (raceName == "Elf")
+                if (raceName == "elf")
                 {
                     validRace = true;
                     hp = 100;
                 }
-                else if (raceName == "Dwarf")
+                else if (raceName == "dwarf")
                 {
                     validRace = true;
                     hp = 100;
                 }
-                else if (raceName == "Gaint")
+                else if (raceName == "gaint")
                 {
                     validRace = true;
                     hp = 100;
                 }
-                else if (raceName == "Fairy")
+                else if (raceName == "fairy")
                 {
                     validRace = true;
                     hp = 100;
                 }
-                else if (raceName == "Dragon")
+                else if (raceName == "dragon")
                 {
                     validRace = true;
                     hp = 100;
