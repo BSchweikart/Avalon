@@ -22,15 +22,17 @@ using System.Threading.Tasks;
 namespace Engine
 {
     public class Weapon : Item
-    {        
-        public int DamagMini { get; set; } //keep
-        public int DamageMax { get; set; } //keep
+    {
+        public int Price { get; set; }
+        public string DamageMax { get; set; } //keep
 
-        public Weapon(int id, string name, string description, bool equiptable, int price, int damageMax) : base (id, name, description, equiptable, price)
+        public Weapon(int id, string name, string description, bool equiptable, int price, string damageMax) : base (id, name, description, equiptable, price)
         {
             ID = id;
             Name = name;
             Description = description;
+            Equiptable = equiptable;
+            Price = price;
             DamageMax = damageMax;
         }
     }

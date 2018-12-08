@@ -17,7 +17,7 @@ namespace AvalonConsole
             WorldListBuilder.Generate();
             GameTitle.Title();
             Console.WriteLine("");
-            Weapon weapon = new Weapon(1, "dagger", "A short sword");
+            Weapon weapon = new Weapon(1, "dagger", "A short sword", true, 0, "10");
             Player player = new Player("Kriina", "Assassin", "Elf", 100, 0, 1, weapon, 100, 100, false, true);
             LocationCurrent.CurrentLocation();
 
