@@ -13,7 +13,7 @@ namespace Engine
             string name;
             string className = "";
             string raceName = "";
-            //int aligment = 0;
+            Faction faction = Faction.Admin;
             int gold = 0;
             int xp = 0;
             int level = 1;
@@ -22,11 +22,13 @@ namespace Engine
             //int hpCurrent = 0;
             bool validClass = false;
             bool validRace = false;
+            bool validFaction = false;
 
             Console.WriteLine("What is your name?");
             Console.Write(">");
             name = CapWords.FirstCharToUpper(Console.ReadLine());
 
+            #region Class Selection
             while (validClass == false)
             {
                 Console.WriteLine("Choose a class.");
@@ -65,7 +67,9 @@ namespace Engine
                     Console.WriteLine("Pick a valid class");
                 }
             }
+            #endregion
 
+            #region Race Selection
             while (validRace == false)
             {
                 Console.ForegroundColor = ConsoleColor.White;
@@ -105,16 +109,33 @@ namespace Engine
                     Console.WriteLine("Pick a valid race");
                 }
             }
+            #endregion
+
+            while (validFaction == false)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("To what faction do you belong?");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("Light, Dark > ");
+                string strFaction = CapWords.FirstCharToUpper(Console.ReadLine());
+
+                if (strFaction == Faction.Light.ToString() || strFaction == Faction.Dark.ToString() || strFaction == Faction.Admin.ToString())
+                {
+                    faction = (Faction)Enum.Parse(typeof(Faction), strFaction, true);
+                    validFaction = true;
+
+                }
+            }
 
             Console.ForegroundColor = ConsoleColor.White;
-            Player._player = new Player(name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), gold, xp, level, equipt, hpMax, hpMax, false, true);
+            Player._player = new Player(name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), gold, xp, level, equipt, hpMax, hpMax, false, true, faction);
             Console.WriteLine("Loading game please wait");
             SavePlayerData.SaveGameData(Player._player);
         }
             public static void CreateFromLoad(Player loadPlayer)
             {
                 Player _player = new Player(loadPlayer.NamePlayer, loadPlayer.ClassPlayer, loadPlayer.RacePlayer, loadPlayer.Gold, loadPlayer.XP, loadPlayer.Level, loadPlayer.Equipt, loadPlayer.HpCurrent,
-                                 loadPlayer.HpMax, loadPlayer.IsDead, loadPlayer.Attackable);
+                                 loadPlayer.HpMax, loadPlayer.IsDead, loadPlayer.Attackable, loadPlayer.Factions);
             }
     }
 }

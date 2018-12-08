@@ -46,8 +46,9 @@ namespace Engine
                 int hpCurrent = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/HpCurrent").InnerText);
                 int hpMax = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/HpMax").InnerText);
                 //int alignment = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Alignment").InnerText);
+                Faction factionString = (Faction)Enum.Parse(typeof(Faction), (playerData.SelectSingleNode("/Player/Stats/Faction").InnerText), true);
                 int equiptString = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentWeapon").InnerText);//check later
-                Player player = new Player(playerName, classPlayer, racePlayer, gold, xp, level, Equipt, hpCurrent, hpMax, false, true);
+                Player player = new Player(playerName, classPlayer, racePlayer, gold, xp, level, Equipt, hpCurrent, hpMax, false, true, factionString);
                 int currentLocationID = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentLocation").InnerText);
                 Player.CurrentLocation = WorldGenerator.RoomByID(currentLocationID);
 

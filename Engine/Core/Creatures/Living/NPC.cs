@@ -13,7 +13,7 @@ namespace Engine
         public string Descrip { get; set; }
 
 
-        public NPC(int id, string name, string descrip, int hpCurrent, int hpMax, bool isDead, bool attackable ) : base (hpCurrent, hpMax, isDead, attackable)
+        public NPC(int id, string name, string descrip, int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction ) : base (hpCurrent, hpMax, isDead, attackable, faction)
         {
             ID = id;
             Name = name;

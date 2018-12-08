@@ -22,7 +22,7 @@ namespace Avalon
 
             while (true)
             {
-                bool exit = false;
+                //bool exit = false;
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("< " + Player._player.NamePlayer +"-"+ Player._player.ClassPlayer + " > <" + Player._player.HpCurrent + "/" + Player._player.HpMax + " HP" + " >");
                 Console.Write("> ");
@@ -35,13 +35,32 @@ namespace Avalon
 
                 string lowerInput = inputUser.ToLower();
                 Console.WriteLine(" ");
-                exit = MenuList.MenuCommand(lowerInput);
 
                 if (lowerInput == "exit")
                 {
-                      break;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Saving character, will close when finished!");
+                    //SaveData.SaveGameData(Player._player);
+                    break;
                 }
+
+                ParseInput(lowerInput);
             }
+        }
+
+        private static void ParseInput(string input)
+        {
+            // Call the command class to figure out what to do.
+            UserCommands.CommandCase(input, Player._player);
+
+            // Write a blank line, to keep the UI a little cleaner
+            Console.WriteLine("");
         }
     }
 }
+
+//exit = MenuList.MenuCommand(lowerInput);
+//if (lowerInput == "exit")
+//{
+//      break;
+//}

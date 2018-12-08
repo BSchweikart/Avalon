@@ -17,18 +17,13 @@ namespace Engine
             Console.WriteLine("Bags - Display your inventory");
             //Console.WriteLine("Quests - Display your quests");
             Console.WriteLine("Attack - Fight the monster");
-            //Console.WriteLine("Equip - Set your current weapon");
-            //Console.WriteLine("Drop <item name> - Drop an item");
+            Console.WriteLine("Equip - Set your current weapon");
+            Console.WriteLine("Drop - Drop an item");
             Console.WriteLine("North - Move North");
             Console.WriteLine("South - Move South");
             Console.WriteLine("East - Move East");
             Console.WriteLine("West - Move West");
             Console.WriteLine("Exit - exit game");
-        }
-
-        internal static void HelpInfo()
-        {
-            throw new NotImplementedException();
         }
     }
 }

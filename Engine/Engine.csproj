@@ -75,6 +75,7 @@
     <Compile Include="Core\Create Player\CreatePlayer.cs" />
     <Compile Include="Core\Create Player\IsNewPlayer.cs" />
     <Compile Include="Core\Create Player\LoadPlayer.cs" />
+    <Compile Include="Enum\Faction.cs" />
     <Compile Include="Enum\PlayerLevel.cs" />
     <Compile Include="Menu\GameTitle.cs" />
     <Compile Include="Menu\MenuList.cs" />

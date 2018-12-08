@@ -19,7 +19,7 @@ namespace Engine
             Iteration = 1;
         }
 
-        public void Attacking(Player player, Monster monsterNamed)
+        public void Attacking(Monster monsterNamed, Player player)
         {
             RollDie attack = new RollDie(1, 20);
             RollDie pDamage = new RollDie(player.Equipt.DamageMax);

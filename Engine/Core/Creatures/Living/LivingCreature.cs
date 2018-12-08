@@ -20,13 +20,15 @@ namespace Engine
         public int HpMax { get { return _hpMax; } set { _hpMax = value; } }
         public bool IsDead { get { return _isDead; } set { _isDead = value; } }
         public bool Attackable { get { return _attackable; } set { _attackable = value; } }
+        public Faction Factions { get; set; }
 
-        public LivingCreature(int hpCurrent, int hpMax, bool isDead, bool attackable)
+        public LivingCreature(int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction)
         {
             HpCurrent = hpCurrent;
             HpMax = hpMax;
             IsDead = IsDead;
             Attackable = attackable;
+            Factions = faction;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

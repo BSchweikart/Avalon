@@ -8,7 +8,7 @@ namespace Engine
 {
     public class Attack
     {
-        public static void Attacking(string input, Player _player)
+        public static void Attacking(string noun, Player _player)
         {
             if(Player.CurrentLocation.MonsterRoom == null)
             {
@@ -20,9 +20,9 @@ namespace Engine
                 Monster monsterNamed;
                 //NPC npcNamed;
 
-                if (MonsterInRoom(input, out monsterNamed))
+                if (MonsterInRoom(noun, out monsterNamed))
                 {
-                    start.Attacking(_player, monsterNamed);
+                    start.Attacking(monsterNamed, _player);
                 }
                 else
                 {

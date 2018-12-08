@@ -8,7 +8,7 @@ namespace Engine
 {
     public class Drop
     {
-        public static void Dropping(string verb)
+        public static void Dropping(string verb, Player _player)
         {
            if (string.IsNullOrEmpty(verb))
                 {

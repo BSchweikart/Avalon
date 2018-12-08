@@ -24,7 +24,7 @@ namespace Engine
         public Weapon Equipt { get; set; }
         public static Monster CurrentMonster { get; set; }
 
-        public Player(string namePlayer, string classPlayer, string racePlayer, int gold, int xp, int level, Weapon equipt, int hpCurrent, int hpMax, bool isDead, bool attackable) : base(hpCurrent, hpMax, isDead, attackable)
+        public Player(string namePlayer, string classPlayer, string racePlayer, int gold, int xp, int level, Weapon equipt, int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction) : base(hpCurrent, hpMax, isDead, attackable, faction)
         {
             NamePlayer = namePlayer;
             ClassPlayer = classPlayer;
