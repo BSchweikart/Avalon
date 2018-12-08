@@ -32,7 +32,7 @@ namespace Engine
                         {
                             _player.Inventory.Add(new Inventory(_player.Equipt, 1));
                             _player.Equipt = weaponToEquip;
-                            //_player.RemoveItemFromInventory(weaponToEquip, 1);
+                            _player.RemoveItemFromInventory(weaponToEquip, 1);
                             Console.WriteLine("You equip your {0}", weaponToEquip.Name.ToString());
                         }
                     }

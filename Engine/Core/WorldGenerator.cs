@@ -11,7 +11,7 @@ using System.IO;
  */
 
 namespace Engine
-{ 
+{
 
     public static class WorldGenerator
     {
@@ -71,5 +71,17 @@ namespace Engine
             return items.SingleOrDefault(x => x.Name == name);
         }
         #endregion
+
+        #region NPC
+        public static NPC NPCByID(int id)
+        {
+            return npcs.SingleOrDefault(x => x.ID == id);
+        }
+        public static NPC NPCByName(string name)
+        {
+            return npcs.SingleOrDefault(x => x.Name == name);
+        }
+        #endregion
     }
 }
+
