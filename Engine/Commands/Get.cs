@@ -32,7 +32,7 @@ namespace Engine
                                 Weapon weaponToGet =
                                     WorldGenerator.weapons.SingleOrDefault(x => x.ID == item.ID);
 
-                                _player.Inventory.Add(new Inventory(new Weapon(weaponToGet.ID, weaponToGet.Name, weaponToGet.Description, weaponToGet.Equiptable, weaponToGet.Price), 1));
+                                _player.Inventory.Add(new Inventory(new Weapon(weaponToGet.ID, weaponToGet.Name, weaponToGet.Description, weaponToGet.Equiptable, weaponToGet.Price, weaponToGet.DamageMax), 1));
                                 Player.CurrentLocation.ItemRoom.Remove(item);
                             }
                         }

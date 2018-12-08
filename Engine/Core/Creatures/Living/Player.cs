@@ -29,12 +29,13 @@ namespace Engine
             NamePlayer = namePlayer;
             ClassPlayer = classPlayer;
             RacePlayer = racePlayer;
-            HpCurrent = hpCurrent;
-            HpMax = hpMax;
             Gold = gold;
             XP = 0;
             Level = level;
+            HpCurrent = hpCurrent;
+            HpMax = hpMax;
             Equipt = equipt;
+            Inventory = new List<Inventory>();
             CurrentLocation = WorldGenerator.Location[0];
         }
 
