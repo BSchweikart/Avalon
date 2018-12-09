@@ -22,7 +22,6 @@ namespace Avalon
 
             while (true)
             {
-                //bool exit = false;
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("< " + Player._player.NamePlayer +"-"+ Player._player.ClassPlayer + " > <" + Player._player.HpCurrent + "/" + Player._player.HpMax + " HP" + " >");
                 Console.Write("> ");
@@ -58,9 +57,3 @@ namespace Avalon
         }
     }
 }
-
-//exit = MenuList.MenuCommand(lowerInput);
-//if (lowerInput == "exit")
-//{
-//      break;
-//}
