@@ -29,7 +29,7 @@ namespace Engine
         {
             string[] dice = typeDice.Split('D');
             int num = Convert.ToInt32(dice[0]);
-            int die = Convert.ToInt32(dice[1]);
+            int die = Convert.ToInt32(dice[0]);
             NumDice = num;
             DieSize = die;
         }

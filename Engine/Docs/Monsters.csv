@@ -1,15 +1,15 @@
-1,Green Imp,1,1,1,1,1,false,true,false
-2,Red Imp,1,1,1,1,1,false,true
-3,Blue Imp,1,1,1,1,1,false,true
-4,Infrit,1,1,1,1,1,false,true
-5,Shiva,1,1,1,1,1,false,true
-6,Vederah,1,1,1,1,1,false,true
-7,Del,1,1,1,1,1,false,true
-8,Shadow Wolf,1,1,1,1,1,false,true
-9,Ogre,1,1,1,1,1,false,true
-10,Two headed Ogre,1,1,1,1,1,false,true
-11,Banshee,1,1,1,1,1,false,true
-12,Mud Golem,1,1,1,1,1,false,true
-13,Rock Golem,1,1,1,1,1,false,true
-14,Windigo,1,1,1,1,1,false,true
-15,Ashtaur,1,1,1,1,1,false,true
+1,Imp,2,3,4,5,6,7,false,true,false
+2,Goblin,2,3,4,5,6,7,false,true,false
+3,Wolf,2,3,4,5,6,7,false,true,false
+4,Infrit,2,3,4,5,6,7,false,true,false
+5,Shiva,2,3,4,5,6,7,false,true,false
+6,Vederah,2,3,4,5,6,7,false,true,false
+7,Del,2,3,4,5,6,7,false,true,false
+8,Shadow Wolf,2,3,4,5,6,7,false,true,false
+9,Ogre,2,3,4,5,6,7,false,true,false
+10,Bobbie,2,3,4,5,6,7,false,true,false
+11,Banshee,2,3,4,5,6,7,false,true,false
+12,Golem,2,3,4,5,6,7,false,true,false
+13,Lani,2,3,4,5,6,7,false,true,false
+14,Windigo,2,3,4,5,6,7,false,true,false
+15,Ashtaur,2,3,4,5,6,7,false,true,false

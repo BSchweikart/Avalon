@@ -129,7 +129,7 @@ namespace Engine
             }
 
             Console.ForegroundColor = ConsoleColor.White;
-            Player._player = new Player(name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), gold, xp, armor, level, equipt, hpMax, hpMax, false, true, faction);
+            Player._player = new Player(name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), gold, xp, armor, level, WorldGenerator.WeaponByID(401), hpMax, hpMax, false, true, faction);
             Console.WriteLine("Loading game please wait");
             SavePlayerData.SaveGameData(Player._player);
         }
