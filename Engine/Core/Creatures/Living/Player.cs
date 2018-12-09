@@ -18,19 +18,21 @@ namespace Engine
         public string RacePlayer { get; set; }
         public int Gold { get; set; }
         public int XP { get; set; }
+        public int Armor { get; set; }
         public int Level { get; set; }
         public List<Inventory> Inventory { get; set; }
         public static Room CurrentLocation { get; set; }
         public Weapon Equipt { get; set; }
         public static Monster CurrentMonster { get; set; }
 
-        public Player(string namePlayer, string classPlayer, string racePlayer, int gold, int xp, int level, Weapon equipt, int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction) : base(hpCurrent, hpMax, isDead, attackable, faction)
+        public Player(string namePlayer, string classPlayer, string racePlayer, int gold, int xp, int armor, int level, Weapon equipt, int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction) : base(hpCurrent, hpMax, isDead, attackable, faction)
         {
             NamePlayer = namePlayer;
             ClassPlayer = classPlayer;
             RacePlayer = racePlayer;
             Gold = gold;
             XP = 0;
+            Armor = armor;
             Level = level;
             HpCurrent = hpCurrent;
             HpMax = hpMax;

@@ -23,23 +23,39 @@ namespace Engine
         {
             RollDie attack = new RollDie(1, 20);
             RollDie pDamage = new RollDie(player.Equipt.DamageMax);
-            while (monsterNamed.HpCurrent > 0 && player.HpCurrent > 0)
+            RollDie mDamage = new RollDie(monsterNamed.DamageMax);
+
+            if (monsterNamed.Attackable == false)
+            {
+                Console.WriteLine("Can't be attacked for whatever reason");
+                return;
+            }
+
+            while (monsterNamed.IsDead != true && player.IsDead != true)
             {
                 AttResults = attack.Roll();
 
-                if(player.HpCurrent > 0 && AttResults >= 10)
+                Console.WriteLine("Your attack with your " + player.Equipt.Name.ToString() + ": " + AttResults);
+
+                #region player attack
+                if (AttResults >= monsterNamed.Armor)
                 {
+                    Console.WriteLine("You hit the " + monsterNamed.Name);
+
                     DamageResults = pDamage.Roll();
-                    Console.WriteLine("You hit " + monsterNamed.Name + " for " + AttResults);
-                    Console.WriteLine(monsterNamed.Name + " has " + monsterNamed.HpCurrent + " left");
+                    Console.WriteLine("You did " + DamageResults + " points of damage.");
+
+                    monsterNamed.HpCurrent -= DamageResults;
+                    Console.WriteLine(monsterNamed.Name + " has " + monsterNamed.HpCurrent + " hitpoints left");
 
                     if (monsterNamed.HpCurrent <= 0)
                     {
-                        Console.WriteLine("You have defeted " + monsterNamed.Name);
+                        Console.WriteLine("The " + monsterNamed.Name + " is dead!");
+                        monsterNamed.IsDead = true;
+                        Console.WriteLine("The fight took " + Iteration + " rounds to finish.");
                         Player.CurrentLocation.MonsterRoom.Remove(monsterNamed);
                         player.XP += monsterNamed.XpReward;
                         player.Gold += monsterNamed.GoldReward;
-
                         break;
                     }
                 }
@@ -47,19 +63,28 @@ namespace Engine
                 {
                     Console.WriteLine("You missed your attack");
                 }
+                #endregion
 
-                if (monsterNamed.HpCurrent > 0 && AttResults >= 10)
+                AttResults = attack.Roll();
+                Console.WriteLine(monsterNamed.Name + " attacks you: " + AttResults);
+
+                if (AttResults > player.Armor)
                 {
-                    Console.WriteLine(monsterNamed.Name + " hits you for " + DamageResults);
-                    Console.WriteLine("You have " + player.HpCurrent + " left");
+                    Console.WriteLine("The " + monsterNamed.Name + " hits you!");
+
+                    DamageResults = mDamage.Roll();
+                    Console.WriteLine("The " + monsterNamed.Name + " did " + DamageResults + " points of damage.");
+
+                    player.HpCurrent -= DamageResults;
 
                     if (player.HpCurrent <= 0)
                     {
-                        Console.WriteLine("You have been defeted ");
+                        Console.WriteLine("You are dead!");
                         player.IsDead = true;
-                      
+                        Console.WriteLine("The fight took " + Iteration + " rounds to finish.\n");
+                        LoadPlayer.LoadGame(player.NamePlayer);
+                        LocationCurrent.CurrentLocation();
 
-                       
                     }
                 }
                 else

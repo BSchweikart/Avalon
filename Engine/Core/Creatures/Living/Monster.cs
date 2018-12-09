@@ -10,18 +10,20 @@ namespace Engine
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public int DamageMax { get; set; }
+        public string DamageMax { get; set; }
         public int XpReward { get; set; }
         public int GoldReward { get; set; }
+        public int Armor { get; set; }
         public List<ItemLoot> LootTable { get; set; }
 
-        public Monster(int id, string name, int damageMax, int xpReward, int goldReward, int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction) : base (hpCurrent, hpMax, isDead, attackable, faction) 
+        public Monster(int id, string name, string damageMax, int xpReward, int goldReward, int armor, int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction) : base (hpCurrent, hpMax, isDead, attackable, faction) 
         {
             ID = id;
             Name = name;
             DamageMax = damageMax;
             XpReward = xpReward;
             GoldReward = goldReward;
+            Armor = armor;
             HpCurrent = hpCurrent;
             HpMax = hpMax;
             IsDead = isDead;
@@ -37,6 +39,7 @@ namespace Engine
             DamageMax = m.DamageMax;
             XpReward = m.XpReward;
             GoldReward = m.GoldReward;
+            Armor = m.Armor;
             HpCurrent = m.HpCurrent;
             HpMax = m.HpMax;
             IsDead = m.IsDead;
