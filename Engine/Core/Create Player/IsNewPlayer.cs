@@ -8,7 +8,7 @@ namespace Engine
 {
     public static class IsNewPlayer
     {
-        //private static object Load;
+        private static object Load;
 
         public static void NewPlayer()
         {
