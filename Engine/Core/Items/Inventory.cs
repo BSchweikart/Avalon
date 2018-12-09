@@ -28,6 +28,12 @@ namespace Engine
         public string WeaponDamageType { get { return _wDamageType; } set { _wDamageType = value; } }
         public int WeaponPrice { get { return _wPrice; } set { _wPrice = value; } }
 
+        public Inventory(Item details, int quantity)
+        {
+            Details = details;
+            Quantity = quantity;
+        }
+    
         public Inventory(Weapon weapon, int quantity)
         {
             WeaponName = weapon.Name;
