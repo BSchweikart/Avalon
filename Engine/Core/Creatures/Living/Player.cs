@@ -25,15 +25,15 @@ namespace Engine
         public Weapon Equipt { get; set; }
         public static Monster CurrentMonster { get; set; }
 
-        public Player(string namePlayer, string classPlayer, string racePlayer, int gold, int xp, int armor, int level, Weapon equipt, int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction) : base(hpCurrent, hpMax, isDead, attackable, faction)
+        public Player(string namePlayer, string classPlayer, string racePlayer, int hpCurrent, int hpMax, int gold, Weapon equipt,  bool isDead, bool attackable, Faction faction) : base(hpCurrent, hpMax, isDead, attackable, faction)
         {
             NamePlayer = namePlayer;
             ClassPlayer = classPlayer;
             RacePlayer = racePlayer;
             Gold = gold;
             XP = 0;
-            Armor = armor;
-            Level = level;
+            Armor = 10;
+            Level = 1;
             HpCurrent = hpCurrent;
             HpMax = hpMax;
             Equipt = equipt;
@@ -44,8 +44,8 @@ namespace Engine
         public void AddXP(int xpToAdd) // Used to incress player health
         {
             //TODO finsh adding in XP
-            //XP += xpToAdd;
-            //HpMax = (Level * 2); // not used until LC can take over have to fix other parts for this to happen
+            XP += xpToAdd;
+            HpMax = (Level * 2); // not used until LC can take over have to fix other parts for this to happen
         }
 
         public string ToXmlString()

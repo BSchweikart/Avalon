@@ -5,16 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-
-// had to add this in by hand would not pop the fields.
 /**
  * This is the area that will be used to populate the lists that the other sections will use.
  * This is the section that will use the StreamReader function and set the values.
- * 
- * 
- * The list should start working and have a base for the others
- * 
- * 
  */
 
 namespace Engine
@@ -59,15 +52,19 @@ namespace Engine
             #endregion
 
             #region Creature ListBulder
+            #region Monster
             using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Monsters.csv"))
             {
                 while (!reader.EndOfStream)
                 {
                     string[] line = ReadNextLine(reader); 
-                    WorldGenerator.monsters.Add(new Monster(int.Parse(line[0]),line[1],line[2],int.Parse(line[3]),int.Parse(line[4]),int.Parse(line[5]), int.Parse(line[6]), int.Parse(line[7]), bool.Parse(line[8]), bool.Parse(line[9]),Faction.Admin));
+                    WorldGenerator.monsters.Add
+                    (new Monster(int.Parse(line[0]),line[1],line[2],int.Parse(line[3]),int.Parse(line[4]),int.Parse(line[5]), int.Parse(line[6]), int.Parse(line[7]), bool.Parse(line[8]), bool.Parse(line[9]),Faction.Admin));
                 }
             }
+            #endregion
 
+            #region NPC
             using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/NPC.csv"))
             {
                 while (!reader.EndOfStream)
@@ -76,7 +73,9 @@ namespace Engine
                     WorldGenerator.npcs.Add(new NPC(int.Parse(line[0]), line[1], line[2], int.Parse(line[3]), int.Parse(line[4]), bool.Parse(line[5]), bool.Parse(line[6]), Faction.Admin));
                 }
             }
+            #endregion
 
+            #region Race
             using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Race.csv"))
             {
                 while (!reader.EndOfStream)
@@ -85,7 +84,9 @@ namespace Engine
                     WorldGenerator.races.Add(new Race(line[0], line[1]));
                 }
             }
+            #endregion
 
+            #region Class
             using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Classes.csv"))
             {
                 while (!reader.EndOfStream)
@@ -95,8 +96,9 @@ namespace Engine
                 }
             }
             #endregion
+            #endregion
 
-            //Room ListBulder
+            #region Rooms
             using (StreamReader reader = File.OpenText(@"../../.../Engine/Docs/Rooms.csv"))
             {
                 while (!reader.EndOfStream)
@@ -109,8 +111,8 @@ namespace Engine
                         );
                 }
             }
-
-            //WorldGenerator.players.Add(new Player(""));
+            #endregion
+            
       }
    } 
 }

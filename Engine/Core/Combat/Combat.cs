@@ -94,6 +94,10 @@ namespace Engine
 
                 Iteration++;
             }
+            if (player.IsDead == true)
+            {
+                player.NamePlayer += " Dead";
+            }
         }
     }
 }

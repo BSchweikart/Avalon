@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Engine.Attack">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Attack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.DevMenu">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAACAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Commands\DevTools\DevMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Drop">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Drop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Equipt">
+    <Position X="2.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Equipt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Get">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Commands\Get.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Help">
+    <Position X="7.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Commands\Help.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Look">
+    <Position X="18" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIQAAAAgEAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Look.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Move">
+    <Position X="19.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAgAAAQAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Move.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.MovePlayer">
+    <Position X="11" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\MovePlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.UserCommands">
+    <Position X="16.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\UserCommands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.CapWords">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\CapWords.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Combat">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAQAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Combat\Combat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.RollDie">
+    <Position X="19.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAACAACAAAIAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Combat\RollDie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.CreatePlayer">
+    <Position X="11" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Create Player\CreatePlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.IsNewPlayer">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Create Player\IsNewPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.LoadPlayer">
+    <Position X="14.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAE=</HashCode>
+      <FileName>Core\Create Player\LoadPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.SavePlayerData">
+    <Position X="12.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Create Player\SavePlayerData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.WelcomeScreen">
+    <Position X="18" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Create Player\WelcomeScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.LivingCreature" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAACAAAAEAAIAAAEgAAgwAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Core\Creatures\Living\LivingCreature.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Engine.Monster" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAEAIQBAAAAAgAAEAAAAAAAAAA=</HashCode>
+      <FileName>Core\Creatures\Living\Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.NPC" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Creatures\Living\NPC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Player" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAgQAgAAAAAAAAAAACCgAAEFAAAAhMAAAAgCBAAE=</HashCode>
+      <FileName>Core\Creatures\Living\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Class">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Creatures\Race,Class\Class.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Race">
+    <Position X="16.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Creatures\Race,Class\Race.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Inventory" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAQABAgARoAAAAAAEgAQAABDAABIAgAACAAA=</HashCode>
+      <FileName>Core\Items\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Engine.Item" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIQAggAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Items\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.ItemLoot">
+    <Position X="12.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Items\ItemLoot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Potion" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Items\Potion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Treasure" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Items\Treasure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Weapon" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Items\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.LocationCurrent">
+    <Position X="16.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Location\LocationCurrent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Room">
+    <Position X="11" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAlCIAAAAAAgAAAAAECAABAAAAAAQAAAA=</HashCode>
+      <FileName>Core\Location\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.Quest">
+    <Position X="14.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAgAAAAAAEAAQBAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Core\Quests\Quest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.RandomNumGen">
+    <Position X="18" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\RandomNumGen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.WorldGenerator">
+    <Position X="19.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAQAEgAAABAiqACQQABgAAIAAAIAAAEIAAAAE=</HashCode>
+      <FileName>Core\WorldGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.WorldListBuilder">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Core\WorldListBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.PlayerLevel">
+    <Position X="12.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAACIAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAA=</HashCode>
+      <FileName>Enum\PlayerLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.GameTitle">
+    <Position X="4" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menu\GameTitle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine.StartMenu">
+    <Position X="14.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menu\StartMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Engine.Faction" Collapsed="true">
+    <Position X="10" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAwAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Enum\Faction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

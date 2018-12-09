@@ -19,11 +19,13 @@ namespace Avalon
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Type help to see list of commands");
             Console.Write("> ");
+            
+
 
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("< " + Player._player.NamePlayer +"-"+ Player._player.ClassPlayer + " > <" + Player._player.HpCurrent + "/" + Player._player.HpMax + " HP" + " >");
+                Console.WriteLine("< " + Player._player.NamePlayer +"-"+ Player._player.ClassPlayer + " > <" + Player._player.HpCurrent + "/" +  Player._player.HpMax + " HP" + " >");
                 Console.Write("> ");
                 string inputUser = Console.ReadLine();
 
@@ -39,7 +41,7 @@ namespace Avalon
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Saving character, will close when finished!");
-                    //SaveData.SaveGameData(Player._player);
+                    SavePlayerData.SaveGameData(Player._player);
                     break;
                 }
 
@@ -49,11 +51,7 @@ namespace Avalon
 
         private static void ParseInput(string input)
         {
-            // Call the command class to figure out what to do.
             UserCommands.CommandCase(input, Player._player);
-
-            // Write a blank line, to keep the UI a little cleaner
-            Console.WriteLine("");
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Engine
 {
     class LoadPlayer
     {
-        private static Weapon Equipt;
+        //private static Weapon Equipt;
 
         //public static object World { get; private set; }
 
@@ -40,15 +40,18 @@ namespace Engine
                 string playerName = playerData.SelectSingleNode("/Player/Stats/Name").InnerText;
                 string classPlayer = playerData.SelectSingleNode("/Player/Stats/Class").InnerText;
                 string racePlayer = playerData.SelectSingleNode("/Player/Stats/Race").InnerText;
-                int gold = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Gold").InnerText);
-                int xp = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/XP").InnerText);
-                int level = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Level").InnerText);
                 int hpCurrent = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/HpCurrent").InnerText);
                 int hpMax = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/HpMax").InnerText);
-                int armor = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Armor").InnerText);
-                Faction factionString = (Faction)Enum.Parse(typeof(Faction), (playerData.SelectSingleNode("/Player/Stats/Faction").InnerText), true);
+                int gold = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Gold").InnerText);
+                int xp = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/XP").InnerText);
+                //int level = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Level").InnerText);
+                //int armor = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Armor").InnerText);
                 int equiptString = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentWeapon").InnerText);//check later
-                Player player = new Player(playerName, classPlayer, racePlayer, gold, xp, armor, level, Equipt, hpCurrent, hpMax, false, true, factionString);
+                Weapon equipt = WorldGenerator.WeaponByID(equiptString);
+                Faction factionString = (Faction)Enum.Parse(typeof(Faction), (playerData.SelectSingleNode("/Player/Stats/Faction").InnerText), true);
+                
+                Player player = new Player(playerName, classPlayer, racePlayer, hpCurrent, hpMax, gold, equipt, false, true, factionString);
+
                 int currentLocationID = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentLocation").InnerText);
                 Player.CurrentLocation = WorldGenerator.RoomByID(currentLocationID);
 

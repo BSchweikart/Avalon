@@ -98,13 +98,13 @@ namespace Engine
             Console.WriteLine("Weapon Name: " + weaponToLook.Name);
             Console.WriteLine("Description: " + weaponToLook.Description);
             Console.WriteLine("Damage: " + weaponToLook.DamageMax);
-            Console.WriteLine("Damage Type", weaponToLook.DamageType);
             Console.WriteLine("Price: ", weaponToLook.Price.ToString());
         }
         public static void LookAtMonster(Monster monsterToLook)
         {
             Console.WriteLine("Name: " + monsterToLook.Name);
-            //Console.WriteLine("Armor Class: " + monsterToLook.AC);
+            Console.WriteLine("Attack: " + monsterToLook.DamageMax);
+            Console.WriteLine("Armor: " + monsterToLook.Armor);
             Console.WriteLine("Current Hitpoints: " + monsterToLook.HpCurrent);
         }
         //public static void LookAtNpc(NPC npcToLook)

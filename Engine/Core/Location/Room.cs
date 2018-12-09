@@ -42,12 +42,12 @@ namespace Engine
 
             //need to add monster spwan
             #region add monsters
-            if(idMonster !=5)
+            if(idMonster !=12)
             {
                 if(idMonster > -1)
                 {
                     Random rand = new Random();
-                    int mobRm = RandomNumGen.NumberBetween(0,3);
+                    int mobRm = RandomNumGen.NumberBetween(0,13);
                     MonsterIsHere = new Monster(WorldGenerator.monsters[mobRm]);
                     MonsterRoom.Add(MonsterIsHere);
                 }

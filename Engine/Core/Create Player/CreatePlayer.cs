@@ -13,14 +13,10 @@ namespace Engine
             string name;
             string className = "";
             string raceName = "";
-            Faction faction = Faction.Admin;
-            int gold = 0;
-            int xp = 0;
-            int armor = 0;
-            int level = 1;
-            Weapon equipt = null;
             int hpMax = 0;
-            //int hpCurrent = 0;
+            int gold = 0;
+            Faction faction = Faction.Admin;
+            //Weapon equipt = null;           
             bool validClass = false;
             bool validRace = false;
             bool validFaction = false;
@@ -129,14 +125,21 @@ namespace Engine
             }
 
             Console.ForegroundColor = ConsoleColor.White;
-            Player._player = new Player(name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), gold, xp, armor, level, WorldGenerator.WeaponByID(401), hpMax, hpMax, false, true, faction);
+            Player._player = new Player
+            (
+                name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), hpMax, hpMax, gold, WorldGenerator.WeaponByID(401), false, true, faction
+            );
+
             Console.WriteLine("Loading game please wait");
             SavePlayerData.SaveGameData(Player._player);
         }
             public static void CreateFromLoad(Player loadPlayer)
             {
-                Player _player = new Player(loadPlayer.NamePlayer, loadPlayer.ClassPlayer, loadPlayer.RacePlayer, loadPlayer.Gold, loadPlayer.XP, loadPlayer.Armor, loadPlayer.Level, loadPlayer.Equipt, loadPlayer.HpCurrent,
-                                 loadPlayer.HpMax, loadPlayer.IsDead, loadPlayer.Attackable, loadPlayer.Factions);
+                Player _player = new Player
+                (
+                    loadPlayer.NamePlayer, loadPlayer.ClassPlayer, loadPlayer.RacePlayer, loadPlayer.HpCurrent, loadPlayer.HpMax, loadPlayer.Gold, 
+                    loadPlayer.Equipt, loadPlayer.IsDead, loadPlayer.Attackable, loadPlayer.Factions
+                );
             }
     }
 }

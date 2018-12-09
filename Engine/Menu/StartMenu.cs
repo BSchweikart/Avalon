@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IO;
 
-// need to link everything in and have the selection clear after
-
 namespace Engine
 {
     public class StartMenu
@@ -10,11 +8,7 @@ namespace Engine
         public static void LaunchMenu()
         {
             Console.WriteLine("");
-            Console.WriteLine("Attack");
-            Console.WriteLine("Bags");
-            Console.WriteLine("Use");
-            Console.WriteLine("Help");
-            Console.WriteLine("Exit");
+            Console.WriteLine("Attack," + " Bags," + " Use" + " Help," + " Exit");
         }
     }
 }
