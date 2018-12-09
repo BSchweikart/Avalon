@@ -47,6 +47,9 @@ Description
 ID 400-499
 Name
 Description
+Equipt
+Price
+Damage
 
 #Amor list is listed as
 ID 500-599

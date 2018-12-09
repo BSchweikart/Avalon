@@ -16,6 +16,7 @@ namespace Engine
             Faction faction = Faction.Admin;
             int gold = 0;
             int xp = 0;
+            int armor = 0;
             int level = 1;
             Weapon equipt = null;
             int hpMax = 0;
@@ -128,13 +129,13 @@ namespace Engine
             }
 
             Console.ForegroundColor = ConsoleColor.White;
-            Player._player = new Player(name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), gold, xp, level, equipt, hpMax, hpMax, false, true, faction);
+            Player._player = new Player(name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), gold, xp, armor, level, equipt, hpMax, hpMax, false, true, faction);
             Console.WriteLine("Loading game please wait");
             SavePlayerData.SaveGameData(Player._player);
         }
             public static void CreateFromLoad(Player loadPlayer)
             {
-                Player _player = new Player(loadPlayer.NamePlayer, loadPlayer.ClassPlayer, loadPlayer.RacePlayer, loadPlayer.Gold, loadPlayer.XP, loadPlayer.Level, loadPlayer.Equipt, loadPlayer.HpCurrent,
+                Player _player = new Player(loadPlayer.NamePlayer, loadPlayer.ClassPlayer, loadPlayer.RacePlayer, loadPlayer.Gold, loadPlayer.XP, loadPlayer.Armor, loadPlayer.Level, loadPlayer.Equipt, loadPlayer.HpCurrent,
                                  loadPlayer.HpMax, loadPlayer.IsDead, loadPlayer.Attackable, loadPlayer.Factions);
             }
     }
