@@ -8,19 +8,11 @@ namespace Engine
 {
     public class Room
     {
-        //private int _id;
-        //private string _nameRoom;
-        //private string _descripRoom;
-        //private Monster _monster;
-        //private int _locationNorth;
-        //private int _locationEast;
-        //private int _locationSouth;
-        //private int _locationWest;
-
+        #region fields
         public int ID { get; set; }
         public string NameRoom { get; set; }
         public string DescripRoom { get; set; }
-        //public Quest QuestIsHere { get; set; }
+        //public Quest QuestIsHere { get; set; } // add at a later time
         public Monster MonsterIsHere { get; set; }
         public NPC NPCIsHere { get; set; }
         public int LocationNorth { get; set; }
@@ -30,19 +22,20 @@ namespace Engine
         public List<Item> ItemRoom = new List<Item>();
         public List<Monster> MonsterRoom = new List<Monster>();
         public List<NPC> NPCRoom = new List<NPC>();
+        #endregion
 
         public Room(int id, String name, String descrip, int exitNorth, int exitEast, int exitSouth, int exitWest, int idMonster, int idRmLoot, int idRmNPC)
         {
             ID = id;
             NameRoom = name;
             DescripRoom = descrip;
-            //QuestIsHere = questIsHere;
+            //QuestIsHere = questIsHere; // used for later
             LocationNorth = exitNorth;
             LocationEast = exitEast;
             LocationSouth = exitSouth;
             LocationWest = exitWest;
 
-            //need to add monster spwan
+            
             #region add monsters
             if(idMonster !=12)
             {
@@ -63,11 +56,12 @@ namespace Engine
             #region add Items
             if (idRmLoot > -1)
             {
-                if (idRmLoot >= 400 && idRmLoot <= 404)
+                if (idRmLoot >= 400 && idRmLoot <= 404) // add weapons
                 {
                     Weapon rmLoot = WorldGenerator.weapons.SingleOrDefault(ii => ii.ID == idRmLoot);
                     ItemRoom.Add(new Weapon(rmLoot.ID, rmLoot.Name, rmLoot.Description, rmLoot.Equiptable, rmLoot.Price, rmLoot.DamageMax));
                 }
+                
             }
             #endregion
 
@@ -82,8 +76,5 @@ namespace Engine
             }
             #endregion
         }
-
-
     }
-
 }

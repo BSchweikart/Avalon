@@ -23,9 +23,8 @@ namespace Engine
 {
     public class Weapon : Item
     {
-        public int Price { get; set; }
+        //public int Price { get; set; }
         public string DamageMax { get; set; } //keep
-        public string DamageType { get; set; }
 
         public Weapon(int id, string name, string description, bool equiptable, int price, string damageMax) : base (id, name, description, equiptable, price)
         {

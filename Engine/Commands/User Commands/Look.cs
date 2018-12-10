@@ -46,7 +46,7 @@ namespace Engine
             }
             #endregion
 
-            #region Weapon
+            #region Weapon need to fix null
             else if (weaponToLook != null)
             {
                 foreach (Inventory weapon in Player._player.Inventory.ToList())

@@ -31,6 +31,7 @@ namespace Engine
         {
             switch (verb)
             {
+                #region Gen Input
                 case "look":
                    if (noun != "")
                    {
@@ -59,32 +60,38 @@ namespace Engine
                  break;
                 
                 case "help":
-                 Help.HelpFile();
-                 break;
+                    Help.HelpFile();
+                    break;
                 
                 case "stats":
-                 Stats.info(Player._player);
-                 break;
-                
+                    Stats.info(Player._player);
+                    break;
+
+                case "equip":
+                    Equipt.Equip(noun, Player._player);
+                    break;
+                #endregion
+
+                #region Movemnt Input
                 case "north":
-                 MovePlayer.MoveTo(verb);
-                 break;
+                    MovePlayer.MoveTo(verb);
+                    break;
                 
                 case "east":
-                 MovePlayer.MoveTo(verb);
-                 break;
+                    MovePlayer.MoveTo(verb);
+                    break;
                 
                 case "south":
-                 MovePlayer.MoveTo(verb);
-                 break;
+                    MovePlayer.MoveTo(verb);
+                    break;
 
                 case "west":
-                 MovePlayer.MoveTo(verb);
-                 break;
-
+                    MovePlayer.MoveTo(verb);
+                    break;
+                #endregion
                 default:
-                 Console.WriteLine(verb + " is not a command"); // display when a command is not valid
-                 break;
+                    Console.WriteLine(verb + " is not a command"); // display when a command is not valid
+                    break;
             }
         }
     }

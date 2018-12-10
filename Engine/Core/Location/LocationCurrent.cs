@@ -12,13 +12,16 @@ namespace Engine
     {
         public static void CurrentLocation()
         {
-            Console.WriteLine("You are at: {0}", Player.CurrentLocation.NameRoom); //getting a null for location
+            #region display Current Location
+            Console.WriteLine("You are at: {0}", Player.CurrentLocation.NameRoom); 
 
             if (Player.CurrentLocation.DescripRoom != "")
             {
                 Console.WriteLine(Player.CurrentLocation.DescripRoom);
             }
+            #endregion
 
+            #region Check for Vaild Exits
             Console.ForegroundColor = ConsoleColor.Magenta;
             string exits = "\n[Exits: ";
             List<string> validExits = new List<string>();
@@ -51,6 +54,7 @@ namespace Engine
                 }
             }
             Console.WriteLine(exits + "]");
+            #endregion
 
             #region Monster spawn
             if (Player.CurrentLocation.MonsterRoom != null)

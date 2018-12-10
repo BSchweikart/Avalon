@@ -12,18 +12,18 @@ namespace Engine
         {
             Console.WriteLine("Available commands");
             Console.WriteLine("------------------------------------");
-            //Console.WriteLine("Stats - Display player information");
-            Console.WriteLine("Look - Get the description of your location");
+            Console.WriteLine("Stats - Display player information"); //working
+            Console.WriteLine("Look - Get the description of your location"); //working
             Console.WriteLine("Bags - Display your inventory");
             //Console.WriteLine("Quests - Display your quests");
-            Console.WriteLine("Attack - Fight the monster");
-            Console.WriteLine("Equip - Set your current weapon");
-            Console.WriteLine("Drop - Drop an item");
-            Console.WriteLine("North - Move North");
-            Console.WriteLine("South - Move South");
-            Console.WriteLine("East - Move East");
-            Console.WriteLine("West - Move West");
-            Console.WriteLine("Exit - exit game");
+            Console.WriteLine("Attack - Fight the monster"); //working
+            Console.WriteLine("Equip - Set your current weapon"); 
+            Console.WriteLine("Drop - Drop an item"); //working logic error
+            Console.WriteLine("North - Move North"); //working
+            Console.WriteLine("South - Move South"); //working
+            Console.WriteLine("East - Move East"); //working
+            Console.WriteLine("West - Move West"); //working
+            Console.WriteLine("Exit - exit game"); //working
         }
     }
 }

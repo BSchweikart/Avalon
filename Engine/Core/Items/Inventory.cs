@@ -11,21 +11,17 @@ namespace Engine
     {
         private Item _details;
         private int _quantity;
-        //private string _wName;
-        //private string _wDesc;
-        //private string _wDamage;
-        //private string _wDamageType;
-        //private int _wPrice;
+        
 
         public Item Details { get { return _details; } set { _details = value; OnPropertyChanged("Details"); } }
         public int Quantity { get { return _quantity; } set { _quantity = value; OnPropertyChanged("Quantity"); } }
         public int ItemID { get { return Details.ID; } }
-        //public string Description { get { return Quantity > 1 ? Details.NamePlural : Details.Name; } }
+        public string Description { get { return Quantity > 1 ? Details.Name : Details.Description; } }
         public int Price { get { return Details.Price; } }
         public string WeaponName { get; set; }
         public string WeaponDesc { get; set; }
         public string WeaponDamage { get; set; }
-        public string WeaponDamageType { get; set; }
+        
         public int WeaponPrice { get; set; }
 
         public Inventory(Item details, int quantity)
@@ -39,12 +35,12 @@ namespace Engine
             WeaponName = weapon.Name;
             WeaponDesc = weapon.Description;
             WeaponDamage = weapon.DamageMax;
-            WeaponDamageType = weapon.DamageType;
             WeaponPrice = weapon.Price;
             Details = weapon;
             Quantity = quantity;
         }
 
+        #region Chnage Event
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string name)
@@ -54,5 +50,6 @@ namespace Engine
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
             }
         }
+        #endregion
     }
 }
