@@ -139,6 +139,7 @@ namespace Engine
 
             Console.WriteLine("Loading game please wait");
             SavePlayerData.SaveGameData(Player._player); // save player information
+            Console.Clear(); // clear the Console to clean it up
         }
         #region Load Player Data
         public static void CreateFromLoad(Player loadPlayer)

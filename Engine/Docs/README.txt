@@ -65,6 +65,10 @@ e
 s
 w
 Mob
+Weapon
+Treas
+Armor
+Pots
 
 #Classes
 ID 700-749

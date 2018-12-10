@@ -50,7 +50,7 @@
     <Compile Include="Commands\User Commands\Look.cs" />
     <Compile Include="Commands\User Commands\Move.cs" />
     <Compile Include="Commands\User Commands\MovePlayer.cs" />
-    <Compile Include="Commands\User Commands\Stats.cs" />
+    <Compile Include="Menu\Stats.cs" />
     <Compile Include="Commands\User Commands\UserCommands.cs" />
     <Compile Include="Core\CapWords.cs" />
     <Compile Include="Core\Combat\RollDie.cs" />

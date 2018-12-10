@@ -10,7 +10,9 @@ namespace Engine
     {
         public void Welcome()
         {
-            IsNewPlayer.NewPlayer();
+           
+
+           
         }
     }
 }

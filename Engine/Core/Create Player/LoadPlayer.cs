@@ -63,7 +63,7 @@ namespace Engine
                     int id = Convert.ToInt32(node.Attributes["ID"].Value);
                     int quantity = Convert.ToInt32(node.Attributes["Quantity"].Value);
 
-                    if (id > 100 && id <= 200)
+                    if (id >= 200 && id <= 599)
                     {
                         for (int i = 0; i < quantity; i++)
                         {
