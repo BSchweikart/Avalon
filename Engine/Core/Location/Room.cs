@@ -22,6 +22,7 @@ namespace Engine
         public string DescripRoom { get; set; }
         //public Quest QuestIsHere { get; set; }
         public Monster MonsterIsHere { get; set; }
+        public NPC NPCIsHere { get; set; }
         public int LocationNorth { get; set; }
         public int LocationEast { get; set; }
         public int LocationSouth { get; set; }
@@ -30,7 +31,7 @@ namespace Engine
         public List<Monster> MonsterRoom = new List<Monster>();
         public List<NPC> NPCRoom = new List<NPC>();
 
-        public Room(int id, String name, String descrip, int exitNorth, int exitEast, int exitSouth, int exitWest, int idMonster, int idRmLoot)
+        public Room(int id, String name, String descrip, int exitNorth, int exitEast, int exitSouth, int exitWest, int idMonster, int idRmLoot, int idRmNPC)
         {
             ID = id;
             NameRoom = name;
@@ -69,11 +70,20 @@ namespace Engine
                 }
             }
             #endregion
+
+            #region add NPC
+            if (idRmNPC != -1)
+            {
+                if (idRmNPC == 100) 
+                {
+                    NPCIsHere = new NPC(WorldGenerator.NPCByID(idRmNPC));
+                    NPCRoom.Add(NPCIsHere);
+                }
+            }
+            #endregion
         }
 
 
     }
 
 }
-
-

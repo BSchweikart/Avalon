@@ -107,7 +107,7 @@ namespace Engine
 
                     WorldGenerator.Location.Add
                         (
-                        new Room(int.Parse(line[0]),line[1], line[2], int.Parse(line[3]), int.Parse(line[4]), int.Parse(line[5]), int.Parse(line[6]), int.Parse(line[7]), int.Parse(line[8]))
+                        new Room(int.Parse(line[0]),line[1], line[2], int.Parse(line[3]), int.Parse(line[4]), int.Parse(line[5]), int.Parse(line[6]), int.Parse(line[7]), int.Parse(line[8]),int.Parse(line[9]))
                         );
                 }
             }

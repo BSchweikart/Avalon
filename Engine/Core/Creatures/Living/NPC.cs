@@ -19,5 +19,16 @@ namespace Engine
             Name = name;
             Descrip = descrip;
         }
+
+        public NPC(NPC m) : base(m.HpCurrent, m.HpMax, m.IsDead, m.Attackable, m.Factions)
+        {
+            ID = m.ID;
+            Name = m.Name;
+            Descrip = m.Descrip;
+            HpCurrent = m.HpCurrent;
+            HpMax = m.HpMax;
+            IsDead = m.IsDead;
+            Attackable = m.Attackable;
+        }
     }
 }

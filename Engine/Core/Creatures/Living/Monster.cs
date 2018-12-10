@@ -20,6 +20,7 @@ namespace Engine
         {
             ID = id;
             Name = name;
+            //add disc
             DamageMax = damageMax;
             XpReward = xpReward;
             GoldReward = goldReward;
@@ -36,6 +37,7 @@ namespace Engine
         {
             ID = m.ID;
             Name = m.Name;
+            //Add deisc
             DamageMax = m.DamageMax;
             XpReward = m.XpReward;
             GoldReward = m.GoldReward;
