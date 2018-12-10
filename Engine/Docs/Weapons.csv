@@ -1,5 +1,5 @@
-400,Dagger,A short hand weapon that is built for fast physical damage,true,0,2
-401,ShortSword,A Sword that works well with a shield,true,0,2
-402,LongSword,A two handed weapon for strong physical damage,true,0,2
-403,Bow,A ranged weapon for physical damage,true,0,2
-404,Staff,A weapon that is a catalyst for helping with magic,true,0,2
+400,Dagger,A short hand weapon that is built for fast physical damage,true,0,4
+401,ShortSword,A Sword that works well with a shield,true,0,6
+402,LongSword,A two handed weapon for strong physical damage,true,0,10
+403,Bow,A ranged weapon for physical damage,true,0,7
+404,Staff,A weapon that is a catalyst for helping with magic,true,0,3
