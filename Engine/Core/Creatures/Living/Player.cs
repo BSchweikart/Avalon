@@ -28,6 +28,7 @@ namespace Engine
         public static NPC CurrentNPC { get; set; }
         #endregion
 
+        #region Const
         public Player(string namePlayer, string classPlayer, string racePlayer, int hpCurrent, int hpMax, int gold, Weapon equipt,  bool isDead, bool attackable, Faction faction) : base(hpCurrent, hpMax, isDead, attackable, faction)
         {
             NamePlayer = namePlayer;
@@ -43,13 +44,16 @@ namespace Engine
             Inventory = new List<Inventory>();
             CurrentLocation = WorldGenerator.Location[0];
         }
+        #endregion
 
+        #region XP
         public void AddXP(int xpToAdd) // Used to incress player health
         {
             //TODO finsh adding in XP
             XP += xpToAdd;
             HpMax = (Level * 2); // not used until LC can take over have to fix other parts for this to happen
         }
+        #endregion
 
         #region Player Data
         public string ToXmlString()
@@ -189,6 +193,7 @@ namespace Engine
         }
         #endregion
 
+        #region Inventory
         public void AddItemToInventory(Item itemToAdd, int quantity = 1)
         {
             Inventory item = Inventory.SingleOrDefault(ii => ii.Details.ID == itemToAdd.ID);
@@ -280,5 +285,6 @@ namespace Engine
         //        }
         //    }
         //}
+        #endregion
     }
 }

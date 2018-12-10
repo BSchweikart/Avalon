@@ -90,7 +90,6 @@ namespace Engine
             Console.WriteLine("Weapon Name: " + weaponToLook.WeaponName);
             Console.WriteLine("Description: " + weaponToLook.WeaponDesc);
             Console.WriteLine("Damage: " + weaponToLook.WeaponDamage);
-            Console.WriteLine("Damage Type", weaponToLook.WeaponDamageType);
             Console.WriteLine("Price: ", weaponToLook.WeaponPrice.ToString());
         }
         public static void LookAtWeapon(Weapon weaponToLook)
@@ -103,15 +102,16 @@ namespace Engine
         public static void LookAtMonster(Monster monsterToLook)
         {
             Console.WriteLine("Name: " + monsterToLook.Name);
+            //Console.WriteLine(monsterToLook.Description);
             Console.WriteLine("Attack: " + monsterToLook.DamageMax);
             Console.WriteLine("Armor: " + monsterToLook.Armor);
             Console.WriteLine("Current Hitpoints: " + monsterToLook.HpCurrent);
         }
-        //public static void LookAtNpc(NPC npcToLook)
-        //{
-        //    Console.WriteLine("Name: " + npcToLook.NPCName);
-        //    Console.WriteLine("Class: " + npcToLook.NPCClass);
-        //    Console.WriteLine("Race: " + npcToLook.NPCRace);
-        //}
+        public static void LookAtNpc(NPC npcToLook)
+        {
+            Console.WriteLine("Name: " + npcToLook.Name);
+            Console.WriteLine(npcToLook.Descrip);
+            Console.WriteLine("Health: " + npcToLook.HpMax);
+        }
     }
 }

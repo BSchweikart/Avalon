@@ -22,12 +22,12 @@ namespace Engine
                     {
                         if (item.Name.ToLower() == verb)
                         {
-                            if (item.ID > 200 && item.ID <= 300)
+                            if (item.ID > 300 && item.ID <= 399)
                             {
                                 _player.Inventory.Add(new Inventory(item, 1));
                                 Player.CurrentLocation.ItemRoom.Remove(item);
                             }
-                            else if (item.ID > 100 && item.ID <= 200)
+                            else if (item.ID >= 400 && item.ID <= 499)
                             {
                                 Weapon weaponToGet =
                                     WorldGenerator.weapons.SingleOrDefault(x => x.ID == item.ID);
