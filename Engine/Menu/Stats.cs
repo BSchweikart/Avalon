@@ -17,9 +17,9 @@ namespace Engine
             Console.WriteLine("Player Race: " + _player.RacePlayer);
             Console.WriteLine("Current hit points: {0}", _player.HpCurrent);
             Console.WriteLine("Maximum hit points: {0}", _player.HpMax);
+            Console.WriteLine("Player Armor: " + _player.Armor);
             Console.WriteLine("Weapon Name: " + _player.Equipt.Name);
             Console.WriteLine("Weapon Damage: " + _player.Equipt.DamageMax);
-            Console.WriteLine("Player Armor: " + _player.Armor);
             Console.WriteLine("Gold: {0}", _player.Gold);
         }
     }

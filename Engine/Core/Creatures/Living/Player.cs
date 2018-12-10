@@ -15,8 +15,8 @@ namespace Engine
         #region Fields
         public static Player _player;
         public string NamePlayer { get; set; }
-        public string ClassPlayer { get; set; }
         public string RacePlayer { get; set; }
+        public string ClassPlayer { get; set; }
         public int Gold { get; set; }
         public int XP { get; set; }
         public int Armor { get; set; }
@@ -29,14 +29,14 @@ namespace Engine
         #endregion
 
         #region Const
-        public Player(string namePlayer, string classPlayer, string racePlayer, int hpCurrent, int hpMax, int gold, Weapon equipt,  bool isDead, bool attackable, Faction faction) : base(hpCurrent, hpMax, isDead, attackable, faction)
+        public Player(string namePlayer, string racePlayer, string classPlayer, int hpCurrent, int hpMax, int armor, int gold, Weapon equipt,  bool isDead, bool attackable, Faction faction) : base(hpCurrent, hpMax, isDead, attackable, faction)
         {
             NamePlayer = namePlayer;
-            ClassPlayer = classPlayer;
             RacePlayer = racePlayer;
+            ClassPlayer = classPlayer;
             Gold = gold;
             XP = 0;
-            Armor = 10;
+            Armor = armor;
             Level = 1;
             HpCurrent = hpCurrent;
             HpMax = hpMax;
@@ -76,16 +76,16 @@ namespace Engine
             stats.AppendChild(playerName);
             #endregion
 
-            #region Player Class Data
-            XmlNode playerClass = playerData.CreateElement("Class");
-            playerClass.AppendChild(playerData.CreateTextNode(this.ClassPlayer.ToString()));
-            stats.AppendChild(playerClass);
-            #endregion
-
             #region Player Race Data
             XmlNode playerRace = playerData.CreateElement("Race");
             playerRace.AppendChild(playerData.CreateTextNode(this.RacePlayer.ToString()));
             stats.AppendChild(playerRace);
+            #endregion
+
+            #region Player Class Data
+            XmlNode playerClass = playerData.CreateElement("Class");
+            playerClass.AppendChild(playerData.CreateTextNode(this.ClassPlayer.ToString()));
+            stats.AppendChild(playerClass);
             #endregion
 
             #region Player Current HP Data
@@ -98,6 +98,12 @@ namespace Engine
             XmlNode maximumHitPoints = playerData.CreateElement("HpMax");
             maximumHitPoints.AppendChild(playerData.CreateTextNode(this.HpMax.ToString()));
             stats.AppendChild(maximumHitPoints);
+            #endregion
+
+            #region Armor Data
+            XmlNode armor = playerData.CreateElement("Armor");
+            armor.AppendChild(playerData.CreateTextNode(this.Armor.ToString()));
+            stats.AppendChild(armor);
             #endregion
 
             #region Player Gold Data
