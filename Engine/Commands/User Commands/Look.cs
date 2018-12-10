@@ -25,6 +25,7 @@ namespace Engine
             Monster monsterToLook = WorldGenerator.MonsterByName(noun);
             NPC NpcToLook = WorldGenerator.NPCByName(noun);
 
+            #region Items
             if (itemToLook != null)
             {
                 foreach (Inventory item in Player._player.Inventory.ToList())
@@ -43,6 +44,9 @@ namespace Engine
                     }
                 }
             }
+            #endregion
+
+            #region Weapon
             else if (weaponToLook != null)
             {
                 foreach (Inventory weapon in Player._player.Inventory.ToList())
@@ -62,6 +66,9 @@ namespace Engine
                 }
 
             }
+            #endregion
+
+            #region Monster
             else if (monsterToLook != null)
             {
                 foreach (Monster mob in Player.CurrentLocation.MonsterRoom.ToList())
@@ -72,7 +79,22 @@ namespace Engine
                     }
                 }
             }
+            #endregion
+
+            #region NPC
+            else if (NpcToLook != null)
+            {
+                foreach (NPC npc in Player.CurrentLocation.NPCRoom.ToList())
+                {
+                    if (npc.Name == NpcToLook.Name)
+                    {
+                        LookAtNpc(npc);
+                    }
+                }
+            }
+            #endregion
         }
+        #region Items (Pots, Tres) Detail
         public static void LookAtItem(Inventory itemToLook)
         {
             Console.WriteLine("Item Name: " + itemToLook.Details);
@@ -85,6 +107,9 @@ namespace Engine
             Console.WriteLine("Description: " + itemToLook.Description);
             Console.WriteLine("Item Price: " + itemToLook.Price);
         }
+        #endregion
+
+        #region Weapons Detail
         public static void LookAtWeapon(Inventory weaponToLook)
         {
             Console.WriteLine("Weapon Name: " + weaponToLook.WeaponName);
@@ -99,6 +124,9 @@ namespace Engine
             Console.WriteLine("Damage: " + weaponToLook.DamageMax);
             Console.WriteLine("Price: ", weaponToLook.Price.ToString());
         }
+        #endregion
+
+        #region Monster Detail
         public static void LookAtMonster(Monster monsterToLook)
         {
             Console.WriteLine("Name: " + monsterToLook.Name);
@@ -107,11 +135,15 @@ namespace Engine
             Console.WriteLine("Armor: " + monsterToLook.Armor);
             Console.WriteLine("Current Hitpoints: " + monsterToLook.HpCurrent);
         }
+        #endregion
+
+        #region NPC Detail
         public static void LookAtNpc(NPC npcToLook)
         {
             Console.WriteLine("Name: " + npcToLook.Name);
             Console.WriteLine(npcToLook.Descrip);
             Console.WriteLine("Health: " + npcToLook.HpMax);
         }
+        #endregion
     }
 }
