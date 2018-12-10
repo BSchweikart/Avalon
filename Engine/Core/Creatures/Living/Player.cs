@@ -12,6 +12,7 @@ namespace Engine
 {
     public class Player : LivingCreature
     {
+        #region Fields
         public static Player _player;
         public string NamePlayer { get; set; }
         public string ClassPlayer { get; set; }
@@ -24,6 +25,8 @@ namespace Engine
         public static Room CurrentLocation { get; set; }
         public Weapon Equipt { get; set; }
         public static Monster CurrentMonster { get; set; }
+        public static NPC CurrentNPC { get; set; }
+        #endregion
 
         public Player(string namePlayer, string classPlayer, string racePlayer, int hpCurrent, int hpMax, int gold, Weapon equipt,  bool isDead, bool attackable, Faction faction) : base(hpCurrent, hpMax, isDead, attackable, faction)
         {
@@ -48,6 +51,7 @@ namespace Engine
             HpMax = (Level * 2); // not used until LC can take over have to fix other parts for this to happen
         }
 
+        #region Player Data
         public string ToXmlString()
         {
             XmlDocument playerData = new XmlDocument();
@@ -183,7 +187,8 @@ namespace Engine
             }
             return obj;
         }
-                
+        #endregion
+
         public void AddItemToInventory(Item itemToAdd, int quantity = 1)
         {
             Inventory item = Inventory.SingleOrDefault(ii => ii.Details.ID == itemToAdd.ID);

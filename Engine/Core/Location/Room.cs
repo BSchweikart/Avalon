@@ -28,8 +28,9 @@ namespace Engine
         public int LocationWest { get; set; }
         public List<Item> ItemRoom = new List<Item>();
         public List<Monster> MonsterRoom = new List<Monster>();
+        public List<NPC> NPCRoom = new List<NPC>();
 
-        public Room(int id, String name, String descrip, int exitNorth, int exitEast, int exitSouth, int exitWest, int idMonster)
+        public Room(int id, String name, String descrip, int exitNorth, int exitEast, int exitSouth, int exitWest, int idMonster, int idRmLoot)
         {
             ID = id;
             NameRoom = name;
@@ -55,6 +56,17 @@ namespace Engine
             else
             {
                 this.MonsterRoom.Add(WorldGenerator.MonsterByID(idMonster));
+            }
+            #endregion
+
+            #region add Items
+            if (idRmLoot > -1)
+            {
+                if (idRmLoot >= 400 && idRmLoot <= 404)
+                {
+                    Weapon rmLoot = WorldGenerator.weapons.SingleOrDefault(ii => ii.ID == idRmLoot);
+                    ItemRoom.Add(new Weapon(rmLoot.ID, rmLoot.Name, rmLoot.Description, rmLoot.Equiptable, rmLoot.Price, rmLoot.DamageMax));
+                }
             }
             #endregion
         }

@@ -24,21 +24,21 @@ namespace Engine
             List<string> validExits = new List<string>();
 
             if (Player.CurrentLocation.LocationNorth != -1)
-            
+
                 validExits.Add("north");
-            
+
             if (Player.CurrentLocation.LocationEast != -1)
-            
+
                 validExits.Add("east");
-            
+
             if (Player.CurrentLocation.LocationSouth != -1)
-            
+
                 validExits.Add("south");
-            
+
             if (Player.CurrentLocation.LocationWest != -1)
-            
+
                 validExits.Add("west");
-            
+
             if (validExits.Count == 1)
                 exits += validExits[0] + " ";
             else
@@ -52,21 +52,54 @@ namespace Engine
             }
             Console.WriteLine(exits + "]");
 
+            #region Monster spawn
             if (Player.CurrentLocation.MonsterRoom != null)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                foreach (Monster mob in Player.CurrentLocation.MonsterRoom )
+                foreach (Monster mob in Player.CurrentLocation.MonsterRoom)
                 {
-                    if (mob.ID !=5)
+                    if (mob.ID != 5)
                     {
                         Player.CurrentMonster = mob;
 
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("A " + mob.Name + " is wondering around here.");
+                        Console.WriteLine(mob.Name + " is wondering around here.");
                         Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
             }
+            #endregion
+
+            #region NPC spawn
+            if (Player.CurrentLocation.NPCRoom != null)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                foreach (NPC npc in Player.CurrentLocation.NPCRoom)
+                {
+                    if (npc.ID == 100)
+                    {
+
+                        Player.CurrentNPC = npc;
+
+                        Console.WriteLine("");
+                        Console.WriteLine(npc.Name + " is walking around.");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                }
+            }
+            #endregion
+
+            #region Item Spawn
+            if (Player.CurrentLocation.ItemRoom != null)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                foreach (Item item in Player.CurrentLocation.ItemRoom)
+                {
+                    Console.WriteLine("You see a " + item.Name);
+                }
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            #endregion
         }
     }
 }
