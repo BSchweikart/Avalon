@@ -20,33 +20,33 @@ namespace Engine
         }
         public static void determineVerbType(string noun)
         {
-            Item itemToLook = WorldGenerator.ItemByName(noun);
+            Treasure treasureToLook = WorldGenerator.TreasureByName(noun); //Not used
             Weapon weaponToLook = WorldGenerator.WeaponByName(noun);
             Monster monsterToLook = WorldGenerator.MonsterByName(noun);
             NPC NpcToLook = WorldGenerator.NPCByName(noun);
 
-            #region Items
-            if (itemToLook != null)
+            #region Treasure - not used
+            if (treasureToLook != null)
             {
-                foreach (Inventory item in Player._player.Inventory.ToList())
+                foreach (Inventory treasures in Player._player.Inventory.ToList())
                 {
-                    if (item.Details.Name == itemToLook.ToString())
+                    if (treasures.Details.Name == treasureToLook.ToString())
                     {
-                        LookAtItem(item);
+                        LookAtTreasure(treasures);
                     }
                 }
 
-                foreach (Item rmItem in Player.CurrentLocation.ItemRoom.ToList())
+                foreach (Treasure trItem in Player.CurrentLocation.ItemRoom.ToList())
                 {
-                    if (rmItem.Name == itemToLook.Name)
+                    if (trItem.Name == treasureToLook.Name)
                     {
-                        LookAtItem(rmItem);
+                        LookAtTreasure(trItem);
                     }
                 }
             }
             #endregion
 
-            #region Weapon need to fix null
+            #region Weapon 
             else if (weaponToLook != null)
             {
                 foreach (Inventory weapon in Player._player.Inventory.ToList())
@@ -94,18 +94,19 @@ namespace Engine
             }
             #endregion
         }
-        #region Items (Pots, Tres) Detail
-        public static void LookAtItem(Inventory itemToLook)
+
+        #region Treasure Detail - not used
+        public static void LookAtTreasure(Inventory treasureToLook)
         {
-            Console.WriteLine("Item Name: " + itemToLook.Details);
-            Console.WriteLine("Description: " + itemToLook.Details);
-            Console.WriteLine("Item Price: " + itemToLook.Price);
+            Console.WriteLine("Treasure Name: " + treasureToLook.Details);
+            Console.WriteLine("Description: " + treasureToLook.Details);
+            Console.WriteLine("Treasure Price: " + treasureToLook.Price);
         }
-        public static void LookAtItem(Item itemToLook)
+        public static void LookAtTreasure(Item treasureToLook)
         {
-            Console.WriteLine("Item Name: " + itemToLook.Name);
-            Console.WriteLine("Description: " + itemToLook.Description);
-            Console.WriteLine("Item Price: " + itemToLook.Price);
+            Console.WriteLine("Treasure Name: " + treasureToLook.Name);
+            Console.WriteLine("Description: " + treasureToLook.Description);
+            Console.WriteLine("Treasure Price: " + treasureToLook.Price);
         }
         #endregion
 

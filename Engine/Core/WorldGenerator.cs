@@ -62,13 +62,13 @@ namespace Engine
         #endregion
 
         #region Item
-        public static Item ItemByID(int id)
+        public static Treasure TreasureByID(int id)
         {
-            return items.SingleOrDefault(x => x.ID == id);
+            return treasures.SingleOrDefault(x => x.ID == id);
         }
-        public static Item ItemByName(string name)
+        public static Treasure TreasureByName(string name)
         {
-            return items.SingleOrDefault(x => x.Name == name);
+            return treasures.SingleOrDefault(x => x.Name == name);
         }
         #endregion
 

@@ -23,7 +23,7 @@ namespace Engine
 
                     foreach (Inventory item in Player._player.Inventory.ToList())
                     {
-                        if (item.Details.Name.ToLower() == verb.ToString())
+                        if (item.Details.Name.ToLower() == verb.ToString()) // need to update
                         {
                             if (itemToDrop != null)
                             {

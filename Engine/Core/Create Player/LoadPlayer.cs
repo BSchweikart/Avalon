@@ -10,12 +10,9 @@ using System.Xml.Serialization;
 
 namespace Engine
 {
-    class LoadPlayer
+    class LoadPlayer // load player data
     {
-        //private static Weapon Equipt;
-
-        //public static object World { get; private set; }
-
+        // need to add in armor and level at a later time once others are finished
         public static void LoadGame(string name)
         {
             if (!File.Exists(name + ".xml"))
@@ -77,7 +74,7 @@ namespace Engine
                     {
                         for (int i = 0; i < quantity; i++)
                         {
-                            player.AddItemToInventory(WorldGenerator.ItemByID(id));
+                            player.AddItemToInventory(WorldGenerator.TreasureByID(id));
                         }
                     }
                 }

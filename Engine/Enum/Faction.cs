@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine
+namespace Engine // Dark not used at this time nor Dev
 {
     public enum Faction
     {
@@ -12,6 +12,6 @@ namespace Engine
 
         Dark,
 
-        Admin,
+        Dev,
     }
 }

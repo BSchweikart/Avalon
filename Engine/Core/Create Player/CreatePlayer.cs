@@ -15,15 +15,17 @@ namespace Engine
             string raceName = "";
             int hpMax = 0;
             int gold = 0;
-            Faction faction = Faction.Admin;
+            Faction faction = Faction.Dev;
             //Weapon equipt = null;           
             bool validClass = false;
             bool validRace = false;
             bool validFaction = false;
 
+            #region Get Player Name
             Console.WriteLine("What is your name?");
-            Console.Write(">");
+            Console.Write("> ");
             name = CapWords.FirstCharToUpper(Console.ReadLine());
+            #endregion
 
             #region Class Selection
             while (validClass == false)
@@ -108,6 +110,7 @@ namespace Engine
             }
             #endregion
 
+            #region Faction Selection
             while (validFaction == false)
             {
                 Console.ForegroundColor = ConsoleColor.White;
@@ -116,31 +119,37 @@ namespace Engine
                 Console.Write("Light, Dark > ");
                 string strFaction = CapWords.FirstCharToUpper(Console.ReadLine());
 
-                if (strFaction == Faction.Light.ToString() || strFaction == Faction.Dark.ToString() || strFaction == Faction.Admin.ToString())
+                if (strFaction == Faction.Light.ToString() || strFaction == Faction.Dark.ToString() || strFaction == Faction.Dev.ToString())
                 {
                     faction = (Faction)Enum.Parse(typeof(Faction), strFaction, true);
                     validFaction = true;
 
                 }
             }
+            #endregion
 
             Console.ForegroundColor = ConsoleColor.White;
+            #region Create Player
             Player._player = new Player
             (
-                name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), hpMax, hpMax, gold, WorldGenerator.WeaponByID(401), false, true, faction
+                name, CapWords.FirstCharToUpper(className), CapWords.FirstCharToUpper(raceName), hpMax, hpMax, 
+                gold, WorldGenerator.WeaponByID(401), false, true, faction
             );
+            #endregion
 
             Console.WriteLine("Loading game please wait");
-            SavePlayerData.SaveGameData(Player._player);
+            SavePlayerData.SaveGameData(Player._player); // save player information
         }
-            public static void CreateFromLoad(Player loadPlayer)
-            {
-                Player _player = new Player
-                (
-                    loadPlayer.NamePlayer, loadPlayer.ClassPlayer, loadPlayer.RacePlayer, loadPlayer.HpCurrent, loadPlayer.HpMax, loadPlayer.Gold, 
-                    loadPlayer.Equipt, loadPlayer.IsDead, loadPlayer.Attackable, loadPlayer.Factions
-                );
-            }
+        #region Load Player Data
+        public static void CreateFromLoad(Player loadPlayer)
+        {
+            Player _player = new Player
+            (
+              loadPlayer.NamePlayer, loadPlayer.ClassPlayer, loadPlayer.RacePlayer, loadPlayer.HpCurrent, loadPlayer.HpMax, 
+              loadPlayer.Gold, loadPlayer.Equipt, loadPlayer.IsDead, loadPlayer.Attackable, loadPlayer.Factions
+            );
+        }
+        #endregion
     }
 }
 

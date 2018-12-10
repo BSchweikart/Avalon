@@ -9,10 +9,12 @@ namespace Engine
 {
     public class Inventory : INotifyPropertyChanged
     {
+        #region Fields
         private Item _details;
         private int _quantity;
-        
+        #endregion
 
+        #region Prop
         public Item Details { get { return _details; } set { _details = value; OnPropertyChanged("Details"); } }
         public int Quantity { get { return _quantity; } set { _quantity = value; OnPropertyChanged("Quantity"); } }
         public int ItemID { get { return Details.ID; } }
@@ -21,15 +23,18 @@ namespace Engine
         public string WeaponName { get; set; }
         public string WeaponDesc { get; set; }
         public string WeaponDamage { get; set; }
-        
         public int WeaponPrice { get; set; }
+        #endregion
 
+        #region Const Item
         public Inventory(Item details, int quantity)
         {
             Details = details;
             Quantity = quantity;
         }
+        #endregion
 
+        #region Const Weapon
         public Inventory(Weapon weapon, int quantity)
         {
             WeaponName = weapon.Name;
@@ -39,6 +44,7 @@ namespace Engine
             Details = weapon;
             Quantity = quantity;
         }
+        #endregion
 
         #region Chnage Event
         public event PropertyChangedEventHandler PropertyChanged;

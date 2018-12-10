@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Engine
 {
-    public static class SavePlayerData
+    public static class SavePlayerData //save game data to file
     {
         public static string PLAYER_DATA_FILE_NAME = (CapWords.FirstCharToUpper(Player._player.NamePlayer) + ".xml");
 

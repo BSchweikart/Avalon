@@ -41,6 +41,7 @@ namespace Engine
         }
         #endregion
 
+        #region die roll
         public int Roll()
         {
             int sum = 0;
@@ -52,5 +53,6 @@ namespace Engine
 
             return sum;
         }
+        #endregion
     }
 }

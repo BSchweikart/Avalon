@@ -59,7 +59,7 @@ namespace Engine
                 {
                     string[] line = ReadNextLine(reader); 
                     WorldGenerator.monsters.Add
-                    (new Monster(int.Parse(line[0]),line[1],line[2],int.Parse(line[3]),int.Parse(line[4]),int.Parse(line[5]), int.Parse(line[6]), int.Parse(line[7]), bool.Parse(line[8]), bool.Parse(line[9]),Faction.Admin));
+                    (new Monster(int.Parse(line[0]),line[1],line[2],int.Parse(line[3]),int.Parse(line[4]),int.Parse(line[5]), int.Parse(line[6]), int.Parse(line[7]), bool.Parse(line[8]), bool.Parse(line[9]),Faction.Dev));
                 }
             }
             #endregion
@@ -70,7 +70,7 @@ namespace Engine
                 while (!reader.EndOfStream)
                 {
                     string[] line = ReadNextLine(reader);
-                    WorldGenerator.npcs.Add(new NPC(int.Parse(line[0]), line[1], line[2], int.Parse(line[3]), int.Parse(line[4]), bool.Parse(line[5]), bool.Parse(line[6]), Faction.Admin));
+                    WorldGenerator.npcs.Add(new NPC(int.Parse(line[0]), line[1], line[2], int.Parse(line[3]), int.Parse(line[4]), bool.Parse(line[5]), bool.Parse(line[6]), Faction.Dev));
                 }
             }
             #endregion
@@ -112,7 +112,6 @@ namespace Engine
                 }
             }
             #endregion
-            
       }
    } 
 }

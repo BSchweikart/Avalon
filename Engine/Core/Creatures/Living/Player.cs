@@ -64,53 +64,76 @@ namespace Engine
             XmlNode player = playerData.CreateElement("Player");
             playerData.AppendChild(player);
 
+            #region Player Stats Data
             // Create the "Stats" child node to hold the other player statistics nodes
             XmlNode stats = playerData.CreateElement("Stats");
             player.AppendChild(stats);
+            #endregion
 
+            #region Player Name Data
             XmlNode playerName = playerData.CreateElement("Name");
             playerName.AppendChild(playerData.CreateTextNode(this.NamePlayer.ToString()));
             stats.AppendChild(playerName);
+            #endregion
 
+            #region Player Class Data
             XmlNode playerClass = playerData.CreateElement("Class");
             playerClass.AppendChild(playerData.CreateTextNode(this.ClassPlayer.ToString()));
             stats.AppendChild(playerClass);
+            #endregion
 
+            #region Player Race Data
             XmlNode playerRace = playerData.CreateElement("Race");
             playerRace.AppendChild(playerData.CreateTextNode(this.RacePlayer.ToString()));
             stats.AppendChild(playerRace);
+            #endregion
 
+            #region Player Current HP Data
             XmlNode currentHitPoints = playerData.CreateElement("HpCurrent");
             currentHitPoints.AppendChild(playerData.CreateTextNode(this.HpCurrent.ToString()));
             stats.AppendChild(currentHitPoints);
+            #endregion
 
+            #region Player Max HP Data
             XmlNode maximumHitPoints = playerData.CreateElement("HpMax");
             maximumHitPoints.AppendChild(playerData.CreateTextNode(this.HpMax.ToString()));
             stats.AppendChild(maximumHitPoints);
+            #endregion
 
+            #region Player Gold Data
             XmlNode gold = playerData.CreateElement("Gold");
             gold.AppendChild(playerData.CreateTextNode(this.Gold.ToString()));
             stats.AppendChild(gold);
+            #endregion
 
+            #region XP Data
             XmlNode experiencePoints = playerData.CreateElement("XP");
             experiencePoints.AppendChild(playerData.CreateTextNode(this.XP.ToString()));
             stats.AppendChild(experiencePoints);
+            #endregion
 
+            #region Location Data
             XmlNode currentLocation = playerData.CreateElement("CurrentLocation");
             currentLocation.AppendChild(playerData.CreateTextNode(CurrentLocation.ID.ToString()));
             stats.AppendChild(currentLocation);
+            #endregion
 
+            #region Faction Data
             XmlNode faction = playerData.CreateElement("Faction");
             faction.AppendChild(playerData.CreateTextNode(this.Factions.ToString()));
             stats.AppendChild(faction);
+            #endregion
 
+            #region Player Equipt Data
             if (Equipt != null)
             {
                 XmlNode currentWeapon = playerData.CreateElement("CurrentWeapon");
                 currentWeapon.AppendChild(playerData.CreateTextNode(this.Equipt.ID.ToString()));
                 stats.AppendChild(currentWeapon);
             }
+            #endregion
 
+            #region Inventory Data
             // Create the "InventoryItems" child node to hold each InventoryItem node
             XmlNode inventoryItems = playerData.CreateElement("Inventory");
             player.AppendChild(inventoryItems);
@@ -119,9 +142,9 @@ namespace Engine
             foreach (Inventory item in this.Inventory)
             {
                 XmlNode inventoryItem = playerData.CreateElement("Inventory");
-
+                //TODO fix save on exit
                 XmlAttribute idAttribute = playerData.CreateAttribute("ID");
-                idAttribute.Value = item.Details.ID.ToString();
+                idAttribute.Value = item.Details.ID.ToString();//error dealing with save
                 inventoryItem.Attributes.Append(idAttribute);
 
                 XmlAttribute quantityAttribute = playerData.CreateAttribute("Quantity");
@@ -130,6 +153,7 @@ namespace Engine
 
                 inventoryItems.AppendChild(inventoryItem);
             }
+            #endregion
 
             return playerData.InnerXml; // The XML document, as a string, so we can save the data to disk
         }
@@ -256,35 +280,6 @@ namespace Engine
                 }
             }
         }
-
-        //public void RemoveItemFromInventory(Weapon weaponToRemove, int quantity = 1)
-        //{
-        //    Item weapon = weaponToRemove;
-        //    Inventory item = Inventory.SingleOrDefault(ii => ii.ItemID == weapon.ID);
-
-        //    if (item == null)
-        //    {
-        //        Item is not in the player's inventory, ignore it.
-
-
-        //    }
-        //    else
-        //    {
-        //        They have the item in their inventory, so decrease the quantity
-        //        item.Quantity -= quantity;
-
-        //        if (item.Quantity < 0)
-        //        {
-        //            item.Quantity = 0;
-        //        }
-
-        //        If the quantity is zero, remove the item from the list
-        //        if (item.Quantity == 0)
-        //        {
-        //            Inventory.Remove(item);
-        //        }
-        //    }
-        //}
         #endregion
     }
 }

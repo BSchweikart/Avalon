@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Get
+    public class Get //Need to add Pots and Tres
     {
         public static void GetCommand(string verb, Player _player)
         {

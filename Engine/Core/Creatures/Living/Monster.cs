@@ -8,6 +8,7 @@ namespace Engine
 {
     public class Monster : LivingCreature
     {
+        #region prop
         public int ID { get; set; }
         public string Name { get; set; }
         public string DamageMax { get; set; }
@@ -15,7 +16,9 @@ namespace Engine
         public int GoldReward { get; set; }
         public int Armor { get; set; }
         public List<ItemLoot> LootTable { get; set; }
+        #endregion
 
+        #region Const
         public Monster(int id, string name, string damageMax, int xpReward, int goldReward, int armor, int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction) : base (hpCurrent, hpMax, isDead, attackable, faction) 
         {
             ID = id;
@@ -30,8 +33,8 @@ namespace Engine
             IsDead = isDead;
             Attackable = attackable;
             LootTable = new List<ItemLoot>();
-
         }
+        #endregion
 
         public Monster(Monster m) : base(m.HpCurrent, m.HpMax, m.IsDead, m.Attackable, m.Factions)
         {

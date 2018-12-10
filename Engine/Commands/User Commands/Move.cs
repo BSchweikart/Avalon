@@ -36,7 +36,7 @@ namespace Engine
                     }
                     break;
 
-                case "east": // need to finish real movment
+                case "east": 
                     if (Player.CurrentLocation.LocationEast != -1)
                     {
                         LocationChange(WorldGenerator.Location[Player.CurrentLocation.LocationEast]);

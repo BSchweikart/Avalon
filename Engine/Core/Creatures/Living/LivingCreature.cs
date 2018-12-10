@@ -10,18 +10,19 @@ namespace Engine
 {
     public class LivingCreature : INotifyPropertyChanged
     {
-
+        #region Fields
         private int _hpCurrent;
-        private int _hpMax;
-        private bool _isDead;
-        private bool _attackable;
+        #endregion
 
+        #region Prop
         public int HpCurrent { get {return _hpCurrent; } set{_hpCurrent = value; OnPropertyChanged("HpCurrent"); } } 
-        public int HpMax { get { return _hpMax; } set { _hpMax = value; } }
-        public bool IsDead { get { return _isDead; } set { _isDead = value; } }
-        public bool Attackable { get { return _attackable; } set { _attackable = value; } }
+        public int HpMax { get; set; }
+        public bool IsDead { get; set; }
+        public bool Attackable { get; set; }
         public Faction Factions { get; set; }
+        #endregion
 
+        #region Const
         public LivingCreature(int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction)
         {
             HpCurrent = hpCurrent;
@@ -30,7 +31,9 @@ namespace Engine
             Attackable = attackable;
             Factions = faction;
         }
+        #endregion
 
+        #region Change envent
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string name)
@@ -40,6 +43,6 @@ namespace Engine
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
             }
         }
-
+        #endregion
     }
 }

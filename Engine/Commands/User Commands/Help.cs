@@ -14,7 +14,7 @@ namespace Engine
             Console.WriteLine("------------------------------------");
             Console.WriteLine("Stats - Display player information"); //working
             Console.WriteLine("Look - Get the description of your location"); //working
-            Console.WriteLine("Bags - Display your inventory");
+            Console.WriteLine("Bags - Display your inventory"); //Working
             //Console.WriteLine("Quests - Display your quests");
             Console.WriteLine("Attack - Fight the monster"); //working
             Console.WriteLine("Equip - Set your current weapon"); 

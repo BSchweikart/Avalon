@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
+    //need to add to the game
     public class ItemLoot
     {
         public Item Details { get; set; }

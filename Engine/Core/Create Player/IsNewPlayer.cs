@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public static class IsNewPlayer
+    public static class IsNewPlayer // Find out if New or Past Player
     {
-        private static object Load;
-
         public static void NewPlayer()
         {
             //get the user input
@@ -23,14 +21,14 @@ namespace Engine
                 Console.Write("> ");
                 usersInput = Console.ReadLine();
 
-                if (usersInput.ToLower() == "no")
+                if (usersInput.ToLower() == "no") //Get save data info
                 {
                     validAnswer = true;
                     Console.WriteLine("What is your name?");
                     usersInput = CapWords.FirstCharToUpper(Console.ReadLine());
                     LoadPlayer.LoadGame(usersInput.ToLower());
                 }
-                else if (usersInput.ToLower() == "yes")
+                else if (usersInput.ToLower() == "yes") // Move on to create the player
                 {
                     validAnswer = true;
                     CreatePlayer.CreateAPlayer();

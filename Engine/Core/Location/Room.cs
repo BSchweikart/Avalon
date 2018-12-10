@@ -24,6 +24,7 @@ namespace Engine
         public List<NPC> NPCRoom = new List<NPC>();
         #endregion
 
+        #region Const
         public Room(int id, String name, String descrip, int exitNorth, int exitEast, int exitSouth, int exitWest, int idMonster, int idRmLoot, int idRmNPC)
         {
             ID = id;
@@ -76,5 +77,6 @@ namespace Engine
             }
             #endregion
         }
+        #endregion
     }
 }

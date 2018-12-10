@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 
-namespace Engine
+namespace Engine // Bring up at game load
 {
-    public class GameTitle
+    public class GameTitle 
     {
         public static void Title()
         {

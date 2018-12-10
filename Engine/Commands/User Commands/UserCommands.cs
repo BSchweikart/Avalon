@@ -4,7 +4,7 @@ namespace Engine
 {
     public static class UserCommands
     {
-        #region test things
+        #region Set Faction
         public static void CommandCase(string input, Player _player)
         {
             string[] commands = input.Split(null);
@@ -19,7 +19,7 @@ namespace Engine
                 noun = "";
             }
 
-            if (_player.Factions != Faction.Admin)
+            if (_player.Factions != Faction.Dev) //Not used at this time
             {
                 NormalCommands(verb, noun);
             }
@@ -89,6 +89,11 @@ namespace Engine
                     MovePlayer.MoveTo(verb);
                     break;
                 #endregion
+
+                case "devmenu": // Hidden Option to bring up options to display Files
+                    DevMenu.InterMenu();
+                    break;
+
                 default:
                     Console.WriteLine(verb + " is not a command"); // display when a command is not valid
                     break;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public static class Stats
+    public static class Stats // Can add more information at a later date
     {
         public static void info(Player _player)
         {

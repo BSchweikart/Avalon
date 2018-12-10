@@ -12,6 +12,7 @@ namespace Avalon
     {
         private static void Main(string[] args)
         {
+            #region Build World, Player
             WorldListBuilder.Generate();
             GameTitle.Title();
             Console.WriteLine("");
@@ -19,8 +20,7 @@ namespace Avalon
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Type help to see list of commands");
             Console.Write("> ");
-            
-
+            #endregion
 
             while (true)
             {
@@ -37,10 +37,10 @@ namespace Avalon
                 string lowerInput = inputUser.ToLower();
                 Console.WriteLine(" ");
 
-                if (lowerInput == "exit")
+                if (lowerInput == "exit") //upon exit save player data
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Saving character, will close when finished!");
+                    Console.WriteLine("Saving character");
                     SavePlayerData.SaveGameData(Player._player);
                     break;
                 }

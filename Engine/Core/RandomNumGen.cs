@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography;
 
-// used for later
-
 namespace Engine
 {
     public static class RandomNumGen

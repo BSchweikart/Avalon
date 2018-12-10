@@ -10,7 +10,7 @@ namespace Engine
     {
         public static void Attacking(string noun, Player _player)
         {
-            if(Player.CurrentLocation.MonsterRoom == null)
+            if(Player.CurrentLocation.MonsterRoom == null) // check if a monster is in the room
             {
                 Console.WriteLine("There is nothing here to attack");
             }

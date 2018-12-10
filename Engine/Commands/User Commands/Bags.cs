@@ -8,7 +8,7 @@ namespace Engine
 {
     class Bags
     {
-        public static void BagInv(Player _player)
+        public static void BagInv(Player _player) // need to add option for treas and pots
         {
             foreach (Inventory inventory in _player.Inventory)
             {
