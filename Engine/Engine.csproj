@@ -89,6 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\Level.txt" />
+    <Resource Include="Docs\Music\GodMode.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Docs\Player.txt" />
     <Content Include="Docs\README.txt" />
     <Content Include="Game Data\GameItems.xml">

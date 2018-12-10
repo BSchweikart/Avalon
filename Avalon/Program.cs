@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Media;
 using Engine;
 
 namespace Avalon
@@ -14,6 +15,11 @@ namespace Avalon
         {
             #region Build World, Player
             WorldListBuilder.Generate();
+            #region Music - Used for testing will me moved to another location 
+            //SoundPlayer music = new SoundPlayer();
+            //music.SoundLocation = (@"../../.../Engine/Docs/Music/GodMode.wav");
+            //music.Play();
+            #endregion
             GameTitle.Title();
             Console.WriteLine("");
             LocationCurrent.CurrentLocation();
