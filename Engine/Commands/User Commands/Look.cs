@@ -131,7 +131,7 @@ namespace Engine
         public static void LookAtMonster(Monster monsterToLook)
         {
             Console.WriteLine("Name: " + monsterToLook.Name);
-            //Console.WriteLine(monsterToLook.Description);
+            Console.WriteLine(monsterToLook.Description);
             Console.WriteLine("Attack: " + monsterToLook.DamageMax);
             Console.WriteLine("Armor: " + monsterToLook.Armor);
             Console.WriteLine("Current Hitpoints: " + monsterToLook.HpCurrent);

@@ -11,6 +11,7 @@ namespace Engine
         #region prop
         public int ID { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
         public string DamageMax { get; set; }
         public int XpReward { get; set; }
         public int GoldReward { get; set; }
@@ -19,11 +20,11 @@ namespace Engine
         #endregion
 
         #region Const
-        public Monster(int id, string name, string damageMax, int xpReward, int goldReward, int armor, int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction) : base (hpCurrent, hpMax, isDead, attackable, faction) 
+        public Monster(int id, string name, string description, string damageMax, int xpReward, int goldReward, int armor, int hpCurrent, int hpMax, bool isDead, bool attackable, Faction faction) : base (hpCurrent, hpMax, isDead, attackable, faction) 
         {
             ID = id;
             Name = name;
-            //add disc
+            Description = description;
             DamageMax = damageMax;
             XpReward = xpReward;
             GoldReward = goldReward;
@@ -40,7 +41,7 @@ namespace Engine
         {
             ID = m.ID;
             Name = m.Name;
-            //Add deisc
+            Description = m.Description;
             DamageMax = m.DamageMax;
             XpReward = m.XpReward;
             GoldReward = m.GoldReward;

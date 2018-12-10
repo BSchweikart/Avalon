@@ -59,7 +59,7 @@ namespace Engine
                 {
                     string[] line = ReadNextLine(reader); 
                     WorldGenerator.monsters.Add
-                    (new Monster(int.Parse(line[0]),line[1],line[2],int.Parse(line[3]),int.Parse(line[4]),int.Parse(line[5]), int.Parse(line[6]), int.Parse(line[7]), bool.Parse(line[8]), bool.Parse(line[9]),Faction.Dev));
+                    (new Monster(int.Parse(line[0]),line[1],line[2],line[3],int.Parse(line[4]),int.Parse(line[5]), int.Parse(line[6]), int.Parse(line[7]), int.Parse(line[8]), bool.Parse(line[9]),bool.Parse(line[10]),Faction.Dev));
                 }
             }
             #endregion
