@@ -91,7 +91,7 @@ namespace Engine
             {
                 Console.WriteLine("Choose a class.");
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("Warrior, Archer, Healer, Assassin, or Mage");
+                Console.WriteLine("Warrior, Archer, Assassin, or Mage");
                 Console.Write("> ");
                 className = Console.ReadLine().ToLower();
                 Console.ForegroundColor = ConsoleColor.White;
