@@ -29,6 +29,7 @@ namespace Engine
                     if (Player.CurrentLocation.LocationNorth != -1) 
                     {
                         LocationChange(WorldGenerator.Location[Player.CurrentLocation.LocationNorth]);
+                        canMove = true;
                     }
                     else
                     {
@@ -40,6 +41,7 @@ namespace Engine
                     if (Player.CurrentLocation.LocationEast != -1)
                     {
                         LocationChange(WorldGenerator.Location[Player.CurrentLocation.LocationEast]);
+                        canMove = true;
                     }
                     else
                     {
@@ -51,6 +53,7 @@ namespace Engine
                     if (Player.CurrentLocation.LocationSouth != -1)
                     {
                         LocationChange(WorldGenerator.Location[Player.CurrentLocation.LocationSouth]);
+                        canMove = true;
                     }
                     else
                     {
@@ -62,6 +65,7 @@ namespace Engine
                     if (Player.CurrentLocation.LocationWest != -1)
                     {
                         LocationChange(WorldGenerator.Location[Player.CurrentLocation.LocationWest]);
+                        canMove = true;
                     }
                     else
                     {
