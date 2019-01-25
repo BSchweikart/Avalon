@@ -89,12 +89,17 @@ namespace Engine
                         Console.WriteLine(npc.Name + " is walking around.");
                         Console.ForegroundColor = ConsoleColor.White;
                     }
-                }
+                } 
             }
-            #endregion
+            if (Player.CurrentLocation.NPCRoom == null)
+            {
+                Console.WriteLine(" Working.");
+            }
 
-            #region Item Spawn
-            if (Player.CurrentLocation.ItemRoom != null)
+                #endregion
+
+                #region Item Spawn
+                if (Player.CurrentLocation.ItemRoom != null)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 foreach (Item item in Player.CurrentLocation.ItemRoom)
