@@ -15,7 +15,7 @@ namespace AvalonConsole
         static void Main(string[] args)
         {
            // This area is used for testing
-           //Showing upload
+        
         }
     }
 }
